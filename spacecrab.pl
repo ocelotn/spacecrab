@@ -1,28 +1,13 @@
 #! /usr/bin/perl
+use strict;
+use warnings;
+use SpaceCrab;
 
-#config
 my $startnode = 0;
-my $storypath = "testdata/story/";
-
-#methods
-sub grabSnippet{
-	my $filepath = $_[0];
-	open(my $fh,"<", $filepath) or return "No such content found for $filepath: $!";
-	my $wodgeoftext;
-	while(<$fh>){$wodgeoftext.=$_;}
-	return $wodgeoftext;
-}
 
 #init
-my $nodeno = ($argv[0])?$argv[0]:$startnode;
-
-#add boilerplate
-my $page;
-#	add header
-#	add story
-$page.=grabSnippet($storypath.$nodeno.".node");
-#	add footer
-
-#return data
+my $nodeno = ($ARGV[0])?$ARGV[0]:$startnode;
+my $page = SpaceCrab->getPage($nodeno);
 print $page;
-#return $page;
+
+1;
