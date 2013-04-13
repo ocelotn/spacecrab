@@ -1,7 +1,7 @@
-#! /usr/bin/perl
+#! /usr/local/bin/perl
 use strict;
 use warnings;
-use SpaceCrab;
+use spacecrab;
 
 my $startnode = 0;
 
