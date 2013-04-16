@@ -1,1 +1,9 @@
 body {background-image:url('TestImage.png');}
+/*Fits text into the white area*/
+div.header {
+		margin-top: 580px;
+		margin-right: 225px;
+		margin-bottom: 30px;
+		margin-left: 720px;
+		}
+	
