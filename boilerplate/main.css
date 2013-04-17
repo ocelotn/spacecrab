@@ -12,7 +12,15 @@ div.header {
 .story {
 	margin:auto;
 	max-width: 475px;
+	padding: 10px;
 	overflow: scroll;
   	background-color: #FFAA00; 
+}
+input {
+	background-color: #FFAA00;
+}
+#footer  {
+	margin-left: 720px ;
+  	    	
 }
 
