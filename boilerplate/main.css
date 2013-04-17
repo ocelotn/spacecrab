@@ -1,1 +1,21 @@
-body {background-image:url('testdata/images/TestImage.png');}
+body {background-image:url('../testdata/images/TestImage.png');
+background-size:cover;
+}
+/*Fits text into the white area*/
+div.header {
+		margin-top: 580px;
+		margin-right: 225px;
+		margin-bottom: 30px;
+		margin-left: 720px;
+		width: 100%;
+		}
+div.story {
+	margin:auto;
+	max-width; 480px;
+	overflow: scroll;
+}
+
+.story {
+	max-width: 500px;
+	overflow: scroll;
+}

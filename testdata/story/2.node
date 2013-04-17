@@ -1,0 +1,7 @@
+<div class="story">
+<p>
+The coin lands tails up but Toto isn't having any of it. Toto leaps out the open window.  Death leaps out the open window.  Bob... 
+<a class="choice" href="6.node">leaps out the window after them...</a> or maybe 
+<a class="choice" href="7.node">Bob uses the door instead.</a>
+</p>
+</div>

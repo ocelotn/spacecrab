@@ -1,7 +1,7 @@
 <div class="story">
 <p>Bob challenged death to a coin toss.  "Heads, you get me and my little dog Toto too.  Tails, you leave us alone!"  Death blinked a moment, then held out a small, very grubby wodge of corroded silver.</p>
 <ul>
-<li><a href="" dest1="1" dest2="2" threshold="50">Bob flipped the coin.</a></li>
-<li><a href="" dest1="1" dest2="2" threshold="20">Bob lets death flip the coin.</a></li>
+<li><a class="choice" href="" data-dest1="1" data-dest2="2" threshold="50">Bob flipped the coin.</a></li>
+<li><a class="choice" href="" data-dest1="1" data-dest2="3" threshold="20">Bob lets death flip the coin.</a></li>
 </ul>
 </div>
