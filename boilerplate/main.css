@@ -2,25 +2,8 @@ body {background-image:url('../testdata/images/TestImage.png');
 /*background-size:cover;*/
 }
 /*Fits text into the white area*/
-div.header {
-		margin-top: 580px;
-		margin-right: 225px;
-		margin-bottom: 30px;
-		margin-left: 720px;
-		width: 100%;
-		}
-.story {
-	margin:auto;
-	max-width: 475px;
-	padding: 10px;
-	overflow: scroll;
-  	background-color: #FFAA00; 
-}
-input {
-	background-color: #FFAA00;
-}
-#footer  {
-	margin-left: 720px ;
-  	    	
-}
+div.story {text-align: left; float: left; clear: right; background-color: #FFFFFF; max-width: 580px; padding 10px; clear: left; height: 100%; padding 10px;}
+.header {width: 100%; float: left; clear: left; background-color: #FFAA00;max-width: 580px; padding 10px; clear: right;}
+#footer {width: 100%; float: left; clear: left;}
+
 

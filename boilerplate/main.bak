@@ -1,0 +1,26 @@
+body {background-image:url('../testdata/images/TestImage.png');
+/*background-size:cover;*/
+}
+/*Fits text into the white area*/
+div.header {
+		margin-top: 580px;
+		margin-right: 225px;
+		margin-bottom: 30px;
+		margin-left: 720px;
+		width: 100%;
+		}
+.story {
+	margin:auto;
+	max-width: 475px;
+	padding: 10px;
+	overflow: scroll;
+  	background-color: #FFAA00; 
+}
+input {
+	background-color: #FFAA00;
+}
+#footer  {
+	margin-left: 720px ;
+  	    	
+}
+
