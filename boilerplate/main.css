@@ -1,5 +1,5 @@
 body {background-image:url('../testdata/images/TestImage.png');
-background-size:cover;
+/*background-size:cover;*/
 }
 /*Fits text into the white area*/
 div.header {
@@ -9,13 +9,9 @@ div.header {
 		margin-left: 720px;
 		width: 100%;
 		}
-div.story {
+.story {
 	margin:auto;
-	max-width; 480px;
+	max-width: 475px;
 	overflow: scroll;
 }
 
-.story {
-	max-width: 500px;
-	overflow: scroll;
-}
