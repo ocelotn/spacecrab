@@ -13,5 +13,6 @@ div.header {
 	margin:auto;
 	max-width: 475px;
 	overflow: scroll;
+  	background-color: #FFAA00; 
 }
 
