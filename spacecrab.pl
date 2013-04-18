@@ -1,7 +1,7 @@
-#! /usr/local/bin/perl
+#! /opt/local/bin/perl -wT
 use strict;
-use warnings;
-use spacecrab;
+use lib qw(.);
+require spacecrab;
 
 my $startnode = 0;
 
