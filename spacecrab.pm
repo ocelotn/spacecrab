@@ -1,4 +1,4 @@
-#! /opt/local/bin/perl -wT
+#!/usr/bin/env perl -wT
 use strict;
 package SpaceCrab;
 
