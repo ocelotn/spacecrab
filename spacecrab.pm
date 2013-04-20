@@ -3,18 +3,15 @@ use strict;
 package SpaceCrab;
 
 #config
-my $startnode = 0;
-my $storypath = "testdata/story/";
-my $boilerplatepath = "boilerplate/";
-my $headername = "header.html";
-my $footername = "footer.html";
-my $storysuffix = ".node";
-my $nodepattern = qr/(\d+)/;
+
+use lib qw(.);
+require spacecrabcfg;
+my $cfg = spacecrabcfg::config();
 
 #methods
 sub validateNodeno{
 	my $nodename = shift;
-	$nodename =~ $nodepattern;
+	$nodename =~ $cfg->{"nodepattern"};
 	return $1;
 }
 sub grabSnippet{
@@ -28,7 +25,7 @@ sub grabSnippet{
 sub grabNode{
 	my $nodeno = $_[1];
 	$nodeno = validateNodeno($nodeno);
-	return grabSnippet($storypath.$nodeno.$storysuffix);
+	return grabSnippet($cfg->{"storypath"}.$nodeno.$cfg->{"storysuffix"});
 }
 
 sub getPage {
@@ -37,11 +34,11 @@ sub getPage {
 	#add boilerplate
 	my $page;
 	#	add header
-	$page.=grabSnippet($boilerplatepath.$headername);
+	$page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"headername"});
 	#	add story
-	$page.=grabSnippet($storypath.$nodeno.$storysuffix);
+	$page.=grabSnippet($cfg->{"storypath"}.$nodeno.$cfg->{"storysuffix"});
 	#	add footer
-	$page.=grabSnippet($boilerplatepath.$footername);
+	$page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"footername"});
 	
 	#return data
 	return $page;
