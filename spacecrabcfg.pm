@@ -10,7 +10,8 @@ package spacecrabcfg;
 	"headername" => "header.html",
 	"footername" => "footer.html",
 	"storysuffix" => ".node",
-	"nodepattern" => qr/(\d+)/
+	"nodepattern" => qr/(\d+)/,
+	"baseurl" => 'http://hills.ccsf.edu/~lortizde/spacecrab.pl'
 	};
 
 	sub config {
