@@ -5,8 +5,7 @@ use warnings;
 use lib qw(.);
 
 use Test::More tests => 7;
-#use Test::Differences;
-#use Test::Simple tests=>7;
+use Test::Differences;
 use spacecrabcfg;
 use File::Slurp;
 use LWP::Simple;
@@ -14,7 +13,8 @@ my $cfg= spacecrabcfg::config();
 
 sub getWebContent {
 	my $node = "".shift;
-	my $content = get($cfg->{"baseurl"}.$cfg->{"spacecrab"}."?".$node) 
+	my $url = $cfg->{"baseurl"}.$cfg->{"spacecrab"}."?".$node;
+	my $content = get($url) 
     or die "Couldn't get ".$cfg->{"baseurl"}." - $!";
 	return $content;
 }
@@ -54,6 +54,8 @@ ok(snarfFile($cfg->{"testdata"}."combined_nodes/1.html")
 	eq getWebContent(1), 
 	"web srvr handles node spec 1"
 ); #spacecrab is not confused by bool value of node id 1
+
+#eq_or_diff snarfFile($cfg->{"testdata"}."combined_nodes/1.html"), getWebContent(1), "testing node 1";
 
 #error conditions
 ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
