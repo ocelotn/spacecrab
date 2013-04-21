@@ -5,7 +5,7 @@ package SpaceCrab;
 #config
 
 use lib qw(.);
-require spacecrabcfg;
+use spacecrabcfg;
 my $cfg = spacecrabcfg::config();
 
 #methods

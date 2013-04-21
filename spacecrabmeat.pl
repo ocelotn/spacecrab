@@ -2,9 +2,8 @@
 use strict;
 use lib qw(.);
 use spacecrab;
+use spacecrabcfg;
 
-use lib qw(.);
-require spacecrabcfg;
 my $cfg = spacecrabcfg::config();
 
 #init

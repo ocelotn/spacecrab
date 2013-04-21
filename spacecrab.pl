@@ -1,8 +1,8 @@
 #!/usr/bin/env perl -wT
 use strict;
 use lib qw(.);
-require spacecrab;
-require spacecrabcfg;
+use spacecrab;
+use spacecrabcfg;
 
 my $cfg = spacecrabcfg::config();
 
