@@ -28,7 +28,7 @@ sub grabSnippet{
 	open(my $fh,"<", $filepath) or return $cfg->{"text400"};
 	my $wodgeoftext;
 	while(<$fh>){$wodgeoftext.=$_;}
-        close $fh;	
+    close $fh;	
 	return $wodgeoftext;
 }
 

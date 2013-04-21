@@ -1,22 +1,79 @@
-#!/usr/local/bin/perl
+#!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::Simple tests=>2;
 
+use lib qw(.);
+
+use Test::More tests => 7;
+#use Test::Differences;
+#use Test::Simple tests=>7;
+use spacecrabcfg;
+use File::Slurp;
 use LWP::Simple;
-my $baseurl = 'http://hills.ccsf.edu/~lortizde/spacecrab.px';
+my $cfg= spacecrabcfg::config();
 
-my $content = get($baseurl) or die "Couldn't get $baseurl - $!";
-#print "content is ".$content."\n";
+sub getWebContent {
+	my $node = "".shift;
+	my $content = get($cfg->{"baseurl"}.$cfg->{"spacecrab"}."?".$node) 
+    or die "Couldn't get ".$cfg->{"baseurl"}." - $!";
+	return $content;
+}
+
+sub snarfFile {
+	my $fpath= shift;
+	my $content = "";
+	$content .= File::Slurp::read_file($fpath);
+	return $content;
+}
+
+sub dirlist {
+	my $dpath = shift;
+	opendir (DH, $dpath);
+	my @dlist = <DH>;
+	close DH;
+	return \@dlist;	
+}
+
+# use visual inspection to validate css and header/content changes
+# then rung testdataGen.pl 
 
 #spacecrab pl
 
-my $result = `./spacecrab.pl`;
-my $compareto = 1;
-print $?;
+#normal conditions
+ok(snarfFile($cfg->{"testdata"}."combined_nodes/0.html") 
+	eq getWebContent(""), 
+	"web srvr returns node ".$cfg->{"startnode"}." if no node specified"
+); #default case is correct case and handled and server returns valid page
 
+ok(snarfFile($cfg->{"testdata"}."combined_nodes/0.html") 
+	eq getWebContent(0), 
+	"web srvr handles node spec 0"
+); #spacecrab is not confused by bool value of node id 0
 
-ok($result eq $compareto, "spacecrab.pl returns correct node 0 doc for request with no params.");
+ok(snarfFile($cfg->{"testdata"}."combined_nodes/1.html") 
+	eq getWebContent(1), 
+	"web srvr handles node spec 1"
+); #spacecrab is not confused by bool value of node id 1
 
-ok($content eq $compareto, "spacecrab.pl returns correct node page for specified node.");
+#error conditions
+ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
+	eq getWebContent(12345690), 
+	"web srvr handles missing file with correct error"
+); #spacecrab gives correct error on non-existent but valid id
 
+ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
+	eq getWebContent("somestring"), 
+	"web srvr handles invalid fname with correct error - string"
+); #invalid ID condition
+
+ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
+	eq getWebContent("abcdefghijklmnopqrstuvwxyz1234567890"), 
+	"web srvr handles invalid fname with correct error - length"
+); #invalid ID condition
+
+ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
+	eq getWebContent('\ ;\\\')(*&)@#($*&@(#$"'), 
+	"web srvr handles invalid fname with correct error - rubbish"
+); #invalid ID condition
+
+#eq_or_diff snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html"), #getWebContent("abcdefghijklmnopqrstuvwxyz1234567890"),   "testing strings";
