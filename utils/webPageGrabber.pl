@@ -18,10 +18,9 @@ print $fh $wnode;
 
 sub getDirList { 
 	opendir (DH, $cfg->{"storypath"}) or die "cannot read story path";
-	my @dirlist = grep {!/^\./} readdir(DH); 
-	my @dirlist2 = map {my $node = $_; $node=~s/\.node//; $node;} @dirlist;
+	my @dirlist = map {my $node = $_; $node=~s/\.node//; $node;} grep {!/^\./}  readdir(DH);
 	close DH;
-	return \@dirlist2;
+	return \@dirlist;
 } 
 
 my $node = shift;
