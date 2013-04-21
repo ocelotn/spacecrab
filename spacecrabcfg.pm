@@ -11,7 +11,7 @@ package spacecrabcfg;
 	"footername" => "footer.html",
 	"storysuffix" => ".node",
 	"nodepattern" => qr/(\d+)/,
-	"baseurl" => 'http://hills.ccsf.edu/~lortizde/',
+	"baseurl" => 'http://test.space-crab.com/',
 	"spacecrab" => "spacecrab.pl",
 	"spacecrabmeat" => "spacecrabmeat.pl",
 	"maxfnamelen" => 32,

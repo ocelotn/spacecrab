@@ -2,7 +2,7 @@ body {background-image:url('../testdata/images/TestImage.png');
 /*background-size:cover;*/
 }
 /*Fits text into the white area*/
-div.story {text-align: left; float: left; clear: right; background-color: #FFFFFF; max-width: 580px; padding 10px; clear: left; height: 100%; padding 10px;}
+div.story {text-align: left; float: left; clear: right; background-color: #FFFFFF; max-width: 580px; clear: left; height: 100%; padding 10px;}
 .header {width: 100%; float: left; clear: left; background-color: #FFAA00;max-width: 580px; padding 10px; clear: right;}
 #footer {width: 100%; float: left; clear: left;}
 

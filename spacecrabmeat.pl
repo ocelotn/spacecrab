@@ -1,4 +1,4 @@
-#!/usr/bin/env perl -wT
+#!/usr/bin/perl -wT
 use strict;
 use lib qw(.);
 use spacecrab;
