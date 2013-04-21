@@ -11,7 +11,9 @@ package spacecrabcfg;
 	"footername" => "footer.html",
 	"storysuffix" => ".node",
 	"nodepattern" => qr/(\d+)/,
-	"baseurl" => 'http://hills.ccsf.edu/~lortizde/spacecrab.pl'
+	"baseurl" => 'http://hills.ccsf.edu/~lortizde/spacecrab.pl',
+	"maxfnamelen" => 32,
+	"text400" => "<p>Hmm...That node isn't on our scanners.  Maybe it fell into a black hole?</p>\n"
 	};
 
 	sub config {
