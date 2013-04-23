@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -wT
+#!/usr/bin/perl -wT
 use strict;
 package spacecrabcfg;
 our $VERSION = '1.01';
@@ -25,7 +25,7 @@ our @EXPORT = qw(config);
 			#optionally followed by .node 
 			#but nothing else before ending
 		#player visible strings
-		"text400" => "<p>Hmm...That node isn't on our scanners.  Maybe it fell into a black hole?</p>\n",
+		"text400" => '<div class="story"><p>Hmm...That node isn\'t on our scanners.  Maybe it fell into a black hole?</p></div>',
 		#for tests
 		"testdata" => "testdata/",
 		"baseurl" => 'http://test.space-crab.com/'

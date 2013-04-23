@@ -1,4 +1,3 @@
-#!/usr/local/bin perl -wT
 use strict;
 package SpaceCrab;
 
