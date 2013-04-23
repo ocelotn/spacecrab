@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/perl -wT
-=======
 #!/usr/local/bin perl -wT
->>>>>>> 4aa961cea068c11abf3f2fc0faac20bbfa8be6d9
 use strict;
 package SpaceCrab;
 

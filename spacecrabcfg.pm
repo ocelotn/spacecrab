@@ -8,21 +8,6 @@ our @EXPORT = qw(config);
 	my $storysuffix = '.node';
 	
 	my $cfg = {
-<<<<<<< HEAD
-	"startnode" => 0,
-	"storypath" => "testdata/story/",
-	"boilerplatepath" => "boilerplate/",
-	"headername" => "header.html",
-	"footername" => "footer.html",
-	"storysuffix" => ".node",
-	"nodepattern" => qr/(\d+)/,
-	"baseurl" => 'http://test.space-crab.com/',
-	"spacecrab" => "spacecrab.pl",
-	"spacecrabmeat" => "spacecrabmeat.pl",
-	"maxfnamelen" => 32,
-	"text400" => "<p>Hmm...That node isn't on our scanners.  Maybe it fell into a black hole?</p>\n",
-	"testdata" => "testdata/"
-=======
 		#behaviour defaults
 		"startnode" => 0,	
 		#finding files
@@ -44,7 +29,6 @@ our @EXPORT = qw(config);
 		#for tests
 		"testdata" => "testdata/",
 		"baseurl" => 'http://test.space-crab.com/'
->>>>>>> 4aa961cea068c11abf3f2fc0faac20bbfa8be6d9
 	};
 
 	sub config {
