@@ -71,8 +71,8 @@ ok($@ ne "","Dies on nonexistent file");
 #testing getFileSpec
 print "\nTesting getFileSpec\n";
 my @dirlist = ('0.node','1.node','2.node','3.node','emptynode.node');
-ok(@dirlist eq getFileSpec('../testdata/story/'),"Read populated valid directory");
-ok(getFileSpec('../testdata/emptydir') == 0,"Read empty valid directory");
+ok(@dirlist eq getFileSpec('../../testdata/story/'),"Read populated valid directory");
+ok(getFileSpec('../../testdata/emptydir') == 0,"Read empty valid directory");
 
 $@ = "";
 eval{getFileSpec('bogusdir')};
