@@ -9,7 +9,7 @@ our @EXPORT = qw(config);
 	
 	my $cfg = {
 		#behaviour defaults
-		"startnode" => 0,	
+		"startnode" => "node1",	
 		#finding files
 		"storypath" => "testdata/story/",
 		"boilerplatepath" => "boilerplate/",
