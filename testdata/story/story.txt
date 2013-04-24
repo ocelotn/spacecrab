@@ -1,0 +1,157 @@
+Space Crab: The Saga
+
+1.
+<div class="story" id="node1">
+<p>You're in the ship again, drifting.  </p>
+
+<p>You're supposed to be scouting the sector for Crabbers, by order of the Divine Brachyura herself.  Your Cockleshell 2600 is equipped with chelae for pincering at close range, as well as xanthidaen lasers and long-range bombs for space battle.</p>  
+
+<p>"Scuttle out and look about," Divine Brachyura ordered, waving you out of her audience hall.  Even in humanoid form, she thought like a true crustacean. "You never know where carcinologists might be hiding.  You never know when they'll be right on our doorstep!"</p>
+
+<p> Actually, you <i>do</i> know.  Crabbers haven't been spotted in this sector since long before you were born.  These missions are boring and pointless, and you'd tell Her Divine Crustaceasness that, too...if you weren't terrified of her.  You shake your head.  You really ought to <a data-dest1="2.node">march into that audience hall and tell Divine Brachyura that she's acting like a hermit crab</a>, paranoid and fearful.</p>
+
+<p>In any case, you spend all your scouting trips exploring rather than scouting.  There's more to see even in this one sector than you could discover in a lifetime.  Straight ahead, <a data-dest1="3.node">something sparkles green and blue in the distance.</a>  And Verru, nearby Sessilia's second moon, is transmitting <a data-dest1="4.node">some kind of signal</a>—which is odd, since nothing lives there. </p> 
+
+<p>Already, you're faced with choices.</p>
+</div>
+
+OPTIONS
+march into that audience hall and tell Divine Brachyura that she's acting like a hermit crab
+something sparkles green and blue in the distance
+some kind of signal
+
+
+2. 
+march into that audience hall and tell Divine Brachyura that she's acting like a hermit crab 
+<div class="story" id="node2">
+<p>You turn your ship around and fly straight back to the docking port nearest the Royal Compound.  Steeling yourself, you stride through the audience hall doors.  The guards don't stop you; they know you for a loyal servant to Her Divine Crustaceasness.</p>
+
+<p>You march up to the throne, where Divine Brachyura sits.  She looks at you expectantly, and you take a deep breath.</p>
+
+<p>"Divine Brachyura," you declare, standing squarely before her, "you are acting like a hermit crab, paranoid and fearful."</p>
+
+<p>Divine Brachyura throws both arms into the air, weaving them as though she has pincers even in human form.</p> 
+
+<p>"BLAAAAASPHEMY," she roars, glaring down at you from the throne, and suddenly her waving arms begin to look harder, more clawlike.  She's making the change; her robe tears as she shifts into crabform.  Clacking her pincers meaningfully, Divine Brachyura scuttles down from her throne and slams her dominant claw over your head, crushing your skull and sending gray brain matter flying in all directions.</p>
+
+<p> If only your human form had included a nice, hard exoskeleton!  Ah, well.</p>
+
+THE END.
+</div>
+
+3.
+something sparkles green and blue in the distance
+<div class="story" id="node3">
+<p>You shift gears and push a few pertinent buttons, and your ship zips forward.  Once again, you feel thankful that you've got a ship produced on Emarginata, where they don't insist on sideways motion.  'Natas might be kind of odd, sure, but it's nice to actually be able to see where you're going.</p>
+
+<p>The sparkling green and blue colors fill more of the sky as your ship glides nearer to it.  A blue star, perhaps...?  Not uncommon, really, but...no, no, there's too much green for that.  And the sparkling is truly odd.  Toggling the telescoping lenses in the underside of the ship, you try to get a closer look at the surface of the thing—assuming it has a surface.  Peering at the telescope's display screen, you see that it <i>is</i> solid, at least.  Circular indentations covering the object.  Craters?  Drained lakes? </p>
+
+<p>You'll have to <a data-dest1="3A.node">get closer</a> if you want to find out more.  If there are hostile inhabitants on or near the object, however--and it <i>does</i> looks large enough for a minor space station--they might detect you.  You probably ought to <a data-dest1="3B.node">turn around now</a>; one little Cockleshell 2600 can't handle much space fighting.</p>
+
+<p>Pondering your situation, you notice the dashboard clock.  Hey, it's lunchtime!  Surely there's time for <a data-dest1="3C.node">a nice coral polyp and algae sandwich</a> before making any big decisions!  Your stomach rumbles meaningfully.</p>
+</div>
+
+OPTIONS
+get closer
+turn around now
+a nice coral polyp and algae sandwish
+
+3A. 
+get closer
+<div class="story" id="node3A">
+<p>Your curiosity overwhelms you (and your good sense does not).  You maintain your course toward the sparkling green and blue object and increase your speed.  You've come too far to turn back before finding out what this thing is!</p>
+
+<p>By the time the ink begins to cover your viewports, you're too close to pull away.  The space 	octopus  pulls you, drills into the Cockleshell 2600, and injects poison into the cabin.  You die; he eats you. </p>
+
+<p>THE END.</p>
+</div>
+
+3B. 
+turn around now
+<div class="story" id="node3B">
+<p>With a sigh, you turn the ship around and head back the way you've come.  Perhaps you should just <a data-dest1="4.node">go investigate that signal from Verru</a>.</p>
+</div>
+
+REJOIN @ NODE 4.
+
+3C.
+a nice coral polyp and algae sandwich
+<div class="story" id="node3C">
+<p>Ooh, lunch time!  You put the Cockleshell 2600 in neutral and let it idle, then reach around 	behind your seat and pull out your lunch pail.  Tipping the pail up, you empty some sand into your mouth.  </p>
+
+<p>Stomach full, you lean back in your seat and ponder your options.  Soon you're snoring. </p>
+
+<p>By the time you notice anything going on, the space octopus is already drilling into the Cockleshell 2600.  It pipes a noxious mucus into the ship, intent on knocking you out and pulling your succulent body out of the Cockleshell and into its gaping maw.  You struggle to stay awake, holding your breath as you attempt to release the airlock and escape into crabform.</p>
+
+<p>How long can you hold your breath?</p>
+
+<a data-dest1="3C1.node">You can hold your breath for 20 seconds, give or take.<br />
+<a data-dest1="3C2.node">You can hold your breath for 3 minutes.  You've got training -- Space Crab Army training.<br />
+<a data-dest1="3C3.node"> You're a space crab!  You can hold your breath all day.<br />
+</div>
+	
+3C1.
+<div class="story" id = "node3C1">
+<p>20 seconds, give or take. </p>
+
+<p>Well, that's not nearly long enough.  You pass out; the space octopus extracts you from the Cockleshell and shovels you into its maw.</p>
+
+THE END.
+</div>		
+
+3C2.
+<div class="story" id="node3C2">
+<p>3 minutes.  You've got training -- Space Crab Army training.</p>
+	
+<p>You nearly turn purple from holding your breath so long, but you manage to program the failing Cockleshell to eject you through the air lock, giving you a nice boost towards home.  Your entry into open space triggers your shapeshifting reflexes, and you immediately shift into crabform.  As far as you can tell, the space octopus doesn't even notice your escape.  Looking back, you see it probing around inside the Cockleshell with two long tentacles.  It looks like a kid with two fingers in the peanut butter jar. </p>
+
+<p>You shudder, remembering that in this case you are the peanut butter.</p>
+</div>
+ 
+3C3.	
+<div class="story" id="node3C3">
+<p>You're a space crab!  You can hold your breath all day.  </p>
+
+<p>Yeah, right.  That doesn't even make sense.  You pass out immediately; the space octopus extracts you from the Cockleshell and shovels you into its maw.</p>
+
+<p>THE END.</p>
+</div>
+
+4. 
+some kind of signal
+<div class="story" id="node4">
+<p>You shift gears and jab a few pertinent buttons, and your ship drifts toward Verru, Sessilia's second moon.  You've programmed your ship to record the signal coming from the dark moon; now you set it to play the signal on the ship's internal speakers.</p>
+
+<p>Orbiting Verru and monitoring the signal, you realize you're sitting in plain view of anyone who might pass by.  Perhaps you should <a data-dest1="4A.node">cloak the Cockleshell</a> while you wait for the computer to decipher the signal.  Just as a precaution.</p>
+
+<p>But is it really necessary?  Or would that be the act of a paranoid hermit crab? Everyone knows <a data-dest1="4B.node">there's nothing really going on out here</a>.</p>
+</div>	
+4A.
+<div class="story" id="node4B">
+<p>Safety first!  It only means pushing a button, after all.  You cloak the ship.</p>
+</div>	
+4B.
+<div class="story" id="node4A">
+<p>Cloak?  No way.  There's no one out here!  <I>You're</i> not a paranoid hermit crab.</p>
+
+<p>Wait--what was that?  The Cockleshell's main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they're coming in fast!  They've clearly seen you, and they're not opening a frequency to hail you.  You're under attack; you hesitate, unsure whether to <a data-dest1="4B1.node">fight</a> or <a data-dest1="4B2.node">flee</a>.</p>
+</div>
+4B1. 
+<div class="story" id="node4B1">
+<p>You raise the ship's shields and prepare to fire your xanthidaen lasers.  You're not going down without a fight!</p>
+
+<p>You are, however, going down, because the Cockleshell 2600 really wasn't made for intense battle, and you <i>are</i> facing three enemy ships.  As their lasers destroy you, you wonder who they are and what they're doing on Verru.</p>
+
+<p>Oh well!  Guess you'll never know.</p>
+
+<p>THE END.</p>
+</div>
+
+4B2.
+<div class="story" id="node4B2">
+<p>There's no way the Cockleshell 2600 can handle a fight against three enemy ships.  You desperately shift gears and send the Cockleshell flying homeward.</p>
+
+<p>Unfortunately, there's also no way the Cockleshell 2600 can outrun three enemy ships, either.  It wasn't build for fighting, it wasn't built for speed...as the enemy ships' lasers destroy you, you wonder what the hell it <i>was</i> built for, anyway.</p>
+
+<p>THE END.</p>
+</div>

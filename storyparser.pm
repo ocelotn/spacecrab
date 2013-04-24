@@ -4,18 +4,17 @@ use warnings;
 
 use File::Slurp;
 use Mojo::DOM;
+use lib('.');
+use spacecrabcfg;
 
 	#SETUP
-	#path variables
-	my $nodepath = "../testdata/story";
-	my $nodefilenamepat = qr/(.*)\.node$/;
-	my $dirmarker = "/";
-	my $nodesuffic = ".node";
+	my $cfg = spacecrabcfg::config();
+	my $storyfile = "story.txt";
 	
 sub snarfFile {
 	my $file = shift;
 		my $nodetext = "";
-		$nodetext .= File::Slurp::read_file($nodepath.$dirmarker.$file);
+		$nodetext .= File::Slurp::read_file($cfg->{"storypath"}.$file);
 		return $nodetext;
 }
 
@@ -34,25 +33,23 @@ sub getFirstLine{
 
 sub main {	
 	#grab the text
-	my $nodetext = snarfFile($file); 
+	my $nodetext = snarfFile($storyfile); 
 	my $dom = Mojo::DOM->new->parse($nodetext);
 
 	#foreach story node
-	foreach my $nodediv ($dom->children('div[class="story"]'))
+	foreach my $nodediv ($dom->find('div[class="story"]')->each)
 	{
 		#get node id
 		my $nodeno = $nodediv->{id};
 		if (defined $nodeno){
-			if ($nodeno =~/\d+/){
-				open(FH,'>',$nodepath.$dirmarker.$nodeno.$nodesuffix) or die "Cannot open file for writing.";
-				print FH, $nodediv;
+		print "$nodeno is id\n";
+			if ($nodeno =~$cfg->{"nodepattern"}){
+				open(FH,'>',$cfg->{"storypath"}.$nodeno.$cfg->{"storysuffix"}) or die "Cannot open file for writing.";
+				print FH $nodediv;
 				close FH;
-			} else { error("Invalid node id for story node ".getFirstLine($nodediv)."\n");
-		} else { error("No node id for story node ".getFirstLine($nodediv)."\n");}
+			} else { error("Invalid node id for story node ".getFirstLine($nodediv)."\n");} }
+		else { error("No node id for story node ".getFirstLine($nodediv)."\n");}
 	}
 
-
 }
-	main();
-
 1
