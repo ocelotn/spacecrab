@@ -41,7 +41,7 @@ sub dirlist {
 
 #normal conditions
 
-	ok(snarfFile($cfg->{"testdata"}."combined_nodes/0.html") 
+	ok(snarfFile($cfg->{"testdata"}."combined_nodes/".$cfg->{"startnode"}.".html") 
 		eq getWebContent(""), 
 		"web srvr returns node ".$cfg->{"startnode"}." if no node specified"
 	); #default case is correct case and handled and server returns valid page
