@@ -4,7 +4,7 @@ use warnings;
 
 use lib qw(.);
 
-use Test::More tests => 10;
+use Test::More tests => 9;
 #use Test::Differences;
 use spacecrabcfg;
 use File::Slurp;
@@ -75,15 +75,10 @@ sub dirlist {
 	
 	ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
 		eq getWebContent("a2"), 
-		"handles invalid fname with error - string w/ number"
+		"handles invalid fname with error - w/o node prefix"
 	); #invalid ID condition
 	
 	#eq_or_diff snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html"), getWebContent("a2"), "testing node 1";
-	
-	ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
-		eq getWebContent("2hats"), 
-		"handles invalid fname with error - num w/ misc string"
-	); #invalid ID condition
 	
 	ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
 		eq getWebContent("abcdefghijklmnopqrstuvwxyz1234567890"), 
