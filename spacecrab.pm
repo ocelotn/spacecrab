@@ -52,6 +52,8 @@ sub getPage {
 	$page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"headername"});
 	#	add story
 	$page.=grabNode($nodeno);
+	#	add images
+	$page.='</div><div class="scene"><img src="images/"'.$bg.'"/><img src="images/"'.$mg.'"/><img src="images/".$fg.'"/>';
 	#	add footer
 	$page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"footername"});
 	
