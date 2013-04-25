@@ -4,7 +4,7 @@ use warnings;
 
 use lib qw(.);
 
-use Test::More tests =>2;
+use Test::More tests =>5;
 use spacecrabcfg;
 use File::Slurp;
 use LWP::Simple;
@@ -38,17 +38,23 @@ sub dirlist {
 }
 
 #normal conditions
-ok(snarfFile($cfg->{"testdata"}."story/0.node") 
+ok(snarfFile($cfg->{"testdata"}."story/".$cfg->{"startnode"}.".node") 
 	eq getWebContent(""), 
 	"web srvr returns node ".$cfg->{"startnode"}." if no node specified"
 ); #default case is correct case and handled and server returns valid page
 
-ok(snarfFile($cfg->{"testdata"}."story/0.node") 
-	eq getWebContent(0), 
-	"web srvr handles node spec 0"
-); #spacecrab is not confused by bool value of node id 0
+ok(snarfFile($cfg->{"testdata"}."story/node1.node") 
+	eq getWebContent("node1"), 
+	"web srvr handles node spec node1"
+);
 
-ok(snarfFile($cfg->{"testdata"}."combined_nodes/1.node") 
-	eq getWebContent(1), 
-	"web srvr handles node spec 1"
-); #spacecrab is not confused by bool value of node id 1
+#error conditions
+ok(getWebContent("1") eq $cfg->{"text400"},
+	"web srvr errors on prefixless node"
+); 
+ok(getWebContent("sillyhat") eq $cfg->{"text400"},
+	"web srvr errors on prefixless node - string"
+); 
+ok(getWebContent("nodebogus") eq $cfg->{"text400"},
+	"web srvr errors on nonexistent valid nodeid"
+); 

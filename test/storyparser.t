@@ -1,7 +1,6 @@
 use Test::More tests=>5;
 use Test::Exception;
 use File::Slurp;
-use lib '../utils';
 use lib '..';
 use spacecrabcfg;
 use storyparser;
