@@ -71,6 +71,8 @@ function showDiv()
 
 function saveSys()
 {
+//Checks if browser supports this type of save
+//Maybe consider figuring out how to deal with cookies version
 if(typeof(Storage)!=="undefined")
   	{
 	// Saves data in testVar
@@ -135,6 +137,6 @@ function builder($start)
 //Reloads the accordion after all this work has been done
 	$('#accordion').accordion("refresh");
 
-//Refocuses on the newest panel
+//Refocuses on the newest panel(has to load in from $start)
 	$("#accordion" ).accordion( "option", "active", $start );
 }
