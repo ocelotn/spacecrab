@@ -45,7 +45,11 @@ sub parseNode{
  my @zones = ('fg','mg','bg');
  foreach my $zone (@zones) {
     my $val = $div->first()->attrs($zone);
-    $attributes{$zone} = $val eq ''?$cfg->{$zone."default"}:$val; 
+    #   supply defaults & validate filename
+    $attributes{$zone} = ( 
+        #length($val) >= $cfg->{"maxfnamelen"} && 
+        $val=~ $cfg->{"imgpattern"}
+    )? $val:$cfg->{$zone."default"};
  }
  return \%attributes;
 }
