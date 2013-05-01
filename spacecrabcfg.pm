@@ -32,7 +32,7 @@ our @EXPORT = qw(config);
 	     #id constraints
                 "maxfnamelen" => 32,
                 #"nodepattern" => qr/^($storyprefix\w+)($storysuffix)?$/, 
-                "nodepattern" => qr/^($nameparts->{"storyprefix"})(\w+)($nameparts->{"storysuffix"})?$/, 
+                "nodepattern" => qr/^(($nameparts->{"storyprefix"})(\w+))($nameparts->{"storysuffix"})?$/, 
                         #begins with one or more digits,
                         #optionally followed by .node
                         #but nothing else before ending

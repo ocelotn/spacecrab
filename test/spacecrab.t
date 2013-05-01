@@ -4,7 +4,8 @@ use warnings;
 
 use lib qw(.);
 
-use Test::More tests => 10;
+use Test::More tests => 17;
+use Test::Exception;
 #use Test::Differences;
 use spacecrabcfg;
 use spacecrab;
@@ -40,6 +41,24 @@ sub dirlist {
 
 
 #spacecrab pm
+#       getcleannodeno
+#		normal conditions
+        ok(SpaceCrab::getCleanNodeno('node4a3bq') eq 'node4a3bq', "getCleanNode handles valid node");
+        ok(SpaceCrab::getCleanNodeno('node2.node') eq 'node2', "getCleanNode handles node with suffix - DWIM");
+#		problem conditions
+        ok(!defined SpaceCrab::getCleanNodeno(), "getCleanNode handles lack of args");
+        ok(!defined SpaceCrab::getCleanNodeno(''), "getCleanNode handles empty string");
+	ok(!defined SpaceCrab::getCleanNodeno('2.node'), "getCleanNode handles invalide node - no prefix");
+	ok(!defined SpaceCrab::getCleanNodeno('nodeasdflkajfd10980qw0ersdfjlasdfasdfasdfasdfsdfasdfasdfasdfasdfasdfasdfasdf'), "getCleanNode handles invalid node - overlong");
+	ok(!defined SpaceCrab::getCleanNodeno('node2\\3f45'), "getCleanNode handles invalid node - bad chars");
+
+#	grabSnippet
+#		normal conditions
+	ok(defined SpaceCrab::grabSnippet($cfg->{"storypath"}.'node1.node'), "grabSnippet returns");
+	ok(SpaceCrab::grabSnippet($cfg->{"storypath"}.'nodeminimal.node') eq snarfFile($cfg->{"storypath"}.'nodeminimal.node'), "grabSnippet returns file requested");
+#		error conditions
+	ok(SpaceCrab::grabSnippet("boguspath") eq $cfg->{"text400"}, "returns standard error content on nonexistant path");	
+
 # 	parsenode 
 	my $minimalnodetext = '<div class="story" mg="MG2e"><p> text <a href="" dest1="node2">choice</a></p></div>';	
 	my $images = SpaceCrab::parseNode($minimalnodetext);
@@ -47,6 +66,13 @@ sub dirlist {
 	ok(defined $images && ref($images) eq "HASH", "parsenode returns a hashref from a valid node text");
 	ok('FG1' eq $images->{"fg"}, "parsenode returns the default image where none is specified");
 	ok('MG2e' eq $images->{"mg"}, "parsenode returns the specified image where one is specified");
+
+#	grabNode
+#		normal conditions
+
+#	getPage
+
+
 
 #spacecrab web tests - only works for features pushed to test server! 
 
