@@ -7,6 +7,7 @@ use lib qw(.);
 use Test::More tests => 9;
 #use Test::Differences;
 use spacecrabcfg;
+use spacecrab;
 use File::Slurp;
 use LWP::Simple;
 my $cfg= spacecrabcfg::config();
@@ -37,7 +38,17 @@ sub dirlist {
 # use visual inspection to validate css and header/content changes
 # then rung testdataGen.pl 
 
-#spacecrab pl
+
+#spacecrab pm
+# 	parsenode
+	my $minimalnodetext = '<div class="story" mg="MG2"><p> text <a href="" dest1="node2">choice</a></p></div>';	
+	my $images = SpaceCrab::parseNode($minimalnodetext);
+	
+	ok(defined $images && ref($images) eq "HASH", "parsenode returns a hashref from a valid node text");
+	ok('FG1' eq $images->{"fg"}, "parsenode returns the default image where none is specified");
+
+
+#spacecrab web tests - only works for features pushed to test server! 
 
 #normal conditions
 

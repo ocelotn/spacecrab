@@ -40,11 +40,13 @@ sub grabSnippet{
 
 sub parseNode{
  my $dom = Mojo::DOM->new(shift);
- my $div = $dom->find('div[class"story"]');
+ my $div = $dom->find('div[class="story"]');
  my %attributes;
- $images{"fg"} = $dom->pluck('fg'):$cfg->{"fgdefault"};
- $images{"mg"} = $dom->pluck('mg'):$cfg->{"mgdefault"};
- $images{"bg"} = $dom->pluck('bg'):$cfg->{"bgdefault"};
+ my @zones = ('fg','mg','bg');
+ foreach my $zone (@zones) {
+    my $val = $div->first()->attrs($zone);
+    $attributes{$zone} = $val eq ''?$cfg->{$zone."default"}:$val; 
+ }
  return \%attributes;
 }
 
@@ -61,20 +63,20 @@ sub grabNode{
 
 sub getPage {
    my $nodeno = $_[1];
-   #add boilerplate
+   #   add boilerplate
    my $page;
    #   add header
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"headername"});
-   #   get content
+   #get content
    my $nodetext = grabNode($nodeno);
-        my $images = parseNode($nodetext);   
+   my $images = parseNode($nodetext);   
    #   add story
    $page.=grabNode($nodeno);
-   #   add images
-   $page.='</div><div class="scene"><img src="images/"';
-   $page.=$images->{"bg"};
-   $page.='"/><img src="images/"'.$images->{"mg"};
-   $page.='"/><img src="images/".$images->{"fg"}.'"/>';
+   #i   add images
+   $page.='</div><div class="scene">';
+   $page.='<img src="images/'.$images->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
+   $page.='<img src="images/'.$images->{"mg"}.$cfg->{"imgsuffix"}.'"/>';
+   $page.='<img src="images/'.$images->{"fg"}.$cfg->{"imgsuffix"}.'"/>';
    #   add footer
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"footername"});
    

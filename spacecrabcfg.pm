@@ -1,4 +1,3 @@
-#!/usr/bin/perl -wT
 use strict;
 package spacecrabcfg;
 our $VERSION = '1.01';
@@ -7,14 +6,12 @@ our @EXPORT = qw(config);
 
 	my $nameparts = {
 	  "storysuffix" => '.node',
-	  "imagesuffix" => '.png',
+	  "imgsuffix" => '.png',
 	  "storyprefix" => 'node',
 	  "foregroundprefix" => 'FG',
           "midgroundprefix" => 'MG',
-	  "backgroundprefix" => 'BG'
-	};
+	  "backgroundprefix" => 'BG',
 
-	my $paths = {
             #basic paths
 		"storypath" => "testdata/story/",
                 "boilerplatepath" => "boilerplate/",
@@ -43,12 +40,12 @@ our @EXPORT = qw(config);
                 "text400" => '<div class="story"><p>Hmm...That node isn\'t on our scanners.  Maybe it fell into a black hole?</p></div>',
 	     #default files
 		"startnode" => "node1",	
-                "fgdefault" => "FG1.png",
-                "mgdefault" => "MG1.png",
-                "bgdefault" => "BG1.png"
+                "fgdefault" => "FG1",
+                "mgdefault" => "MG1",
+                "bgdefault" => "BG1"
 	};
 	
-	my %cfg= (%$paths, %$defaults, %$nameparts); 
+	my %cfg= (%$nameparts, %$defaults); 
 
 	sub config {
 		return \%cfg;
