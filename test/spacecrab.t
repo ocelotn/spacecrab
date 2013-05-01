@@ -4,9 +4,10 @@ use warnings;
 
 use lib qw(.);
 
-use Test::More tests => 9;
+use Test::More tests => 10;
 #use Test::Differences;
 use spacecrabcfg;
+use spacecrab;
 use File::Slurp;
 use LWP::Simple;
 my $cfg= spacecrabcfg::config();
@@ -37,27 +38,38 @@ sub dirlist {
 # use visual inspection to validate css and header/content changes
 # then rung testdataGen.pl 
 
-#spacecrab pl
 
-#normal conditions
+#spacecrab pm
+# 	parsenode 
+	my $minimalnodetext = '<div class="story" mg="MG2e"><p> text <a href="" dest1="node2">choice</a></p></div>';	
+	my $images = SpaceCrab::parseNode($minimalnodetext);
+	
+	ok(defined $images && ref($images) eq "HASH", "parsenode returns a hashref from a valid node text");
+	ok('FG1' eq $images->{"fg"}, "parsenode returns the default image where none is specified");
+	ok('MG2e' eq $images->{"mg"}, "parsenode returns the specified image where one is specified");
+
+#spacecrab web tests - only works for features pushed to test server! 
+
+#normal conditions 
 
 	ok(snarfFile($cfg->{"testdata"}."combined_nodes/".$cfg->{"startnode"}.".html") 
 		eq getWebContent(""), 
 		"web srvr returns node ".$cfg->{"startnode"}." if no node specified"
 	); #default case is correct case and handled and server returns valid page
 	
-	ok(snarfFile($cfg->{"testdata"}."combined_nodes/0.html") 
-		eq getWebContent(0), 
-		"web srvr handles node spec 0"
-	); #spacecrab is not confused by bool value of node id 0
-	
-	ok(snarfFile($cfg->{"testdata"}."combined_nodes/1.html") 
-		eq getWebContent(1), 
-		"web srvr handles node spec 1"
-	); #spacecrab is not confused by bool value of node id 1
+	#TEST NOT RELEVANT UNDER CURRENT NODESPEC - RESTORE IF USING PURE NUMERIC
+	#ok(snarfFile($cfg->{"testdata"}."combined_nodes/0.html") 
+	#	eq getWebContent(0), 
+	#	"web srvr handles node spec 0"
+	#); #spacecrab is not confused by bool value of node id 0
+        #	
+	#ok(snarfFile($cfg->{"testdata"}."combined_nodes/1.html") 
+	#	eq getWebContent(1), 
+	#	"web srvr handles node spec 1"
+	#); #spacecrab is not confused by bool value of node id 1
 		
-	ok(snarfFile($cfg->{"testdata"}."combined_nodes/1.html") 
-		eq getWebContent("1".$cfg->{"storysuffix"}), 
+	ok(snarfFile($cfg->{"testdata"}."combined_nodes/node2.html") 
+		eq getWebContent("node2".$cfg->{"storysuffix"}), 
 		"srvr DWIM w/ node spec w/ terminal ".$cfg->{"storysuffix"}
 	); #spacecrab DWIM when handed a node file name isntead of a node id
 
