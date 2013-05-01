@@ -68,4 +68,33 @@ function showDiv()
 
 		//available preview
 		//http://jsfiddle.net/petko_james/nDMFG/3/
+
+function saveSys()
+{
+if(typeof(Storage)!=="undefined")
+  	{
+	// Saves data in testVar
+	        localStorage.setItem('save', copier());
+	}
+	// If browser dont support it, then can't save
+	else
+	  {
+	//If tacking on, probably ignore it or something since it can't save anyways
+			alert("Sorry, your browser does not support web storage");
+	  }
+}
+
+function loadSys()
+{
+//Checks if there is a save called save
+if(localStorage.getItem("save") != null)
+  	{
+	// Loads data from variable save and replaces the body
+		document.body.innerHTML = localStorage.getItem("save");
+  	}
+	// If browser dont support it, then can't save/load
+else
+  {
+		alert("Sorry, no saves detected");
+  }
 		
