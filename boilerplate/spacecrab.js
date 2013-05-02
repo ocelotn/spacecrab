@@ -130,7 +130,10 @@ function builder($start)
 //Append just adds the body, might be a more efficient way to add this in
 //Load loads data, figure out how to integrate from the loader backend
 	$(document.getElementById("accordion")).append('<h[$start]></h[$start]><div><p></p></div>');
-	$("p").load("http://space-crab.com/ .story");
+
+//Loads data parsed from the .story in the spacecrabmeat into p
+	$("p").load("http://test.space-crab.com/spacecrabmeat.pl? .story");
+
 
 //Reloads the accordion after all this work has been done
 	$('#accordion').accordion("refresh");
