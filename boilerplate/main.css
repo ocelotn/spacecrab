@@ -6,4 +6,11 @@ div.story {text-align: left; float: left; clear: right; background-color: #FFFFF
 .header {width: 100%; float: left; clear: left; background-color: #FFAA00;max-width: 580px; padding 10px; clear: right;}
 #footer {width: 100%; float: left; clear: left;}
 
+/*To resize the accordion*/
+#accordion-resizer {
+padding: 10px;
+width: 600px;
+height: 100%;
+}
+
 
