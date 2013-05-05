@@ -39,6 +39,9 @@ sub grabSnippet{
 }
 
 sub parseNode{
+	#takes a wodge of xml/html
+	#returns a hash of image zone attributes
+	#and the text itself with first pass choice paths set
  
 	 my %attributes;
 	 
@@ -71,10 +74,22 @@ sub parseNode{
 }
 
 sub grabImageLinks{
-   my $images = parseNode(shift);
-   my $links = '<img src="images/'.$images->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
+   #takes either a hash reference of pre-parsed node text
+   #or a scalar of node text
+   #returns the default or specified images for the node
+   #as a scene div scalar
+   
+   #make sure we have the attributes from parsed node text
+   my $images = shift;
+   if (ref($images) ne 'HASH'){
+   	$images = parseNode(grabNode($images)); 
+   }
+
+   my $links='</div><div class="scene">';
+   $links = '<img src="images/'.$images->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
    $links.='<img src="images/'.$images->{"mg"}.$cfg->{"imgsuffix"}.'"/>';
    $links.='<img src="images/'.$images->{"fg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links.='</div>';
    return $links;
 }
 
@@ -82,7 +97,7 @@ sub grabNode{
    #takes and cleans a node id
    #returns contents of a valid node 
    #returns the error div if node is invalid
-   my $nodeno = pop;
+   my $nodeno = shift;
    $nodeno = getCleanNodeno($nodeno);
    return (defined $nodeno)?
       grabSnippet($cfg->{"storypath"}.$nodeno.$cfg->{"storysuffix"}):
@@ -98,8 +113,7 @@ sub getPage {
    #get content
    my $nodestuff = parseNode(grabNode($nodeno));
    $page.=$nodestuff->{'story'};
-   $page.='</div><div class="scene">';
-   $page.=grabImageLinks($nodestuff->{'story'});
+   $page.=grabImageLinks($nodestuff);
    #   add footer
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"footername"});
    
