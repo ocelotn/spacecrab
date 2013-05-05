@@ -7,24 +7,41 @@ use LWP::Simple;
 my $cfg = spacecrabcfg::config();
 
 sub getNodePage {
-my $node = shift;
-if (!defined $node) { die "No node specified!  What should I retrieve?";}
+#   pull the web page corresponding to a given node
+#	 takes a node name
+#	 returns the server response as a string
 
-open (my $fh, ">", "$node.html") or die "argh"; 
-my $url = $cfg->{"baseurl"}.$cfg->{"spacecrab"}."?".$node;
-my $wnode= get($url) or die "cannot retrieve $url!"; 
-print $fh $wnode;
+   my $node = shift;
+   if (!defined $node) { die "No node specified!  What should I retrieve?";}
+   
+   my $url = $cfg->{"baseurl"}.$cfg->{"spacecrab"}."?".$node;
+   my $wnode= get($url) or die "cannot retrieve $url!"; 
+   
+   open (FH, ">", "$node.html") or die "argh"; 
+   print FH $wnode;
+   close FH;
+
 }
 
 sub getDirList { 
-	opendir (DH, $cfg->{"storypath"}) or die "cannot read story path";
-	my @dirlist = map {my $node = $_; $node=~s/\.node//; $node;} grep {!/^\./}  readdir(DH);
-	close DH;
-	return \@dirlist;
+#   get a directly listing - takes a path, 
+#   returns an array of file names exluding dot files
+
+   opendir (DH, $cfg->{"storypath"}) or die "cannot read story path";
+   #   snarf the directory 
+   #   grep out any files beginning with .
+   #   strip off the file suffix to leave a list of node ids
+   my @dirlist = map {my $node = $_; $node=~s/\.node//; $node;} grep {!/^\./}  readdir(DH);
+   close DH;
+   return \@dirlist;
 } 
+
+#   if webpagegrabber was called with an argument just grab that page
+#   otherwise, grab all the nodes from the default web server and service 
 
 my $node = shift;
 if (!defined $node){
+	print "Getting all known nodes from ".$cfg->{"baseurl"}.$cfg->{"spacecrab"}."\n";
 	my $dirlist = getDirList();
 	foreach my $rawnode(@$dirlist){
 		getNodePage($rawnode);
@@ -32,3 +49,6 @@ if (!defined $node){
 } else {
 	getNodePage($node);
 }
+
+0
+
