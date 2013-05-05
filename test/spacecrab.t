@@ -69,8 +69,10 @@ sub dirlist {
 
 #	grabNode
 #		normal conditions
-
+#		error conditions
 #	getPage
+#		normal conditions
+#		error conditions
 
 
 

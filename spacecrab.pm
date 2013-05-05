@@ -39,19 +39,43 @@ sub grabSnippet{
 }
 
 sub parseNode{
- my $dom = Mojo::DOM->new(shift);
- my $div = $dom->find('div[class="story"]');
- my %attributes;
- my @zones = ('fg','mg','bg');
- foreach my $zone (@zones) {
-    my $val = $div->first()->attrs($zone);
-    #   supply defaults & validate filename
-    $attributes{$zone} = ( 
-        #length($val) >= $cfg->{"maxfnamelen"} && 
-        $val=~ $cfg->{"imgpattern"}
-    )? $val:$cfg->{$zone."default"};
- }
- return \%attributes;
+ 
+	 my %attributes;
+	 
+	 my $dom = Mojo::DOM->new(shift);
+	 my $div = $dom->at('div[class="story"]');
+	 
+	 my @zones = ('fg','mg','bg');
+	 foreach my $zone (@zones) {
+		#   get any image attributes for the div
+		my $vals = $div->attrs($zone);
+		#   supply defaults & validate filename
+		$attributes{$zone} = ( 
+			$vals=~ $cfg->{"imgpattern"}
+		)? $vals:$cfg->{$zone."default"};
+	 }
+	
+	 $div->find('a')->map(sub{
+		my $choice = $_; 
+		#$attributes{'href'} = $cfg->{'baseurl'}.
+		$attributes{'href'} = 'spacecrab.pl?';
+		if ($choice->attrs('data-dest2')){
+		   $attributes{'href'} .= $choice->attrs('data-dest2');
+		} else {
+		   $attributes{'href'} .= $choice->attrs('data-dest1');
+		}
+		   $choice->{'href'} = $attributes{'href'};
+	 });
+	 $attributes{'story'} = $div->to_xml;
+	 return \%attributes;
+}
+
+sub grabImageLinks{
+   my $images = parseNode(shift);
+   my $links = '<img src="images/'.$images->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links.='<img src="images/'.$images->{"mg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links.='<img src="images/'.$images->{"fg"}.$cfg->{"imgsuffix"}.'"/>';
+   return $links;
 }
 
 sub grabNode{
@@ -72,15 +96,10 @@ sub getPage {
    #   add header
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"headername"});
    #get content
-   my $nodetext = grabNode($nodeno);
-   my $images = parseNode($nodetext);   
-   #   add story
-   $page.=grabNode($nodeno);
-   #i   add images
+   my $nodestuff = parseNode(grabNode($nodeno));
+   $page.=$nodestuff->{'story'};
    $page.='</div><div class="scene">';
-   $page.='<img src="images/'.$images->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
-   $page.='<img src="images/'.$images->{"mg"}.$cfg->{"imgsuffix"}.'"/>';
-   $page.='<img src="images/'.$images->{"fg"}.$cfg->{"imgsuffix"}.'"/>';
+   $page.=grabImageLinks($nodestuff->{'story'});
    #   add footer
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"footername"});
    
