@@ -20,7 +20,6 @@ sub getNodePage {
    open (FH, ">", "$node.html") or die "argh"; 
    print FH $wnode;
    close FH;
-
 }
 
 sub getDirList { 

@@ -1,7 +1,0 @@
-use Test::Simple;
-use lib qw(.);
-use spacecrabcfg;
-
-use lib qw(utils/storymapper/);
-use storyparser;
-
