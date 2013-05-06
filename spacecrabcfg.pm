@@ -22,7 +22,7 @@ our @EXPORT = qw(config);
                 "spacecrab" => "spacecrab.pl",
                 "spacecrabmeat" => "spacecrabmeat.pl",
 	    #default files
-	       "startnode" => "node1",	
+	       "startnode" => "1",	
                "fgdefault" => "FG1",
                "mgdefault" => "MG1",
                "bgdefault" => "BG1"
@@ -32,7 +32,8 @@ our @EXPORT = qw(config);
 	     #id constraints
                 "maxfnamelen" => 32,
                 #"nodepattern" => qr/^($storyprefix\w+)($storysuffix)?$/, 
-                "nodepattern" => qr/^(($nameparts->{"storyprefix"})(\w+))($nameparts->{"storysuffix"})?$/, 
+                #"nodepattern" => qr/^((nameparts->{"storyprefix"})?(\w+))($nameparts->{"storysuffix"})?$/, 
+                "nodepattern" => qr/^(\w+)($nameparts->{"storysuffix"})?$/, 
                         #begins with one or more digits,
                         #optionally followed by .node
                         #but nothing else before ending

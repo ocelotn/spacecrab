@@ -6,29 +6,16 @@ use File::Slurp;
 use Mojo::DOM;
 use lib('.');
 use spacecrabcfg;
+package StoryParser;
 
    #SETUP
    my $cfg = spacecrabcfg::config();
-   my $storyfile = "story.txt";
    
 sub snarfFile {
    my $file = shift;
       my $nodetext = "";
       $nodetext .= File::Slurp::read_file($cfg->{"storypath"}.$file);
       return $nodetext;
-}
-
-sub getFirstLine{
-#   my $firsttext = shift->at('div[class="story"] *:not(div)');
-   my $firsttext = shift->at('div[class="story"] p|h1|h2|h3|h4|li');
-   
-   my $firstline;
-   if ($firsttext) {
-      $firstline = substr $firsttext->text, 0, 50;
-   } else {
-      $firstline = "Cannot find a first line. Node may be skeletal."
-   }
-   return $firstline;
 }
 
 sub asFiles{
@@ -41,9 +28,13 @@ sub asFiles{
    }
 }
 
+sub error{
+	print shift."\n";
+}
 
 sub parseOutNodes{
    my $output = shift;
+   my $storyfile = "story.txt";
 
    #grab the text
    my $nodetext = snarfFile($storyfile); 
@@ -61,18 +52,17 @@ sub parseOutNodes{
             $nodehash{$nodeno} = $nodediv;
          } else {
             error("Invalid node id for story node "
-              .getFirstLine($nodediv)."\n");
+              .getFirstLine($nodediv));
          } 
       } else { 
-         error("No node id for story node ".getFirstLine($nodediv)."\n");
+         error("No node id for story node ".getFirstLine($nodediv));
       }
    }
    return \%nodehash;
 }
 
 sub main {
- my $nodehashref = parseOutNodes(snarfFile($storyfile)); 
- return $nodehashref;
+	return praseOutNodes();
 }
 
 1
