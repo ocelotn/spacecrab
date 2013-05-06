@@ -2,9 +2,59 @@ body {background-image:url('../testdata/images/TestImage.png');
 /*background-size:cover;*/
 }
 /*Fits text into the white area*/
-div.story {text-align: left; float: left; clear: right; background-color: #FFFFFF; max-width: 580px; clear: left; height: 100%; padding 10px;}
-.header {width: 100%; float: left; clear: left; background-color: #FFAA00;max-width: 580px; padding 10px; clear: right;}
-#footer {width: 100%; float: left; clear: left;}
+div.story {
+	text-align: left;
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;	
+	color: #b0aeb0;
+	clear: right; 
+	background-color: #000; 
+	max-width: 580px; 
+	clear: left; 
+	height: 100%; 
+	padding: 20px;
+	overflow: scroll;}
+	
+.header {
+	text-align: center;
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+	color: #5e2359;
+	width: 100%; 
+	clear: right; 
+	max-width: 580px; 
+	padding: 10px; 
+	border-color: #60225b;
+	border-width: thick;
+
+/* IE10 */ 
+background-image: -ms-linear-gradient(top left, #000000 0%, #1D4539 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top left, #000000 0%, #1D4539 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top left, #000000 0%, #1D4539 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #000000), color-stop(1, #1D4539));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top left, #000000 0%, #1D4539 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom right, #000000 0%, #1D4539 100%);}
+
+
+.image{
+	float: right;
+	background-image: ('../testdata/images/TestImage.png');
+	clear: left;
+	clear: right;
+	padding: 10px;
+}
+
+#footer {width: 100%; 
+	float: left; 
+	clear: left;}	
 
 /*To resize the accordion*/
 #accordion-resizer {
