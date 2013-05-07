@@ -1,1 +1,1 @@
-<div class="story" fg="FG1"><p>Some text<a href="" dest1="node1">choice</a></div>
+<div class="story" fg="FGminim"><p>Some text<a data-dest1id="node1">choice</a></div>', "returns DWIM contents for valid, prefixed and suffixed node

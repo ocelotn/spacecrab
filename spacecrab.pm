@@ -18,7 +18,7 @@ sub getCleanNodeno{
    #sanity checks it for length and matching a defined node id pattern
    #returns the node id scalar for node ids that appear valid
    #returns undefined for node ids that appear bogus
-   my $nodename = shift; #get first parameter as name to clean
+   my $nodename = pop; #get first parameter as name to clean
    if (length($nodename) >= $cfg->{"maxfnamelen"}) {
       return;
    } else { 
@@ -78,30 +78,52 @@ sub grabImageLinks{
    #or a scalar of node text
    #returns the default or specified images for the node
    #as a scene div scalar
+   my $nodeproperties = pop;
    
-   #make sure we have the attributes from parsed node text
-   my $images = getCleanNodeno(pop);
-   if (ref($images) ne 'HASH'){
-   	$images = parseNode(grabNode($images)); 
+   #If this the text has already been parsed, just use that
+   #otherwise get it and parse it first
+   if (ref($nodeproperties) ne 'HASH' || !defined ref($nodeproperties)){
+   	$nodeproperties = grabNodeData($nodeproperties); 
    }
-
+   
+   #assemble the image div
    my $links='</div><div class="scene">';
-   $links .= '<img src="images/'.$images->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
-   $links.='<img src="images/'.$images->{"mg"}.$cfg->{"imgsuffix"}.'"/>';
-   $links.='<img src="images/'.$images->{"fg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links .= '<img src="images/'.$nodeproperties->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links.='<img src="images/'.$nodeproperties->{"mg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links.='<img src="images/'.$nodeproperties->{"fg"}.$cfg->{"imgsuffix"}.'"/>';
    $links.='</div>';
+   
+   #return it
    return $links;
+}
+
+sub grabNodeData{
+	#requires a node id
+	#returns a hash of the link infused story and image files for the node
+   my $nodeno = getCleanNodeno(pop);
+   if ($nodeno){ #current format does not allow node id of 0
+	   my $contents = grabSnippet(
+	      $cfg->{"storypath"}.
+	      $nodeno.$cfg->{"storysuffix"}
+	   );
+	   return parseNode($contents);
+	} else {
+		return {
+			'story'=>$cfg->{'text400'}, 
+			'fg'=> $cfg->{'fgdefault'}, 
+			'mg'=> $cfg->{'mgdefault'}, 
+			'bg'=>$cfg->{'bgdefault'}
+		};
+	}
 }
 
 sub grabNode{
    #takes and cleans a node id
    #returns contents of a valid node 
    #returns the error div if node is invalid
-   my $nodeno = pop;
-   $nodeno = getCleanNodeno($nodeno);
-   if (defined $nodeno){
-    my $contents = grabSnippet($cfg->{"storypath"}.$nodeno.$cfg->{"storysuffix"});
-    return parseNode($contents)->{"story"};
+   my $contents = grabNodeData(pop);
+   if (defined $contents->{'story'} && $contents->{'story'} ne ''){
+   	return $contents->{'story'};
    } else {return $cfg->{"text400"};}
 }
 

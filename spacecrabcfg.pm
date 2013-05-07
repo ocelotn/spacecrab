@@ -44,7 +44,7 @@ our @EXPORT = qw(config);
 			#optionally followed by an image file suffix
 			#but nothing else before the end
              #player visible strings
-		"text400" => '<div class="story"><p>Hmm...That node isn\'t on our scanners.  Maybe it fell into a black hole?</p></div>',
+		"text400" => '<div class="story"><p>Hmm...That node isn&#39;t on our scanners.  Maybe it fell into a black hole?</p></div>',
 	};
 	
 	my %cfg= (%$nameparts, %$patternsnstrings); 
