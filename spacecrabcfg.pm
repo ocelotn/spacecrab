@@ -22,7 +22,7 @@ our @EXPORT = qw(config);
                 "spacecrab" => "spacecrab.pl",
                 "spacecrabmeat" => "spacecrabmeat.pl",
 	    #default files
-	       "startnode" => "1",	
+	       "startnode" => "node1",	
                "fgdefault" => "FG1",
                "mgdefault" => "MG1",
                "bgdefault" => "BG1"
