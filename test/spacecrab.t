@@ -116,8 +116,6 @@ sub dirlist {
 #check for html validity
 #check for matching sample output
 #		error conditions
-
-exit;
 	
 #spacecrab web tests - only works for features pushed to test server! 
 

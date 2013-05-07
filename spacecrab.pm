@@ -101,19 +101,20 @@ sub grabNodeData{
 	#requires a node id
 	#returns a hash of the link infused story and image files for the node
    my $nodeno = getCleanNodeno(pop);
-   if ($nodeno){ #current format does not allow node id of 0
+   if (defined $nodeno){ #current format does not allow node id of 0
 	   my $contents = grabSnippet(
 	      $cfg->{"storypath"}.
 	      $nodeno.$cfg->{"storysuffix"}
 	   );
 	   return parseNode($contents);
 	} else {
-		return {
+		  my %defaults = (
 			'story'=>$cfg->{'text400'}, 
 			'fg'=> $cfg->{'fgdefault'}, 
 			'mg'=> $cfg->{'mgdefault'}, 
 			'bg'=>$cfg->{'bgdefault'}
-		};
+			);
+		  return \%defaults;
 	}
 }
 
@@ -121,7 +122,10 @@ sub grabNode{
    #takes and cleans a node id
    #returns contents of a valid node 
    #returns the error div if node is invalid
-   my $contents = grabNodeData(pop);
+   my $contents = pop;
+   if (ref($contents) ne 'HASH' || !defined ref($contents)){
+   	$contents = grabNodeData($contents); 
+   }
    if (defined $contents->{'story'} && $contents->{'story'} ne ''){
    	return $contents->{'story'};
    } else {return $cfg->{"text400"};}
@@ -134,8 +138,9 @@ sub getPage {
    #   add header
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"headername"});
    #	get content
-   $page.=grabNode($nodeno);
-   $page.=grabImageLinks($nodeno);
+   my $nodeData = grabNodeData($nodeno);
+   $page.=grabNode($nodeData);
+   $page.=grabImageLinks($nodeData);
    #   add footer
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"footername"});
    
