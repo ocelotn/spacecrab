@@ -47,8 +47,8 @@ sub dirlist {
 #		normal conditions
         ok(SpaceCrab::getCleanNodeno('node4a3bq') eq 'node4a3bq', "getCleanNode handles valid node");
         ok(SpaceCrab::getCleanNodeno('node2.node') eq 'node2', "getCleanNode handles node with suffix - DWIM");
-	ok(!defined SpaceCrab::getCleanNodeno('2'), "getCleanNode handles node - no prefix, no suffix");
 #		problem conditions
+	ok(!defined SpaceCrab::getCleanNodeno('2'), "getCleanNode handles node - no prefix, no suffix");
         ok(!defined SpaceCrab::getCleanNodeno(), "getCleanNode handles lack of args");
         ok(!defined SpaceCrab::getCleanNodeno(''), "getCleanNode handles empty string");
 	ok(!defined SpaceCrab::getCleanNodeno('nodeasdflkajfd10980qw0ersdfjlasdfasdfasdfasdfsdfasdfasdfasdfasdfasdfasdfasdf'), "getCleanNode handles invalid node - overlong");
@@ -62,18 +62,22 @@ sub dirlist {
 	ok(SpaceCrab::grabSnippet("boguspath") eq $cfg->{"text400"}, "returns standard error content on nonexistant path");	
 
 # 	parsenode 
-	my $minimalnodetext = '<div class="story" mg="MG2e"><p> text <a href="" data-dest1="node2">choice</a></p></div>';	
+	my $minimalnodetext = '<div class="story" mg="MG2e"><p> text <a href="" data-dest1id="node2">choice</a></p></div>';	
 	my $attribs = SpaceCrab::parseNode($minimalnodetext);
 	
 	ok(defined $attribs && ref($attribs) eq "HASH", "parsenode returns a hashref from a valid node text");
 	ok('FG1' eq $attribs->{"fg"}, "parsenode returns the default image where none is specified");
 	ok('MG2e' eq $attribs->{"mg"}, "parsenode returns the specified image where one is specified");
-	
 	ok($attribs->{'href'} eq 'spacecrab.pl?node2', "parsenode returns stripped down node link for dest1");
-	$minimalnodetext = '<div class="story" mg="MG2e"><p> text <a href="" data-dest2="node2.node">choice</a></p></div>';	
+
+	$minimalnodetext = '<div class="story" mg="MG2e"><p> text <a href="" data-dest1id="node1" data-dest2id="node2.node">choice</a></p></div>';	
 	$attribs = SpaceCrab::parseNode($minimalnodetext);
 	
-	ok($attribs->{'href'} eq 'spacecrab.pl?node2', "parsenode returns stripped down node linke for dest1 - handle previous format");
+
+###### TEMPORARY - REPLACE WHEN WE HAVE RANDOMIZER ######
+###Behaviour with randomizer installed undetermined#####
+	ok($attribs->{'href'} eq 'spacecrab.pl?node2', "parsenode returns stripped down node link for dest2 - handle node suffix");
+
 
 #	grabNode
 #		normal conditions
@@ -84,6 +88,7 @@ sub dirlist {
 	ok(SpaceCrab::grabNode('\\\\109283712347254JHSDF.123489') eq $cfg->{"text400"}, "Tidy error for blatantly bogus node id");
 	ok(SpaceCrab::grabNode('nodebogon') eq $cfg->{"text400"}, "Tidy error for plausible but nonexistant node");
 	
+exit;
 #	getPage
 #		normal conditions
 	ok(length(SpaceCrab::getPage('node2')) == 1753, "get page for valid node returns a string");
@@ -91,7 +96,6 @@ sub dirlist {
 	print Text::Diff::diff(\(SpaceCrab::getPage('node2')), $cfg->{'testdata'}.'story/node2.node');
 #		error conditions
 
-exit;
 
 #spacecrab web tests - only works for features pushed to test server! 
 

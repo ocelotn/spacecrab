@@ -62,10 +62,10 @@ sub parseNode{
 		my $choice = $_; 
 		#$attributes{'href'} = $cfg->{'baseurl'}.
 		$attributes{'href'} = 'spacecrab.pl?';
-		if ($choice->attrs('data-dest2')){
-		   $attributes{'href'} .= getCleanNodeno($choice->attrs('data-dest2'));
+		if ($choice->attrs('data-dest2id') ne ''){
+		   $attributes{'href'} .= getCleanNodeno($choice->attrs('data-dest2id'));
 		} else {
-		   $attributes{'href'} .= getCleanNodeno($choice->attrs('data-dest1'));
+		   $attributes{'href'} .= getCleanNodeno($choice->attrs('data-dest1id'));
 		}
 		   $choice->{'href'} = $attributes{'href'};
 	 });
@@ -80,7 +80,7 @@ sub grabImageLinks{
    #as a scene div scalar
    
    #make sure we have the attributes from parsed node text
-   my $images = pop;
+   my $images = getCleanNodeno(pop);
    if (ref($images) ne 'HASH'){
    	$images = parseNode(grabNode($images)); 
    }
@@ -99,21 +99,21 @@ sub grabNode{
    #returns the error div if node is invalid
    my $nodeno = pop;
    $nodeno = getCleanNodeno($nodeno);
-   return (defined $nodeno)?
-      grabSnippet($cfg->{"storypath"}.$nodeno.$cfg->{"storysuffix"}):
-      $cfg->{"text400"};
+   if (defined $nodeno){
+    my $contents = grabSnippet($cfg->{"storypath"}.$nodeno.$cfg->{"storysuffix"});
+    return parseNode($contents)->{"story"};
+   } else {return $cfg->{"text400"};}
 }
 
 sub getPage {
-   my $nodeno = pop;
+   my $nodeno = getCleanNodeno(pop);
    #   add boilerplate
    my $page;
    #   add header
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"headername"});
-   #get content
-   my $nodestuff = parseNode(grabNode($nodeno));
-   $page.=$nodestuff->{'story'};
-   $page.=grabImageLinks($nodestuff);
+   #	get content
+   $page.=grabNode($nodeno);
+   $page.=grabImageLinks($nodeno);
    #   add footer
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"footername"});
    
