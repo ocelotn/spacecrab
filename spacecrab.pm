@@ -73,30 +73,6 @@ sub parseNode{
 	 return \%attributes;
 }
 
-sub grabImageLinks{
-   #takes either a hash reference of pre-parsed node text
-   #or a scalar of node text
-   #returns the default or specified images for the node
-   #as a scene div scalar
-   my $nodeproperties = pop;
-   
-   #If this the text has already been parsed, just use that
-   #otherwise get it and parse it first
-   if (ref($nodeproperties) ne 'HASH' || !defined ref($nodeproperties)){
-   	$nodeproperties = grabNodeData($nodeproperties); 
-   }
-   
-   #assemble the image div
-   my $links='</div><div class="scene">';
-   $links .= '<img src="images/'.$nodeproperties->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
-   $links.='<img src="images/'.$nodeproperties->{"mg"}.$cfg->{"imgsuffix"}.'"/>';
-   $links.='<img src="images/'.$nodeproperties->{"fg"}.$cfg->{"imgsuffix"}.'"/>';
-   $links.='</div>';
-   
-   #return it
-   return $links;
-}
-
 sub grabNodeData{
 	#requires a node id
 	#returns a hash of the link infused story and image files for the node
@@ -118,29 +94,58 @@ sub grabNodeData{
 	}
 }
 
+sub generateImageLinks {
+   #takes mandatory a hash reference of pre-parsed node text
+   #returns the default or specified images for the node
+   #as a scene div scalar
+   my $nodeproperties = shift;
+   
+   #assemble the image div
+   my $links='</div><div class="scene">';
+   $links .= '<img src="images/'.$nodeproperties->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links.='<img src="images/'.$nodeproperties->{"mg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links.='<img src="images/'.$nodeproperties->{"fg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links.='</div>';
+   
+   #return it
+   return $links;
+}
+
+sub grabImageLinks{
+   #takes a node id
+   #returns the default or specified images for the node
+   #as a scene div scalar
+   my $nodeData = grabNodeData(pop);
+   return generateImageLinks($nodeData);
+}
+
+sub storyText {
+	#takes mandatory hash ref of pre-parsed node text
+	#returns story div scalar
+	my $nodeproperties = shift;
+	return $nodeproperties->{'story'};
+}
+
 sub grabNode{
    #takes and cleans a node id
    #returns contents of a valid node 
    #returns the error div if node is invalid
-   my $contents = pop;
-   if (ref($contents) ne 'HASH' || !defined ref($contents)){
-   	$contents = grabNodeData($contents); 
-   }
+   my $contents = grabNodeData(pop); 
    if (defined $contents->{'story'} && $contents->{'story'} ne ''){
    	return $contents->{'story'};
    } else {return $cfg->{"text400"};}
 }
 
 sub getPage {
-   my $nodeno = getCleanNodeno(pop);
+   my $nodeno = pop;
    #   add boilerplate
    my $page;
    #   add header
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"headername"});
    #	get content
    my $nodeData = grabNodeData($nodeno);
-   $page.=grabNode($nodeData);
-   $page.=grabImageLinks($nodeData);
+   $page.=storyText($nodeData);
+   $page.=generateImageLinks($nodeData);
    #   add footer
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"footername"});
    

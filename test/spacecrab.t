@@ -111,8 +111,9 @@ sub dirlist {
 
 #	getPage
 #		normal conditions
-	ok(length(SpaceCrab::getPage('nodeminimal')) == 1058, "get page for valid node returns a string of correct length");
+	ok(length(SpaceCrab::getPage('nodeminimal')) == 1058, "get page for valid node returns a string of correct length for nodeminimal");
 	ok(SpaceCrab::getPage('nodeminimal') eq snarfFile($cfg->{'testdata'}.'story/nodeminimal.local'), "get page for valid node returns correct page");
+
 #check for html validity
 #check for matching sample output
 #		error conditions
@@ -163,5 +164,3 @@ sub dirlist {
 	
 	#eq_or_diff snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html"), getWebContent("a2"), "testing node 1";
 	
-	
-
