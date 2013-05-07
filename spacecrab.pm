@@ -63,9 +63,9 @@ sub parseNode{
 		#$attributes{'href'} = $cfg->{'baseurl'}.
 		$attributes{'href'} = 'spacecrab.pl?';
 		if ($choice->attrs('data-dest2')){
-		   $attributes{'href'} .= $choice->attrs('data-dest2');
+		   $attributes{'href'} .= getCleanNodeno($choice->attrs('data-dest2'));
 		} else {
-		   $attributes{'href'} .= $choice->attrs('data-dest1');
+		   $attributes{'href'} .= getCleanNodeno($choice->attrs('data-dest1'));
 		}
 		   $choice->{'href'} = $attributes{'href'};
 	 });
@@ -80,13 +80,13 @@ sub grabImageLinks{
    #as a scene div scalar
    
    #make sure we have the attributes from parsed node text
-   my $images = shift;
+   my $images = pop;
    if (ref($images) ne 'HASH'){
    	$images = parseNode(grabNode($images)); 
    }
 
    my $links='</div><div class="scene">';
-   $links = '<img src="images/'.$images->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
+   $links .= '<img src="images/'.$images->{"bg"}.$cfg->{"imgsuffix"}.'"/>';
    $links.='<img src="images/'.$images->{"mg"}.$cfg->{"imgsuffix"}.'"/>';
    $links.='<img src="images/'.$images->{"fg"}.$cfg->{"imgsuffix"}.'"/>';
    $links.='</div>';
@@ -97,7 +97,7 @@ sub grabNode{
    #takes and cleans a node id
    #returns contents of a valid node 
    #returns the error div if node is invalid
-   my $nodeno = shift;
+   my $nodeno = pop;
    $nodeno = getCleanNodeno($nodeno);
    return (defined $nodeno)?
       grabSnippet($cfg->{"storypath"}.$nodeno.$cfg->{"storysuffix"}):
@@ -105,7 +105,7 @@ sub grabNode{
 }
 
 sub getPage {
-   my $nodeno = $_[1];
+   my $nodeno = pop;
    #   add boilerplate
    my $page;
    #   add header

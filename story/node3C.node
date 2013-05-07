@@ -7,7 +7,7 @@
 
 <p>How long can you hold your breath?</p>
 
-<a data-dest1="3C1.node">You can hold your breath for 20 seconds, give or take.<br />
-<a data-dest1="3C2.node">You can hold your breath for 3 minutes.  You&#39;ve got training -- Space Crab Army training.<br />
-<a data-dest1="3C3.node"> You&#39;re a space crab!  You can hold your breath all day.<br />
+<a data-dest1id="node3C1">You can hold your breath for 20 seconds, give or take.<br />
+<a data-dest1id="node3C2">You can hold your breath for 3 minutes.  You&#39;ve got training -- Space Crab Army training.<br />
+<a data-dest1id="node3C3"> You&#39;re a space crab!  You can hold your breath all day.<br />
 </a></a></a></div>

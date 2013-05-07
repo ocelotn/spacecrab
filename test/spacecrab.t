@@ -4,9 +4,11 @@ use warnings;
 
 use lib qw(.);
 
-use Test::More tests => 17;
+use Test::More tests => 25;
 use Test::Exception;
+use Text::Diff;
 #use Test::Differences;
+#use WebService::Validator::HTML::W3C
 use spacecrabcfg;
 use spacecrab;
 use File::Slurp;
@@ -45,10 +47,10 @@ sub dirlist {
 #		normal conditions
         ok(SpaceCrab::getCleanNodeno('node4a3bq') eq 'node4a3bq', "getCleanNode handles valid node");
         ok(SpaceCrab::getCleanNodeno('node2.node') eq 'node2', "getCleanNode handles node with suffix - DWIM");
+	ok(!defined SpaceCrab::getCleanNodeno('2'), "getCleanNode handles node - no prefix, no suffix");
 #		problem conditions
         ok(!defined SpaceCrab::getCleanNodeno(), "getCleanNode handles lack of args");
         ok(!defined SpaceCrab::getCleanNodeno(''), "getCleanNode handles empty string");
-	ok(!defined SpaceCrab::getCleanNodeno('2.node'), "getCleanNode handles invalide node - no prefix");
 	ok(!defined SpaceCrab::getCleanNodeno('nodeasdflkajfd10980qw0ersdfjlasdfasdfasdfasdfsdfasdfasdfasdfasdfasdfasdfasdf'), "getCleanNode handles invalid node - overlong");
 	ok(!defined SpaceCrab::getCleanNodeno('node2\\3f45'), "getCleanNode handles invalid node - bad chars");
 
@@ -60,21 +62,36 @@ sub dirlist {
 	ok(SpaceCrab::grabSnippet("boguspath") eq $cfg->{"text400"}, "returns standard error content on nonexistant path");	
 
 # 	parsenode 
-	my $minimalnodetext = '<div class="story" mg="MG2e"><p> text <a href="" dest1="node2">choice</a></p></div>';	
-	my $images = SpaceCrab::parseNode($minimalnodetext);
+	my $minimalnodetext = '<div class="story" mg="MG2e"><p> text <a href="" data-dest1="node2">choice</a></p></div>';	
+	my $attribs = SpaceCrab::parseNode($minimalnodetext);
 	
-	ok(defined $images && ref($images) eq "HASH", "parsenode returns a hashref from a valid node text");
-	ok('FG1' eq $images->{"fg"}, "parsenode returns the default image where none is specified");
-	ok('MG2e' eq $images->{"mg"}, "parsenode returns the specified image where one is specified");
+	ok(defined $attribs && ref($attribs) eq "HASH", "parsenode returns a hashref from a valid node text");
+	ok('FG1' eq $attribs->{"fg"}, "parsenode returns the default image where none is specified");
+	ok('MG2e' eq $attribs->{"mg"}, "parsenode returns the specified image where one is specified");
+	
+	ok($attribs->{'href'} eq 'spacecrab.pl?node2', "parsenode returns stripped down node link for dest1");
+	$minimalnodetext = '<div class="story" mg="MG2e"><p> text <a href="" data-dest2="node2.node">choice</a></p></div>';	
+	$attribs = SpaceCrab::parseNode($minimalnodetext);
+	
+	ok($attribs->{'href'} eq 'spacecrab.pl?node2', "parsenode returns stripped down node linke for dest1 - handle previous format");
 
 #	grabNode
 #		normal conditions
+	ok(snarfFile($cfg->{'testdata'}.'story/nodeminimal.node'), "returns node contents for valid (prefixed) node");
+	ok(SpaceCrab::grabNode('nodeminimal') eq snarfFile($cfg->{'testdata'}.'story/nodeminimal.node'), "returns DWIM contents for valid, prefixed and suffixed node");
 #		error conditions
+	ok(SpaceCrab::grabNode('minimal') eq $cfg->{"text400"}, "Tidy error for bare node number");
+	ok(SpaceCrab::grabNode('\\\\109283712347254JHSDF.123489') eq $cfg->{"text400"}, "Tidy error for blatantly bogus node id");
+	ok(SpaceCrab::grabNode('nodebogon') eq $cfg->{"text400"}, "Tidy error for plausible but nonexistant node");
+	
 #	getPage
 #		normal conditions
+	ok(length(SpaceCrab::getPage('node2')) == 1753, "get page for valid node returns a string");
+	
+	print Text::Diff::diff(\(SpaceCrab::getPage('node2')), $cfg->{'testdata'}.'story/node2.node');
 #		error conditions
 
-
+exit;
 
 #spacecrab web tests - only works for features pushed to test server! 
 
@@ -129,3 +146,4 @@ sub dirlist {
 		eq getWebContent('\ ;\\\')(*&)@#($*&@(#$"'), 
 		"web srvr handles invalid fname with correct error - rubbish"
 	); #invalid ID condition
+
