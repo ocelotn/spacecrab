@@ -24,16 +24,18 @@ use GraphViz;
 
 	#SETUP
 	#path variables
-	my $nodepath = "../testdata/story";
-	my $nodefilenamepat = qr/(.*)\.node$/;
+	my $nodepath = "../../testdata/story";
+	my $nodefilenamepat = qr/(.*)\.node?$/;
 	my $dirmarker = "/";
 	
 sub getFileSpec {
 	opendir(DH, shift) or die "couldn't open $nodepath for listing";
-	my @files = readdir(DH);
+	my @files = grep {!/^\./} readdir(DH);
 	closedir(DH);
-	
-	return grep {!/^\./} @files; 
+
+	@files = grep {/node\w*\.node/} @files;
+
+	return @files;	
 	#ret. all files whose names do not begin with a dot
 }
 
@@ -66,9 +68,9 @@ sub getFirstLine{
 sub main {
 	#SETUP
 	#attribute names
-	my $uribase = "http://hills.ccsf.edu/~lortizde/spacecrab.pl?";
-	my $d1 = "data-dest1";
-	my $d2 = "data-dest2";
+	my $uribase = "http://test.space-crab.com/spacecrab.pl?";
+	my $d1 = "data-dest1id";
+	my $d2 = "data-dest2id";
 	my $deps = "data-ifvisited";
 	my $thresh = "threshold";
 	my $threshmax = 100;
@@ -113,14 +115,15 @@ sub main {
 		$graph->add_node($nodeno, label=>$nodeno.":".$firstline, tooltip=>"Node ".$nodeno);
 
 	#map edges out of the node
-		$dom->find('a[class="choice"]')->each(sub{
+#		$dom->find('a[class="choice"]')->each(sub{
+		$dom->find('a')->each(sub{
 	
 		my $choicetext = $_->text;
 		my @attributes  = $_->attrs;
 		
 		foreach my $choice ($_->attrs){
 			#if it's a direct URL, just add a direct edge
-			if ($choice->{"href"} ne ""){
+			if (defined $choice->{"href"} and $choice->{"href"} ne ""){
 				$choice->{"href"} =~/(.*)\.node/;
 				$graph->add_edge(
 					$nodeno => $1, 
@@ -131,7 +134,7 @@ sub main {
 			#then map edges from that
 				my $forkid = $nodeno.",";
 				$forkid.=$choice->{$d1}.",";
-				$forkid.=$choice->{$d2};
+				if ($choice->{$d2}){$forkid.=$choice->{$d2};}
 				$graph->add_node(
 					$forkid,
 					shape=>"point"
@@ -146,7 +149,7 @@ sub main {
 					tooltip=>$forkid.":".$choicetext);
 
 				my $threshval = ($choice->{$thresh})?$choice->{$thresh}:"";
-				my $d1chance = $threshmax-$threshval;
+				my $d1chance = ($threshval ne '')? $threshmax-$threshval : 0.50;
 				my $d2chance = $threshval;
 				my $depsval =   ($choice->{$deps})  ?$choice->{$deps}  :"";
 				
@@ -177,6 +180,6 @@ sub main {
 	print $graph->as_svg;
 
 }
-#	main();
+	main();
 
 1
