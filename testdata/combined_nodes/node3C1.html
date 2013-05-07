@@ -3,14 +3,20 @@
 <head>
 <title>The Perilous Adventures of a Reluctant Space Crab</title>
 <link rel="stylesheet" type="text/css" href="boilerplate/main.css"> 
+<script src="jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="jquery-ui.css" />
+<script src="jquery-ui.js"></script>
 <script language="JavaScript" src="boilerplate/spacecrab.js"></script>
 </head>
 <body>
 <div class="header">
+<button onclick="saveSys()" type="button">Save</button>
+<button onclick="loadSys()" type="button">Load</button>
 <h1>If you turn into a space crab...</h1>
 <h2>well, that's bad</h2>
 <h3>a gamestory</h3>
 </div>
+<div id="accordion-resizer" class="ui-widget-content">
 <div id="storywrapper">
 
 <div class="story" id="node3C1">
@@ -19,7 +25,8 @@
 <p>Well, that&#39;s not nearly long enough.  You pass out; the space octopus extracts you from the Cockleshell and shovels you into its maw.</p>
 
 THE END.
-</div></div>
+</div></div><div class="scene"><img src="images/BG1.png"/><img src="images/MG1.png"/><img src="images/FG1.png"/></div></div>
+</div>
 <div id="footer">
 <form action="spacecrab.pl?0">
 <p> <input type="submit" value="Start over"> </p>

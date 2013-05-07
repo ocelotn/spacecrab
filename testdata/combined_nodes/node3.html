@@ -3,14 +3,20 @@
 <head>
 <title>The Perilous Adventures of a Reluctant Space Crab</title>
 <link rel="stylesheet" type="text/css" href="boilerplate/main.css"> 
+<script src="jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="jquery-ui.css" />
+<script src="jquery-ui.js"></script>
 <script language="JavaScript" src="boilerplate/spacecrab.js"></script>
 </head>
 <body>
 <div class="header">
+<button onclick="saveSys()" type="button">Save</button>
+<button onclick="loadSys()" type="button">Load</button>
 <h1>If you turn into a space crab...</h1>
 <h2>well, that's bad</h2>
 <h3>a gamestory</h3>
 </div>
+<div id="accordion-resizer" class="ui-widget-content">
 <div id="storywrapper">
 
 <div class="story" id="node3">
@@ -18,10 +24,11 @@
 
 <p>The sparkling green and blue colors fill more of the sky as your ship glides nearer to it.  A blue star, perhaps...?  Not uncommon, really, but...no, no, there&#39;s too much green for that.  And the sparkling is truly odd.  Toggling the telescoping lenses in the underside of the ship, you try to get a closer look at the surface of the thing—assuming it has a surface.  Peering at the telescope&#39;s display screen, you see that it <i>is</i> solid, at least.  Circular indentations covering the object.  Craters?  Drained lakes? </p>
 
-<p>You&#39;ll have to <a data-dest1="3A.node">get closer</a> if you want to find out more.  If there are hostile inhabitants on or near the object, however--and it <i>does</i> looks large enough for a minor space station--they might detect you.  You probably ought to <a data-dest1="3B.node">turn around now</a>; one little Cockleshell 2600 can&#39;t handle much space fighting.</p>
+<p>You&#39;ll have to <a data-dest1id="node3A" href="spacecrab.pl?node3A">get closer</a> if you want to find out more.  If there are hostile inhabitants on or near the object, however--and it <i>does</i> looks large enough for a minor space station--they might detect you.  You probably ought to <a data-dest1id="node3B" href="spacecrab.pl?node3B">turn around now</a>; one little Cockleshell 2600 can&#39;t handle much space fighting.</p>
 
-<p>Pondering your situation, you notice the dashboard clock.  Hey, it&#39;s lunchtime!  Surely there&#39;s time for <a data-dest1="3C.node">a nice coral polyp and algae sandwich</a> before making any big decisions!  Your stomach rumbles meaningfully.</p>
-</div></div>
+<p>Pondering your situation, you notice the dashboard clock.  Hey, it&#39;s lunchtime!  Surely there&#39;s time for <a data-dest1id="node3C" href="spacecrab.pl?node3C">a nice coral polyp and algae sandwich</a> before making any big decisions!  Your stomach rumbles meaningfully.</p>
+</div></div><div class="scene"><img src="images/BG1.png"/><img src="images/MG1.png"/><img src="images/FG1.png"/></div></div>
+</div>
 <div id="footer">
 <form action="spacecrab.pl?0">
 <p> <input type="submit" value="Start over"> </p>

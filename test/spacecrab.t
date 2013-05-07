@@ -4,10 +4,10 @@ use warnings;
 
 use lib qw(.);
 
-use Test::More tests => 36;
+use Test::More tests => 42;
 use Test::Exception;
 use Text::Diff;
-#use Test::Differences;
+use Test::Differences;
 #use WebService::Validator::HTML::W3C
 use spacecrabcfg;
 use spacecrab;
@@ -143,31 +143,25 @@ sub dirlist {
 	); #spacecrab DWIM when handed a node file name isntead of a node id
 
 #error conditions
-
-	ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
-		eq getWebContent(12345690), 
-		"web srvr handles missing file with correct error"
-	); #spacecrab gives correct error on non-existent but valid id
-	
-	ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
-		eq getWebContent("somestring"), 
-		"handles invalid fname with error - string"
-	); #invalid ID condition
 	
 	ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
 		eq getWebContent("a2"), 
 		"handles invalid fname with error - w/o node prefix"
 	); #invalid ID condition
-	
-	#eq_or_diff snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html"), getWebContent("a2"), "testing node 1";
-	
+	ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
+		eq getWebContent("node\\\/bogonchar"), 
+		"handles invalid fname with error - invalid char"
+	); #invalid ID condition
 	ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
 		eq getWebContent("abcdefghijklmnopqrstuvwxyz1234567890"), 
 		"web srvr handles invalid fname with correct error - length"
 	); #invalid ID condition
-	
 	ok(snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html") 
 		eq getWebContent('\ ;\\\')(*&)@#($*&@(#$"'), 
 		"web srvr handles invalid fname with correct error - rubbish"
 	); #invalid ID condition
+	
+	#eq_or_diff snarfFile($cfg->{"testdata"}."combined_nodes/bogus.html"), getWebContent("a2"), "testing node 1";
+	
+	
 
