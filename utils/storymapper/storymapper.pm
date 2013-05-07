@@ -25,7 +25,7 @@ use GraphViz;
 	#SETUP
 	#path variables
 	my $nodepath = "../../testdata/story";
-	my $nodefilenamepat = qr/(.*)\.node?$/;
+	my $nodefilenamepat = qr/(.*)\.node$/;
 	my $dirmarker = "/";
 	
 sub getFileSpec {
@@ -104,11 +104,15 @@ sub main {
 	
 		#allowing empty nodetext to map possible stub files
 		my $nodetext = snarfFile($file); 
-		
 		my $dom = Mojo::DOM->new->parse($nodetext);
 
-		my $nodeno = getNodeFromFileName($file);
-		if ($nodeno eq '') {die "Can't get nodeno from filename $file.";}
+		my  $div = $dom->at("div.story"); #assumes only one story/file
+										#do a find and foreach otherwise
+		my $nodeno = $div->{'id'};
+		unless ($nodeno) {next;}
+				
+#		my $nodeno = getNodeFromFileName($file);
+#		if ($nodeno eq '') {die "Can't get nodeno from filename $file.";}
 #		elsif ($nodeno eq "-1"){print "Node is not parseable from $file."; die;}
 
 		my $firstline = getFirstLine($dom);
@@ -116,22 +120,14 @@ sub main {
 
 	#map edges out of the node
 #		$dom->find('a[class="choice"]')->each(sub{
-		$dom->find('a')->each(sub{
+		$div->find('a')->each(sub{
 	
 		my $choicetext = $_->text;
 		my @attributes  = $_->attrs;
 		
 		foreach my $choice ($_->attrs){
-			#if it's a direct URL, just add a direct edge
-			if (defined $choice->{"href"} and $choice->{"href"} ne ""){
-				$choice->{"href"} =~/(.*)\.node/;
-				$graph->add_edge(
-					$nodeno => $1, 
-					,head_url => $uribase.$1, tooltip=>$nodeno.",".$1.":".$choicetext
-				);
-			} else {
-			#otherwise create a subnode to represent the fork
-			#then map edges from that
+			if (defined $choice->{$d1} && defined $choice->{$d2}){
+			#if it's a forked URL create a subnode for the fork then map from that
 				my $forkid = $nodeno.",";
 				$forkid.=$choice->{$d1}.",";
 				if ($choice->{$d2}){$forkid.=$choice->{$d2};}
@@ -141,10 +137,8 @@ sub main {
 					, url=>$uribase.$nodeno, tooltip=>$nodeno.":".$choicetext
 				);
 				#my $forkid = $graph->add_node(shape=>"point");
-				
-
 				$graph->add_edge(
-					$nodeno=>$forkid, 
+					$nodeno=>$forkid,
 					tail_url=>$uribase.$nodeno,
 					tooltip=>$forkid.":".$choicetext);
 
@@ -152,7 +146,6 @@ sub main {
 				my $d1chance = ($threshval ne '')? $threshmax-$threshval : 0.50;
 				my $d2chance = $threshval;
 				my $depsval =   ($choice->{$deps})  ?$choice->{$deps}  :"";
-				
 				
 				if($choice->{$d1}){
 					$graph->add_edge(
@@ -172,6 +165,13 @@ sub main {
 						, tooltip=>$forkid.":".$choicetext
 					)
 				}
+			} else {
+			#if it's a direct URL, just add a direct edge
+				$choice->{$d1} =~/(.*)(\.node)?/;
+				$graph->add_edge(
+					$nodeno => $1, 
+					,head_url => $uribase.$1, tooltip=>$nodeno.",".$1.":".$choicetext
+				);	
 			}
 		}
 	});
