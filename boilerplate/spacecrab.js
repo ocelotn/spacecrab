@@ -107,3 +107,7 @@ else
   }
 }		
 
+function startOver()
+{
+$(document).load('spacecrab.pl?0')
+}		
