@@ -109,5 +109,5 @@ else
 
 function startOver()
 {
-$(document).load('spacecrab.pl?0')
+document.load('spacecrab.pl?0');
 }		
