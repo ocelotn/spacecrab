@@ -80,16 +80,14 @@ function copier()
 function saveSys()
 {
 //Checks if browser supports this type of save
-//Maybe consider figuring out how to deal with cookies version
 if(typeof(Storage)!=="undefined")
   	{
-	// Saves data in testVar
-	        localStorage.setItem('save', copier());
+	// Saves data in save
+	        sessionStorage.setItem('save', copier());
 	}
 	// If browser dont support it, then can't save
 	else
 	  {
-	//If tacking on, probably ignore it or something since it can't save anyways
 			alert("Sorry, your browser does not support web storage");
 	  }
 }
@@ -100,7 +98,7 @@ function loadSys()
 if(localStorage.getItem('save') != null)
   	{
 	// Loads data from variable save and replaces the body
-		document.body.innerHTML = localStorage.getItem("save");
+		document.body.innerHTML = sessionStorage.getItem("save");
   	}
 	// If browser dont support it, then can't save/load
 else
