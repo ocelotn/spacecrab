@@ -93,6 +93,13 @@ sub getFirstLine{
    }
    return $firstline;
 }
+sub checkforEnd{
+	my $div = shift;
+	#if the div text ends in THE END
+	#possibly followed by a dot, whitespace or 
+	#a closing tag, return true else false
+	return ($div->text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
+}
 
 sub getGraph{   
    #create the graph
@@ -127,7 +134,7 @@ sub addStoryNode{
             
       $graph->add_node(
          $nodeno, 
-         label=>$nodeno.":".$firstline, 
+         label=>$nodeno.":\n".$firstline, 
          tooltip=>"Node ".$nodeno
       );
       return $nodeno;
@@ -208,34 +215,42 @@ sub main {
       if ($div) {
          #map edges out of the node
       #      $dom->find('a[class="choice"]')->each(sub{
-            $div->find('a')->each(sub{
-         
-            my $choicetext = $_->text;
-            my @attributes  = $_->attrs;
-            
-            foreach my $choice ($_->attrs){
-               if (defined $choice->{$d1} && defined $choice->{$d2}){
-                  addForkedEdge(
-                     $graph, 
-                     $nodeno, 
-                     $choice->{$d1},
-                     $choice->{$d2},  
-                     $choicetext);
-               } else {
-               #if it's a direct URL, just add a direct edge
-               addStraightEdge($graph, $nodeno, $choice->{$d1}, $choicetext);
-               }
-            }
-         });
-         if ($div->{'fg'}){
-           #addStraightEdge($graph,$nodeno, $div->{'fg'}, "image: ".$div->{'fg'});
-           addImage($graph, $nodeno, $div->{'fg'});
-         }
-#         if ($attribs->{'mg'}){add_edge();}
-#         if ($attribs->{'bg'}){add_edge();}
+      my $links =  $div->find('a');
+	  if (defined $links && $links->size > 0){
+		  $links->each(sub{
+			 
+				my $choicetext = $_->text;
+				my @attributes  = $_->attrs;
+				
+				foreach my $choice ($_->attrs){
+				   if (defined $choice->{$d1} && defined $choice->{$d2}){
+					  addForkedEdge(
+						 $graph, 
+						 $nodeno, 
+						 $choice->{$d1},
+						 $choice->{$d2},  
+						 $choicetext);
+				   } else {
+				   #if it's a direct URL, just add a direct edge
+				   addStraightEdge($graph, $nodeno, $choice->{$d1}, $choicetext);
+				   }
+				}
+			 });
+			 if ($div->{'fg'}){
+			   #addStraightEdge($graph,$nodeno, $div->{'fg'}, "image: ".$div->{'fg'});
+			   addImage($graph, $nodeno, $div->{'fg'});
+			 }
+	#         if ($attribs->{'mg'}){add_edge();}
+	#         if ($attribs->{'bg'}){add_edge();}
+		  } else { 
+		  	if (checkforEnd($div)){
+		  		$graph->add_node($nodeno, fillcolor=>'gray');
+	      	} else {
+	      		$graph->add_node($nodeno, color=>'red');
+	      	}
+	      }
+   		}
       }
-   }
-   
    
    print $graph->as_svg;
 
