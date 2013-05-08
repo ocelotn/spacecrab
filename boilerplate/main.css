@@ -12,9 +12,7 @@ div.story {
 	clear: left; 
 	height: 100%; 
 	padding: 20px;
-	overflow: scroll;
-	a:link {color:#c960c1;}
-	}
+	overflow: scroll;}
 	
 .header {
 	text-align: center;
