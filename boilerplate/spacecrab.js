@@ -73,11 +73,6 @@ else
 }
 
 /*
-
-           on_load -> find all the <a> inside div[class="story"] and for each link,
-               -  if there is a data_dest2 then, if there is also a data_dest1, pick one of the two and set href inside that link to point to 
-			   "spacecrab.pl?nodeID"  where nodeID is the id of the destination that your code selected.
-
 			TODO:
 			@JimPetko
 			implement coinflips at loadtime to start, then try to use AJAX to intercept onclick and flip coin and direct them to resulting destination. 
@@ -91,20 +86,23 @@ else
 */
 
 
-//detects forks in the choices and redirects to random choice. 
-$function()
+//detects forks in the choices and redirects to random choice.
+alert("js is being called correctly");
+ 
+$function forkedChoice()
 {
-	for ('a' : '.story'){		
-		if ('a').find('data-dest2id')
-		{
-			var result = Math.floor(Math.random()*1);	//generates either 1 or 0.
-			if(result == 1){
-				('a').attr("href", "spacecrab.pl?" + data-dest2id);
+	alert("function has been called =)");
+    for (thing in $('a.story[data-dest2]')){		
+		var result = Math.floor(Math.random()*2);	//generates either 1 or 0.
+		alert("result = " + result);
+		
+		if(result == 1){
+			$(thing).attr("href", "spacecrab.pl?" + data-dest2);
+			alert("result = " + result);			
+			else
+			{
+				alert("result != 1 ");
 			}
-		}
-		else
-		{
-			('a').attr("href", "spacecrab.pl?" + data-dest1id);
 		}
 	}
 }
@@ -115,6 +113,6 @@ function coinflip(int flipCount)
 	while (flipCount!=0)
 	{
 		flipCount--;
-		return Math.floor(Math.random()*1);
+		return Math.floor(Math.random()*2);
 	}
 }
