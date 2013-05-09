@@ -86,9 +86,12 @@ else
 */
 
 
-//detects forks in the choices and redirects to random choice. 
+//detects forks in the choices and redirects to random choice.
+alert("js is being called correctly");
+ 
 $function()
 {
+	alert("function has been called =)");
 	for (thing in $('a.story')){		
 		if $(thing.find('data-dest2'))
 		{
