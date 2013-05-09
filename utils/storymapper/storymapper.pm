@@ -134,13 +134,13 @@ sub addStoryNode{
       elsif ($nodeno eq "-1"){print "Node is not parseable from $file."; die;}
       $firstline = "Node file exists but appears empty.";
    }
-   my $tooltip;# = $div->all_text;
-   unless ($tooltip) {$tooltip = "Empty node?";}
-   
+ 	my $tooltip = $div->children()->first->text;
+ 	$tooltip =~s/[\'\"]//g;
+ 	warn $tooltip;
       $graph->add_node(
          $nodeno, 
          label=>$nodeno.":\n".$firstline, 
-         tooltip=>"Node ".$nodeno.$tooltip
+         tooltip=>"Node ".$nodeno." ".$tooltip
       );
       return $nodeno;
 }
@@ -257,7 +257,7 @@ sub main {
 	      }
    		}
       }
-   
+   warn "done adding nodes\n";
    print $graph->as_svg;
 
 }
