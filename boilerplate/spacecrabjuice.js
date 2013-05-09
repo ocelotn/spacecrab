@@ -52,7 +52,7 @@ saveSys();
 });
 
 //Load button which calls loadsys
-$( "button.save" )
+$( "button.load" )
 .button()
 .click(function() {
 $(this).ready.load('spacecrab.pl?0');
