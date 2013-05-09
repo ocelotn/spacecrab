@@ -32,6 +32,7 @@ function showDiv()
 	} 
 }
 
+/*
 function copier()
 //Copies everything in the body for saving and loading
 {
@@ -39,7 +40,6 @@ function copier()
     return screenCopy;
 }
 
-/*
 function saveSys()
 {
 //Checks if browser supports this type of save

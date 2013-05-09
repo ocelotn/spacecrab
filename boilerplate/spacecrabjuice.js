@@ -24,6 +24,13 @@ $(function()
 );
 });
 
+//Converted copier function to be in jQuery
+$(function copier() 
+{
+	var screenCopy = $('body').clone().html();
+    return screenCopy;
+});
+
 //Converted save function to be in jQuery
 $(function saveSys() 
 {
