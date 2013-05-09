@@ -1,7 +1,7 @@
 ﻿Space Crab: A Saga
 
 1.
-<div class="story" id="node1">
+<div class="story" id="node1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png bg="BG_SpaceCrabQueenPalace.png">
 <p>You're in the ship again, drifting.  </p>
 
 <p>You're supposed to be scouting the sector for crabbers, by order of the Divine Brachyura herself.  Your Cockleshell 2600 is equipped with chelae for pincering at close range, as well as xanthidaen lasers and long-range bombs for space battle.  It wouldn't be much help in a pitched battle, but it should do the trick if you need to beat a hasty retreat and leave some cover-fire in your wake to discourage pursuit.</p>  
@@ -27,7 +27,7 @@ some kind of signal
 
 2. 
 march into that audience hall and tell Divine Brachyura that she's acting like a hermit crab 
-<div class="story" id="node2">
+<div class="story" id="node2" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueenAttack.png bg="BG_SpaceCrabQueenPalace.png">
 <p>You turn your ship around and fly straight back to Brachya, the most beautiful planet in space, and dock your ship at the port nearest the Royal Compound.   After powering down the Cockleshell, you steel yourself and stride through the audience hall doors.  The guards don't stop you; they know you for a loyal servant to Her Divine Crustaceasness, and they casually salute as you stride by. </p>
 
 <p>You march up to the throne, where Divine Brachyura sits on her throne.  It's a sturdy, imposing structure, and Divine Brachyura is a sturdy, imposing crab.  You take a deep breath; you had forgotten she might be in crabform.  Of all your people, only Divine Brachyura has the knack of shifting to crabform at will, and she often spends her public audience time in full crab.  She looks at you expectantly with her gracefully protruding eyeballs, and you clear your throat.</p>
@@ -47,7 +47,7 @@ march into that audience hall and tell Divine Brachyura that she's acting like a
 
 3.
 something sparkles green and blue in the distance
-<div class="story" id="node3">
+<div class="story" id="node3" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusFar.png">
 <p>You shift gears and push a few pertinent buttons, and your ship zips forward.  Once again, you feel thankful that you've got a Cockleshell 2600.  Cockleshells are produced on Emarginata, where they don't insist on sideways motion.  'Natas might be kind of odd, sure, but you'd take one of their forward-motion ships any day of the week.  It might be counterintuitive to say so (and you'd never say it in front of Mother or Father, of course), but it's nice to actually be able to see where you're going.</p>
 
 <p>The sparkling green and blue colors fill more of the sky as your ship glides nearer to it.  A blue star, perhaps...?  Not uncommon, really, but...no, no, there's too much green for that.   Blue starts are undeniably, singularly blue.  And the sparkling is truly odd.  Toggling the telescoping lenses in the underside of the Cockleshell, you try to get a closer look at the surface of the thing—assuming it has a surface.  Peering at the telescope's display screen, you can see that it <i>is</i> solid, at least.  Circular indentations cover the object.  Craters?  Drained lakes? </p>
@@ -64,7 +64,7 @@ a nice coral polyp and algae sandwish
 
 3A. 
 get closer
-<div class="story" id="node3A">
+<div class="story" id="node3A" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
 <p>Your curiosity overwhelms you (and your good sense does not).  You maintain your course toward the sparkling green and blue object and increase your speed.  You've come too far to turn back before finding out what this thing is!  It could be incredible!  It could be spectacular!  If you turn back now, you'll never know.</p>
 
 <p>By the time the ink begins to cover your viewports, you're too close to pull away.  Ah, yes, of course.  A space octopus.  You should have known, really.  The blue and green sparkles were its camouflage, the circular markings were the suction cups on what you now see to be tentacles.  The space octopus  pulls you close, drills into the Cockleshell 2600, and injects poison into the cabin.  As you lose consciousness, you wonder whether being eaten by a space octopus will hurt more or less than being eaten by a crabber would have. </p>
@@ -74,7 +74,7 @@ get closer
 
 3B. 
 turn around now
-<div class="story" id="node3B">
+<div class="story" id="node3B" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
 <p>With a sigh, you turn the ship around and head back the way you've come.  Perhaps you should just go investigate that signal from Verru.  You feel kind of silly—you're probably turning shell and running from a harmless gust of galactic gases—but, after all, there are lots of dangerous things in space.  This sparkly blue and green whatsis could be one of them.</p>
 
 <p>As you punch the buttons to turn the ship around, however, you see that the blue and green sparkle isn't quite as distant as it had been a moment before.  You've stopped moving toward it, so...that can only mean <i>it</i> is now moving towards <i>you</i>!  Glancing down at your computer display, you see confirmation of your suspicions: the blip on your radar that stands for the blue and green whatsis has, over the last few seconds, begun a trajectory toward the Cockleshell 2600.</p>
@@ -93,7 +93,7 @@ turn around now
 
 3
 a nice coral polyp and algae sandwich
-<div class="story" id="node3C">
+<div class="story" id="node3C" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
 <p>Ooh, lunch time!  You put the Cockleshell 2600 in neutral and let it idle, then reach around behind your seat and pull out your lunch pail.  Mother filled it this morning as she does every morning, and you know you'll find some tasty polyps and algae layered into the pound or so of sand.  Tipping the pail up, you empty some sand into your mouth. Yes!  Mmmmm, polyps!  No one packs a lunch like Mother.  You tip the pail up again.</p>
 
 <p>Stomach full, you lean back in your seat and ponder your options.  Soon you're snoring, drifting peacefully in space.</p>
@@ -108,7 +108,7 @@ a nice coral polyp and algae sandwich
 </div>
 	
 3C1.
-<div class="story" id = "node3C1">
+<div class="story" id = "node3C1" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopus.png">
 <p>20 seconds, give or take. </p>
 
 <p>Well, that's not nearly long enough.  You pass out; the space octopus extracts you from the Cockleshell and shovels you into its maw.</p>
@@ -117,7 +117,7 @@ THE END.
 </div>		
 
 3C2.
-<div class="story" id="node3C2">
+<div class="story" id="node3C2"fg="FG_SpaceCrab.png" mg="MG_SpaceOctopus.png">
 <p>3 minutes.  You've got training—Space Crab Army training.</p>
 	
 <p>You nearly turn purple from holding your breath so long, but you manage to program the failing Cockleshell to eject you through the air lock, giving you a nice boost towards home.  Your entry into open space triggers your shapeshifting reflexes, and you immediately shift into crabform.  As far as you can tell, the space octopus doesn't even notice your escape.  Looking back, you see it probing around inside the Cockleshell with two long tentacles.  It looks like a kid with two fingers in the peanut butter without jar. </p>
@@ -140,7 +140,7 @@ THE END.
 <p>You stare back at Divine Brachyura in horror.  She doesn't believe you!  She's not going to send out the Army.  And you are never, ever going to have enough money to leave your parents' house.  There must be <a data-dest1="node3C2A"> something you can say to convince her</a>!  On the other hand...perhaps there isn't.  Perhaps you'd better <a data-dest1="node3C2B">resign yourself to your fate</a>.</p>
 </div>
 3C2A
-<div class="story" id="node3C2A">
+<div class="story" id="node3C2A" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueenAttack.png bg="BG_SpaceCrabQueenPalace.png">
 <p>"This is no fantastic tale," you insist, leaning in toward Divine Brachyura, willing her to understand and believe.  "There are crabbers on Verru, and you must send out the Space Crab Army or else we're all DOOMED!"<p>
 
 <p>You raise your claws over your head, snapping them open and shut as your emotions run wild.  Unsure of your intent, Divine Brachyura takes no chances.  Before you see what's coming, she has raised one massive claw and slammed it down to crush your head.</p>
@@ -151,7 +151,7 @@ THE END.
 </div>
 
 3C2B
-<div class="story" id="node3C2B">
+<div class="story" id="node3C2B" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png bg="BG_SpaceCrabQueenPalace.png">
 <p>You shudder to think you'll be living with your parents for the foreseeable future, but you know it's pointless to argue with Divine Brachyura.  You bow yourself out of her presence, apologizing profusely for bothering her. </p>
 
 <p>On the bright side, most likely the crabbers will come and boil you all soon, and you'll only have to go on living with your parents for a little while.</p>
@@ -160,7 +160,7 @@ THE END.
 </div>
 
 3C3.	
-<div class="story" id="node3C3">
+<div class="story" id="node3C3" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
 <p>You're a space crab!  You can hold your breath all day.  </p>
 
 <p>Yeah, right.  That doesn't even make sense.  You pass out immediately.  The space octopus extracts you from the Cockleshell and shovels you into its maw.</p>
@@ -170,7 +170,7 @@ THE END.
 
 4. 
 some kind of signal
-<div class="story" id="node4">
+<div class="story" id="node4" fg="FG_SpaceCrabShipInterior.png">
 <p>You shift gears and jab a few pertinent buttons, and your ship drifts toward Verru, Sessilia's second moon.  You'd already programmed the Cockleshell to record the signal coming from the dark moon; now you set it to play the signal on the ship's internal speakers. Perhaps you can learn something from it, even if the ship's computer can't decode it.</p>
 
 <p>Orbiting Verru and monitoring the signal, you realize you're sitting in plain view of anyone who might pass by.  Perhaps you should <a data-dest1="node4A">cloak the Cockleshell</a> while you wait for the computer to decipher the signal.  Just as a precaution.</p>
@@ -178,7 +178,7 @@ some kind of signal
 <p>But is it really necessary?  Or would that be the act of a paranoid hermit crab? Everyone knows <a data-dest1="node4B">there's nothing really going on out here</a>.  You wince as the signal playing on the speakers hits a particularly sharp note.  What to do, what to do?</p>
 </div>	
 4A.
-<div class="story" id="node4A">
+<div class="story" id="node4A" fg="FG_SpaceCrabShipInterior.png" mg="MG_CrabberShipFleet.png">
 <p>Safety first!  It only means pushing a button, after all.  You cloak the ship, and it's a damn good thing you did.   Moments after cloaking, you see three ships come blazing toward you; you gape at them as they zip by and disappear into the distance.   Judging by their speed and angle, they've just come from Verru.  You don't recognize the ships, so they're obviously not of crustaceas design.</p> 
 
 <p>What could be happening down there on that little moon?  You stare at it on your screen, as though the view from space is going to tell you anything.  You ought to <a data-dest1="node4A1">fly straight home, tell Divine Brachyura what you've seen, and help her raise the Space Crab Army</a>.  You're just one person in a Cockleshell 2600.  You need reinforcements.</p>
@@ -187,7 +187,7 @@ some kind of signal
 </div>	
 
 4A1
-<div class="story" id="node4A1">
+<div class="story" id="node4A1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png bg="BG_SpaceCrabQueenPalace.png">
 <p>After checking carefully with your ship's scanners to make sure no more crabber vessels are nearby, you speed off toward Brachya.  You plan out what to say to Divine Brachyura, envisioning yourself by her side as she announces that the crabbers have come and the Space Crab Army must arise and defeat the enemy.</p> 
 
 <p>"This young crab," she will proclaim to the gathered masses, "has saved us all, giving us the time to organize and rise up to face the wicked carcinologists!"</p> 
@@ -208,7 +208,7 @@ some kind of signal
 </div>
 
 4A1A
-<div class="story" id="node4A1A">
+<div class="story" id="node4A1A" fg="FG_SpaceCrabShipInterior.png">
 <p>You agree with Divine Brachyura that you must be overtired, and you bow yourself out of her presence.  Then you turn and scuttle for the Cockleshell, climbing inside and taking off before anyone can question you.  None of the dock guards know you've been ordered home, anyway.</p>
 
 <p>You engage the ship's cloaking mechanism and speed back toward Verru.  You put the Cockleshell in orbit around the moon, take a deep breath, and set the ship to eject you into space.  When your body hits the outside air, you immediately undergo the shift into crabform.  As programmed, the ship has lobbed you toward the moon's surface, some few yards distant from where you think the ships are coming and going.  You land near enough to see lights and movement, but far enough that no one detects your presence.  Nice aim, Cockleshell 2600!</p>
@@ -220,7 +220,7 @@ some kind of signal
 <p>Or maybe...no, there's really no other option, here.  You need to <a data-dest1="node4A1A1">scuttle over and take a peek</a>.</p>
 
 4A1A1
-<div class="story" id="node4A1A1">
+<div class="story" id="node4A1A1" fg="FG_SpaceCrabHuman.png" bg="BG_CrabberBase.png">
 <p> Oh, the horror!  Rows and rows of monstrous silver pots, as far as the eye can see.  Dozens of crabbers wander around inside the building, checking the pots, adding a dash of salt here and pepper there, filling ramekins with melted butter.  You've heard all the crabber campfire stories; you know what those pots are for.</p>
 
 <p>You pull yourself together and hold up your claw, recording an image of the room with your wrist device.   No one will be able to deny that the crabbers have landed on Verru.</p>
@@ -228,7 +228,7 @@ some kind of signal
 <p>Now you've got to <a data-dest1="node4A1A1A">get out of here and take the Cockleshell back to Brachya</a>.  To be honest, though, it's tempting to <a data-dest1="node4A1A1B">keep gawking like an idiot</a>.  Crabbers have been legends and scary stories to you until now.  It's hard to tear your eyes away.</p>
 
 4A1A1A
-<div class="story" id="node4A1A1A">
+<div class="story" id="node4A1A1A" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>With the proof safely recorded on your wrist device, you scuttle off into the underbrush. When you've gotten a good distance away from the crabber encampment, you launch yourself back toward the Cockleshell 2600.  Once aboard, you set your destination to Brachya and head home at the highest speed the Cockleshell can handle.</p>
 
 <p>When you finally get back to Brachya, you race to the audience hall and interrupt the councilor speaking to Divine Brachyura.  You're still in crabform; you can't be bothered to wait for the effects of your direct contact with space to wear off.</p>
@@ -243,7 +243,7 @@ some kind of signal
 </div>
 
 4A1A1A1
-<div class="story" id="node4A1A1A1">
+<div class="story" id="node4A1A1A1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>No, that's a terrible idea.  Divine Brachyura doesn't have any patience for impertinence.  You can't possibly confront her directly.  You need to <a data-dest1="node4A1A1A3">give up and go home</a>, or else <a data-dest1="node4A1A1A2">do some sneaking</a>.</p>
 </div>
 v
@@ -382,8 +382,8 @@ v
 
 </div>
 4A1A1A3
-<div class="story" id="node4A1A1A3">
-<p> Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabform—for the change hasn't yet had time to wear off—you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
+<div class="story" id="node4A1A1A3" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
+<p> Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabformófor the change hasn't yet had time to wear offóyou clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
 
 <p>Hopefully, Divine Brachyura and the rest of the Space Crab Army will win the battle against the crabbers.  You savor your tea; if the SCA doesn't succeed, it could be the last cup you ever drink.</p>
 
@@ -392,7 +392,7 @@ v
 
 
 4A1A1B
-<div class="story" id="node4A1A1B">
+<div class="story" id="node4A1A1B" fg="FG_SpaceCrabHuman.png" mg="MG_Crabber.png bg="BG_CrabberBase.png">
 <p>You go on gawking like an idiot for some time, unable to tear your eyes away from what the crabbers are doing inside that horrifying room. </p> 
 
 <p>Well, that was bad idea.  One of the crabbers wandering about outside spots you, sneaks up behind you, and cracks you over the head.  You flap onto your back in the sand, dazed.  He doesn't kill you immediately, of course; you'll taste much fresher if you go into the pot alive.</p>
@@ -400,7 +400,7 @@ v
 <p>THE END.</p>
 </div>
 4A1B
-<div class="story" id="node4A1B">
+<div class="story" id="node4A1B" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabform—for the change hasn't yet had time to wear off—you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
 
 <p>If the crabbers do find Brachya and come to boil you and your family and friends, hopefully you'll have enough time to find Divine Brachyura and tell her you told her so.</p>
@@ -409,7 +409,7 @@ v
 </div>
 
 4A2
-<div class="story id="node4A2">
+<div class="story id="node4A2" fg="FG_SpaceCrabShipInterior.png">
 <p>You're going to have to present Divine Brachyura with evidence that something fishy is going on with Verru, and the only way to do that is to go record some images with your handy wrist device.  You won't actually have wrists when you use it, because you'll be in crabform. You spend a moment pondering this irony, then take yourself firmly in claw.  You're stalling!  There's no time for nervous dithering.  You tap out the proper commands and the Cockleshell sends you flying out through the airlock.  Crabform kicks in immediately, turning you into an independent space-worthy unit, small but hardy.</p>
 
 <p>It doesn't take you long to reach Verru; the Cockleshell lobbed you out of the airlock with force, sending you sailing toward the small moon. As you near the surface, you employ claws and legs to steer yourself to a landing a few yards away from what you've identified as a landing strip.  You want to be close enough that reaching the crabber base won't take an hour, but far enough away that you don't land in the middle of a crabber audience.  You gauge your descent to perfection, of course, and land among scrubby bushes and trees just outside the crabber compound.</p>
@@ -420,13 +420,13 @@ v
 </div>
 
 4B.
-<div class="story" id="node4B">
+<div class="story" id="node4B" fg="FG_SpaceCrabShip.png" mg="MG_CrabberShipFleet.png">
 <p>Cloak?  No way.  There's no one out here!  <I>You're</i> not a paranoid hermit crab.</p>
 
 <p>Wait—what was that?  The Cockleshell's main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they're coming in fast!  They've clearly seen you, and they're not opening a frequency to hail you.  You're under attack; you hesitate, unsure whether to <a data-dest1="node4B1">fight</a> or <a data-dest1="node4B2">flee</a>.</p>
 </div>
 4B1. 
-<div class="story" id="node4B1">
+<div class="story" id="node4B1" mg="MG_CrabberShipFleet.png">
 <p>You raise the ship's shields and prepare to fire your xanthidaen lasers.  You're not going down without a fight!</p>
 
 <p>You are, however, going down, because the Cockleshell 2600 really wasn't made for intense battle, and you <i>are</i> facing three enemy ships.  As their lasers destroy you, you wonder who they are and what they're doing on Verru.</p>
@@ -437,7 +437,7 @@ v
 </div>
 
 4B2.
-<div class="story" id="node4B2">
+<div class="story" id="node4B2" mg="MG_CrabberShipFleet.png">
 <p>There's no way the Cockleshell 2600 can handle a fight against three enemy ships.  You desperately shift gears and send the Cockleshell flying homeward.</p>
 
 <p>Unfortunately, there's also no way the Cockleshell 2600 can outrun three enemy ships, either.  It wasn't build for fighting, it wasn't built for speed...as the enemy ships' lasers destroy you, you wonder what the hell it <i>was</i> built for, anyway.</p>
