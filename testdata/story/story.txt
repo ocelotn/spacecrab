@@ -183,7 +183,7 @@ some kind of signal
 
 <p>What could be happening down there on that little moon?  You stare at it on your screen, as though the view from space is going to tell you anything.  You ought to <a data-dest1="node4A1">fly straight home, tell Divine Brachyura what you've seen, and help her raise the Space Crab Army</a>.  You're just one person in a Cockleshell 2600.  You need reinforcements.</p>
 
-<p>On the other claw, what's the use of returning home without proof that something's going on?  Will Divine Brachyura even believe you, if all you've got is your own statement that you've seen a few ships?  Maybe you should <a data-dest1="node4A2>eject from the Cockleshell and go planetside to explore.</a></p>
+<p>On the other claw, what's the use of returning home without proof that something's going on?  Will Divine Brachyura even believe you, if all you've got is your own statement that you've seen a few ships?  Maybe you should <a data-dest1="node4A2">eject from the Cockleshell and go planetside to explore.</a></p>
 </div>	
 
 4A1
