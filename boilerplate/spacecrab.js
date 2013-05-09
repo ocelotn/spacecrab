@@ -107,8 +107,3 @@ else
 		alert("Sorry, no saves detected");
   }
 }		
-
-function startOver()
-{
-document.load('spacecrab.pl?0');
-}		
