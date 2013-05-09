@@ -47,7 +47,6 @@ function builder($start)
 $( "button.save" )
 .button()
 .click(function() {
-$(this).ready.load('spacecrab.pl?0');
 saveSys();
 });
 
@@ -55,11 +54,12 @@ saveSys();
 $( "button.load" )
 .button()
 .click(function() {
-$(this).ready.load('spacecrab.pl?0');
 loadSys();
 });
 
 //Should restart the game by calling spacecrab.pl?0
 $( "button.startOver" )
 .button()
-.click.load('spacecrab.pl?0');
+.click.(function() {
+$(this).ready.load('spacecrab.pl?0');
+});
