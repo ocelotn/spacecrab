@@ -140,7 +140,7 @@ THE END.
 <p>You stare back at Divine Brachyura in horror.  She doesn't believe you!  She's not going to send out the Army.  And you are never, ever going to have enough money to leave your parents' house.  There must be <a data-dest1="node3C2A"> something you can say to convince her</a>!  On the other hand...perhaps there isn't.  Perhaps you'd better <a data-dest1="node3C2B">resign yourself to your fate</a>.</p>
 </div>
 3C2A
-<div class="story" id="node3C2A" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueenAttack.png bg="BG_SpaceCrabQueenPalace.png">
+<div class="story" id="node3C2A" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueenAttack.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>"This is no fantastic tale," you insist, leaning in toward Divine Brachyura, willing her to understand and believe.  "There are crabbers on Verru, and you must send out the Space Crab Army or else we're all DOOMED!"<p>
 
 <p>You raise your claws over your head, snapping them open and shut as your emotions run wild.  Unsure of your intent, Divine Brachyura takes no chances.  Before you see what's coming, she has raised one massive claw and slammed it down to crush your head.</p>
@@ -394,7 +394,7 @@ v
 
 
 4A1A1B
-<div class="story" id="node4A1A1B" fg="FG_SpaceCrabHuman.png" mg="MG_Crabber.png bg="BG_CrabberBase.png">
+<div class="story" id="node4A1A1B" fg="FG_SpaceCrabHuman.png" mg="MG_Crabber.png" bg="BG_CrabberBase.png">
 <p>You go on gawking like an idiot for some time, unable to tear your eyes away from what the crabbers are doing inside that horrifying room. </p> 
 
 <p>Well, that was bad idea.  One of the crabbers wandering about outside spots you, sneaks up behind you, and cracks you over the head.  You flap onto your back in the sand, dazed.  He doesn't kill you immediately, of course; you'll taste much fresher if you go into the pot alive.</p>
