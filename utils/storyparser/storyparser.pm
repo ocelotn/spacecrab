@@ -34,7 +34,8 @@ sub error{
 
 sub cleantext{
 	my $text = shift;
-	$text =~s/\x{2014}|\x{2013}|\x{8012}/--/g;
+	if($text =~/�/){print "yep\n";} exit;
+#	$text =~s/\x{2014}/\&mdash/--/g;
 	return $text;
 }
 
@@ -44,7 +45,7 @@ sub parseOutNodes{
 
    #grab the text
    my $nodetext = snarfFile($storyfile); 
-   $nodetext = cleantext($storyfile);
+   $nodetext = cleantext($nodetext);
    
    my $dom = Mojo::DOM->new->parse($nodetext);
 
