@@ -60,7 +60,7 @@ loadSys();
 //Should restart the game by calling spacecrab.pl?0
 $( "button.startOver" )
 .button()
-.click.(function() {
+.click(function() {
 //$(this).ready.load('spacecrab.pl?0');
 $(this).ready.load('spacecrab.pl');
 });
