@@ -75,7 +75,7 @@ get closer
 3B. 
 turn around now
 <div class="story" id="node3B" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
-<p>With a sigh, you turn the ship around and head back the way you've come.  Perhaps you should just go investigate that signal from Verru.  You feel kind of silly—you're probably turning shell and running from a harmless gust of galactic gases—but, after all, there are lots of dangerous things in space.  This sparkly blue and green whatsis could be one of them.</p>
+<p>With a sigh, you turn the ship around and head back the way you've come.  Perhaps you should just go investigate that signal from Verru.  You feel kind of sillyâ€”you're probably turning shell and running from a harmless gust of galactic gasesâ€”but, after all, there are lots of dangerous things in space.  This sparkly blue and green whatsis could be one of them.</p>
 
 <p>As you punch the buttons to turn the ship around, however, you see that the blue and green sparkle isn't quite as distant as it had been a moment before.  You've stopped moving toward it, so...that can only mean <i>it</i> is now moving towards <i>you</i>!  Glancing down at your computer display, you see confirmation of your suspicions: the blip on your radar that stands for the blue and green whatsis has, over the last few seconds, begun a trajectory toward the Cockleshell 2600.</p>
 
@@ -118,7 +118,7 @@ THE END.
 
 3C2.
 <div class="story" id="node3C2"fg="FG_SpaceCrab.png" mg="MG_SpaceOctopus.png">
-<p>3 minutes.  You've got training—Space Crab Army training.</p>
+<p>3 minutes.  You've got trainingâ€”Space Crab Army training.</p>
 	
 <p>You nearly turn purple from holding your breath so long, but you manage to program the failing Cockleshell to eject you through the air lock, giving you a nice boost towards home.  Your entry into open space triggers your shapeshifting reflexes, and you immediately shift into crabform.  As far as you can tell, the space octopus doesn't even notice your escape.  Looking back, you see it probing around inside the Cockleshell with two long tentacles.  It looks like a kid with two fingers in the peanut butter without jar. </p>
 
@@ -298,7 +298,7 @@ deathstarfish
 </div>
 4A1A1A3
 <div class="story" id="node4A1A1A3" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
-<p> Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabform—for the change hasn't yet had time to wear off—you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
+<p> Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabformÃ³for the change hasn't yet had time to wear offÃ³you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
 
 <p>Hopefully, Divine Brachyura and the rest of the Space Crab Army will win the battle against the crabbers.  You savor your tea; if the SCA doesn't succeed, it could be the last cup you ever drink.</p>
 
@@ -316,7 +316,7 @@ deathstarfish
 </div>
 4A1B
 <div class="story" id="node4A1B" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
-<p>Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabform—for the change hasn't yet had time to wear off—you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
+<p>Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabformâ€”for the change hasn't yet had time to wear offâ€”you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
 
 <p>If the crabbers do find Brachya and come to boil you and your family and friends, hopefully you'll have enough time to find Divine Brachyura and tell her you told her so.</p>
 
