@@ -89,17 +89,24 @@ else
 //detects forks in the choices and redirects to random choice. 
 $function()
 {
-	for ('a' : '.story'){		
-		if ('a').find('data-dest2')
+	for (thing in $('a.story')){		
+		if $(thing.find('data-dest2'))
 		{
-			var result = Math.floor(Math.random()*1);	//generates either 1 or 0.
+			var result = Math.floor(Math.random()*2);	//generates either 1 or 0.
+			alert("result = " + result);
 			if(result == 1){
-				('a').attr("href", "spacecrab.pl?" + data-dest2);
+				$(thing).attr("href", "spacecrab.pl?" + data-dest2);
+				alert("result = " + result);
+			}
+			else
+			{
+				alert("result != 1 ");
 			}
 		}
 		else
 		{
-			('a').attr("href", "spacecrab.pl?" + data-dest1);
+			$(thing).attr("href", "spacecrab.pl?" + data-dest1);
+			alert("result != 1 it was " + result);
 		}
 	}
 }
@@ -110,6 +117,6 @@ function coinflip(int flipCount)
 	while (flipCount!=0)
 	{
 		flipCount--;
-		return Math.floor(Math.random()*1);
+		return Math.floor(Math.random()*2);
 	}
 }
