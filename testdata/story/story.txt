@@ -226,6 +226,7 @@ some kind of signal
 <p>You pull yourself together and hold up your claw, recording an image of the room with your wrist device.   No one will be able to deny that the crabbers have landed on Verru.</p>
 
 <p>Now you've got to <a data-dest1="node4A1A1A">get out of here and take the Cockleshell back to Brachya</a>.  To be honest, though, it's tempting to <a data-dest1="node4A1A1B">keep gawking like an idiot</a>.  Crabbers have been legends and scary stories to you until now.  It's hard to tear your eyes away.</p>
+</div>
 
 4A1A1A
 <div class="story" id="node4A1A1A" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
