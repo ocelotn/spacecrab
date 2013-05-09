@@ -63,7 +63,7 @@ function loadSys()
 if(localStorage.getItem('save') != null)
   	{
 	// Loads data from variable save and replaces the body
-		document.body.innerHTML = localStorage.getItem('saveCrab';
+		document.body.innerHTML = localStorage.getItem('saveCrab');
   	}
 	// If browser dont support it, then can't save/load
 else
