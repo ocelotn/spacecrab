@@ -98,7 +98,9 @@ sub checkforEnd{
 	#if the div text ends in THE END
 	#possibly followed by a dot, whitespace or 
 	#a closing tag, return true else false
-	return ($div->text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
+#	return ($div->text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
+#if ($div->content_xml) {print $div->content_xml;}
+	return ($div->content_xml=~/THE END/)?1:0;
 }
 
 sub getGraph{   
@@ -141,11 +143,16 @@ sub addStoryNode{
 }
 sub addStraightEdge{
    my ($graph,$source, $dest, $choicetext) = @_;
+   if (!$dest) {}#die "no destination for $source\n";}
+   else {
    $dest =~/(.*)(\.node)?/;
+   my $nodeid = $1;
    $graph->add_edge(
-      $source => $1, 
-      ,head_url => $uribase.$1, tooltip=>$source.",".$1.":".$choicetext
+      $source => $nodeid, 
+      ,head_url => $uribase.$nodeid, 
+      tooltip=>$source.",".$nodeid.":".$choicetext
    );
+   }
 }
 sub addForkedEdge{
    my ($graph, $source, $dest1, $dest2, $choicetext) = @_;
@@ -244,12 +251,12 @@ sub main {
 	#         if ($attribs->{'bg'}){add_edge();}
 		  } else { 
 		  	if (checkforEnd($div)){
-		  		$graph->add_node($nodeno, fillcolor=>'gray');
+		  		$graph->add_node($nodeno, color=>'blue');
 	      	} else {
 	      		$graph->add_node($nodeno, color=>'red');
 	      	}
 	      }
-   		}
+		}   		
       }
    
    print $graph->as_svg;
