@@ -103,13 +103,8 @@ a nice coral polyp and algae sandwich
 <p>How long can you hold your breath?</p>
 
 <a data-dest1="node3C1">You can hold your breath for 20 seconds, give or take.<br />
-<<<<<<< HEAD
-<a data-dest1="node3C2">You can hold your breath for 3 minutes.  You've got training—Space Crab Army training.<br />
-<a data-dest1="node3C3 "> You're a space crab!  You can hold your breath all day.<br />
-=======
 <a data-dest1="node3C2">You can hold your breath for 3 minutes.  You've got trainingâ€”Space Crab Army training.<br />
 <a data-dest1="node3C3"> You're a space crab!  You can hold your breath all day.<br />
->>>>>>> dev
 </div>
 	
 3C1.
