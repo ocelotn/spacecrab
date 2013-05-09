@@ -106,4 +106,30 @@ else
   {
 		alert("Sorry, no saves detected");
   }
-}		
+}
+
+/*
+
+           on_load -> find all the <a> inside div[class="story"] and for each link,
+               -  if there is a data_dest2 then, if there is also a data_dest1, pick one of the two and set href inside that link to point to 
+			   "spacecrab.pl?nodeID"  where nodeID is the id of the destination that your code selected.
+
+			TODO:
+			@JimPetko
+			implement coinflips at loadtime to start, then try to use AJAX to intercept onclick and flip coin and direct them to resulting destination. 
+			if( dest2 exists) flip a coin else{ flip a coin for dest 1) 
+			
+*/
+
+$function(){
+	for ('a' : 'story'){		//('#mydiv').find('.myclass');
+		if ('a').find('data-dest2id')
+		{
+			('a').attr("href", "spacecrab.pl?" + data-dest2id); //add coinflip result here
+		}
+		else if ('a').find('data-dest1id')
+		{
+			('a').attr("href", "spacecrab.pl?" + data-dest1id); //here too
+		}
+	}
+}
