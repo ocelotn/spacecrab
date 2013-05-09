@@ -46,7 +46,9 @@ use GraphViz;
     my %nodeformat = ( 
        shape=> "box",   
        fontsize=> 10.0, 
-       color => "gray"
+       style => "filled",
+       color => "gray",
+       fillcolor => "linen"
     );
    my %edgeformat = (
       fontsize => 8.0,
@@ -98,7 +100,8 @@ sub checkforEnd{
 	#if the div text ends in THE END
 	#possibly followed by a dot, whitespace or 
 	#a closing tag, return true else false
-	return ($div->text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
+#	return ($div->text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
+	return ($div->all_text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
 }
 
 sub getGraph{   
@@ -131,11 +134,13 @@ sub addStoryNode{
       elsif ($nodeno eq "-1"){print "Node is not parseable from $file."; die;}
       $firstline = "Node file exists but appears empty.";
    }
-            
+   my $tooltip;# = $div->all_text;
+   unless ($tooltip) {$tooltip = "Empty node?";}
+   
       $graph->add_node(
          $nodeno, 
          label=>$nodeno.":\n".$firstline, 
-         tooltip=>"Node ".$nodeno
+         tooltip=>"Node ".$nodeno.$tooltip
       );
       return $nodeno;
 }
@@ -198,7 +203,7 @@ sub addImage{
 		name=> $img,
 		tooltip=>"Image ".$img,
 		color=>$nodecolor,
-		shape=>'circle'
+		shape=>'oval'
 	);
 	$graph->add_edge( $source => $img);
 	
@@ -211,6 +216,7 @@ sub main {
    #populate the graph
    foreach my $file (getFileSpec($nodepath)){
       my $div = getDiv($file);
+      unless ($div) {$div = Mojo::DOM->new('<div>EMPTY FILE!</div>')}
       my $nodeno = addStoryNode($graph, $div, $file);
       if ($div) {
          #map edges out of the node
@@ -244,7 +250,7 @@ sub main {
 	#         if ($attribs->{'bg'}){add_edge();}
 		  } else { 
 		  	if (checkforEnd($div)){
-		  		$graph->add_node($nodeno, fillcolor=>'gray');
+		  		$graph->add_node($nodeno, fillcolor=>'lightgray');
 	      	} else {
 	      		$graph->add_node($nodeno, color=>'red');
 	      	}
