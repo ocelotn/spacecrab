@@ -112,8 +112,9 @@ sub dirlist {
 #	getPage
 #		normal conditions
 	ok(length(SpaceCrab::getPage('nodeminimal')) == 1058, "get page for valid node returns a string of correct length for nodeminimal");
+	print SpaceCrab::getPage('nodeminimal');
 	ok(SpaceCrab::getPage('nodeminimal') eq snarfFile($cfg->{'testdata'}.'story/nodeminimal.local'), "get page for valid node returns correct page");
-
+exit;
 #check for html validity
 #check for matching sample output
 #		error conditions

@@ -32,12 +32,20 @@ sub error{
 	print shift."\n";
 }
 
+sub cleantext{
+	my $text = shift;
+	$text =~s/ó/&mdash;/g;
+	return $text;
+}
+
 sub parseOutNodes{
    my $output = shift;
    my $storyfile = "story.txt";
 
    #grab the text
    my $nodetext = snarfFile($storyfile); 
+   $nodetext = cleantext($storyfile);
+   
    my $dom = Mojo::DOM->new->parse($nodetext);
 
    my %nodehash;
@@ -62,7 +70,7 @@ sub parseOutNodes{
 }
 
 sub main {
-	return praseOutNodes();
+	return parseOutNodes();
 }
 
 1

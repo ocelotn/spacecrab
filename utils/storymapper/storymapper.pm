@@ -31,8 +31,8 @@ use GraphViz;
    
    #attribute names
    my $uribase = "http://test.space-crab.com/spacecrab.pl?";
-   my $d1 = "data-dest1id";
-   my $d2 = "data-dest2id";
+   my $d1 = "data-dest1";
+   my $d2 = "data-dest2";
    my $deps = "data-ifvisited";
    my $thresh = "threshold";
    my $threshmax = 100;
