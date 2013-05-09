@@ -89,27 +89,20 @@ else
 //detects forks in the choices and redirects to random choice.
 alert("js is being called correctly");
  
-$function()
+$function forkedChoice()
 {
 	alert("function has been called =)");
-	for (thing in $('a.story')){		
-		if $(thing.find('data-dest2'))
-		{
-			var result = Math.floor(Math.random()*2);	//generates either 1 or 0.
-			alert("result = " + result);
-			if(result == 1){
-				$(thing).attr("href", "spacecrab.pl?" + data-dest2);
-				alert("result = " + result);
-			}
+    for (thing in $('a.story[data-dest2]')){		
+		var result = Math.floor(Math.random()*2);	//generates either 1 or 0.
+		alert("result = " + result);
+		
+		if(result == 1){
+			$(thing).attr("href", "spacecrab.pl?" + data-dest2);
+			alert("result = " + result);			
 			else
 			{
 				alert("result != 1 ");
 			}
-		}
-		else
-		{
-			$(thing).attr("href", "spacecrab.pl?" + data-dest1);
-			alert("result != 1 it was " + result);
 		}
 	}
 }
