@@ -84,8 +84,7 @@ loadSys();
 $( "button.startOver" )
 .button()
 .click(function() {
-//$(this).load('spacecrab.pl?0');
-$(document).load('spacecrab.pl');
+$.get('spacecrab.pl?0');
 });
 
 //Builds the extra tabs
