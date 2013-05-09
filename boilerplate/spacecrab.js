@@ -84,7 +84,10 @@ function saveSys()
 if(typeof(Storage)!=="undefined")
   	{
 	// Saves data in save
-	        sessionStorage.setItem('save', copier());
+	        localStorage.setItem('saveCrab', copier());
+			
+			//Should tell what is actually in the savefile
+			alert( JSON.parse(JSON.stringify(localStorage.getItem('saveCrab'))));
 	}
 	// If browser dont support it, then can't save
 	else
@@ -95,11 +98,11 @@ if(typeof(Storage)!=="undefined")
 
 function loadSys()
 {
-//Checks if there is a save called save
+//Checks if there is a save called saveCrab
 if(localStorage.getItem('save') != null)
   	{
 	// Loads data from variable save and replaces the body
-		document.body.innerHTML = sessionStorage.getItem("save");
+		document.body.innerHTML = localStorage.getItem('saveCrab';
   	}
 	// If browser dont support it, then can't save/load
 else
@@ -107,6 +110,28 @@ else
 		alert("Sorry, no saves detected");
   }
 }
+
+//Save button which calls savesys
+$( "button.save" )
+.button()
+.click(function() {
+saveSys();
+});
+
+//Load button which calls loadsys
+$( "button.load" )
+.button()
+.click(function() {
+loadSys();
+});
+
+//Should restart the game by calling spacecrab.pl?0
+$( "button.startOver" )
+.button()
+.click(function() {
+//$(this).load('spacecrab.pl?0');
+$(document).load('spacecrab.pl');
+});
 
 /*
 
@@ -132,4 +157,4 @@ $function(){
 			('a').attr("href", "spacecrab.pl?" + data-dest1id); //here too
 		}
 	}
-}
+};
