@@ -72,28 +72,6 @@ else
   }
 }
 
-//Save button which calls savesys
-$( "button.save" )
-.button()
-.click(function() {
-saveSys();
-});
-
-//Load button which calls loadsys
-$( "button.load" )
-.button()
-.click(function() {
-loadSys();
-});
-
-//Should restart the game by calling spacecrab.pl?0
-$( "button.startOver" )
-.button()
-.click(function() {
-//$(this).load('spacecrab.pl?0');
-$(document).load('spacecrab.pl');
-});
-
 /*
 
            on_load -> find all the <a> inside div[class="story"] and for each link,
