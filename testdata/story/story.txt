@@ -1,4 +1,4 @@
-Space Crab: A Saga
+ï»¿Space Crab: A Saga
 
 1.
 <div class="story" id="node1">
@@ -6,7 +6,7 @@ Space Crab: A Saga
 
 <p>You're supposed to be scouting the sector for crabbers, by order of the Divine Brachyura herself.  Your Cockleshell 2600 is equipped with chelae for pincering at close range, as well as xanthidaen lasers and long-range bombs for space battle.  It wouldn't be much help in a pitched battle, but it should do the trick if you need to beat a hasty retreat and leave some cover-fire in your wake to discourage pursuit.</p>  
 
-<p>"Scuttle out and look about," Divine Brachyura had ordered, waving you out of her audience hall.  Even in humanoid form, she thought like a true crustacean.  Scuttle out, indeed.  You shake your head in admiration; some day, perhaps, you'll be as crustaceas as Divine Brachyura.  Unlike her, though, you'd never send your people out chasing waves on the sand.  Day after day, despite your protests, she sends you out to patrol for crabbers—carcinologists, as they're called in polite company.  Every day, she says the same thing.  "You never know where carcinologists might be hiding.  You never know when they'll be right on our doorstep!"<p>
+<p>"Scuttle out and look about," Divine Brachyura had ordered, waving you out of her audience hall.  Even in humanoid form, she thought like a true crustacean.  Scuttle out, indeed.  You shake your head in admiration; some day, perhaps, you'll be as crustaceas as Divine Brachyura.  Unlike her, though, you'd never send your people out chasing waves on the sand.  Day after day, despite your protests, she sends you out to patrol for crabbersâ€”carcinologists, as they're called in polite company.  Every day, she says the same thing.  "You never know where carcinologists might be hiding.  You never know when they'll be right on our doorstep!"<p>
 
 <p> Actually, you <i>do</i> know.  Crabbers haven't been spotted in this sector since long before you were born.  Even your parents find Divine Brachyura's obsession with crabbers a bit odd, though they never say so outright.  Your mother told you once that she could barely remember the last time a crabber had been spotted even by wide-ranging crabships.  You frown.  These missions are boring and pointless, and you'd tell Her Divine Crustaceasness that, too...if you weren't terrified of her.  You shake your head.  You really ought to <a data-dest1="node2">march into that audience hall and tell Divine Brachyura that she's acting like a hermit crab</a>, paranoid and fearful.</p>  You wince, imagining Mother's face after she heard about you making a scene like <i>that</i>.  Not one of your better ideas, maybe.
 
@@ -14,7 +14,7 @@ Space Crab: A Saga
 
 <p>The dark spot has been explored before, and you know what it is: a deathstarfish, one of those fabled moon-sized beasts that feeds on planets.  You look at it through the viewscreen.  It's never bothered Brachya; despite their fearsome reputation, deathstarfish only eat a planet every few centuries. They spend the rest of the time digesting.  You shudder and turn away from the deathstarfish.  It doesn't bother small spacecrafts, but nonetheless it scares you silly.</p>
 
-<p>Straight ahead, <a data-dest1="node3">something sparkles green and blue in the distance.</a>  And Verru, nearby Sessilia's second moon, is transmitting <a data-dest1="node4">some kind of signal</a>—which is odd, since nothing lives there.  These two are much more interesting (and less horrifying) than an old deathstarfish.</p> 
+<p>Straight ahead, <a data-dest1="node3">something sparkles green and blue in the distance.</a>  And Verru, nearby Sessilia's second moon, is transmitting <a data-dest1="node4">some kind of signal</a>â€”which is odd, since nothing lives there.  These two are much more interesting (and less horrifying) than an old deathstarfish.</p> 
 
 <p>Already, you're faced with choices.</p>
 </div>
@@ -50,9 +50,9 @@ something sparkles green and blue in the distance
 <div class="story" id="node3">
 <p>You shift gears and push a few pertinent buttons, and your ship zips forward.  Once again, you feel thankful that you've got a Cockleshell 2600.  Cockleshells are produced on Emarginata, where they don't insist on sideways motion.  'Natas might be kind of odd, sure, but you'd take one of their forward-motion ships any day of the week.  It might be counterintuitive to say so (and you'd never say it in front of Mother or Father, of course), but it's nice to actually be able to see where you're going.</p>
 
-<p>The sparkling green and blue colors fill more of the sky as your ship glides nearer to it.  A blue star, perhaps...?  Not uncommon, really, but...no, no, there's too much green for that.   Blue starts are undeniably, singularly blue.  And the sparkling is truly odd.  Toggling the telescoping lenses in the underside of the Cockleshell, you try to get a closer look at the surface of the thing—assuming it has a surface.  Peering at the telescope's display screen, you can see that it <i>is</i> solid, at least.  Circular indentations cover the object.  Craters?  Drained lakes? </p>
+<p>The sparkling green and blue colors fill more of the sky as your ship glides nearer to it.  A blue star, perhaps...?  Not uncommon, really, but...no, no, there's too much green for that.   Blue starts are undeniably, singularly blue.  And the sparkling is truly odd.  Toggling the telescoping lenses in the underside of the Cockleshell, you try to get a closer look at the surface of the thingâ€”assuming it has a surface.  Peering at the telescope's display screen, you can see that it <i>is</i> solid, at least.  Circular indentations cover the object.  Craters?  Drained lakes? </p>
 
-<p>You'll have to <a data-dest1="node3A">get closer</a> if you want to find out more.  If there are hostile inhabitants on or near the object, however—and it <i>does</i> looks large enough for a minor space station—they might detect you.  You probably ought to <a data-dest1="node3B">turn around now</a>; one little Cockleshell 2600 can't handle much space fighting.</p>  You frown down at the buttons that control your lasers and bombs.  If only the Emarginata manufacturers had seen fit to provide a little more firepower, you could boldly scuttle where no crab had scuttled before.</p>
+<p>You'll have to <a data-dest1="node3A">get closer</a> if you want to find out more.  If there are hostile inhabitants on or near the object, howeverâ€”and it <i>does</i> looks large enough for a minor space stationâ€”they might detect you.  You probably ought to <a data-dest1="node3B">turn around now</a>; one little Cockleshell 2600 can't handle much space fighting.</p>  You frown down at the buttons that control your lasers and bombs.  If only the Emarginata manufacturers had seen fit to provide a little more firepower, you could boldly scuttle where no crab had scuttled before.</p>
 
 <p>Pondering your situation, you notice the dashboard clock.  Hey, it's lunchtime!  Surely you can spare a few minutes for <a data-dest1="node3C">a nice coral polyp and algae sandwich</a> before making any big decisions!  Your stomach rumbles meaningfully.</p>
 </div>
@@ -75,7 +75,7 @@ get closer
 3B. 
 turn around now
 <div class="story" id="node3B">
-<p>With a sigh, you turn the ship around and head back the way you've come.  Perhaps you should just go investigate that signal from Verru.  You feel kind of silly—you're probably turning shell and running from a harmless gust of galactic gases—but, after all, there are lots of dangerous things in space.  This sparkly blue and green whatsis could be one of them.</p>
+<p>With a sigh, you turn the ship around and head back the way you've come.  Perhaps you should just go investigate that signal from Verru.  You feel kind of sillyâ€”you're probably turning shell and running from a harmless gust of galactic gasesâ€”but, after all, there are lots of dangerous things in space.  This sparkly blue and green whatsis could be one of them.</p>
 
 <p>As you punch the buttons to turn the ship around, however, you see that the blue and green sparkle isn't quite as distant as it had been a moment before.  You've stopped moving toward it, so...that can only mean <i>it</i> is now moving towards <i>you</i>!  Glancing down at your computer display, you see confirmation of your suspicions: the blip on your radar that stands for the blue and green whatsis has, over the last few seconds, begun a trajectory toward the Cockleshell 2600.</p>
 
@@ -103,7 +103,7 @@ a nice coral polyp and algae sandwich
 <p>How long can you hold your breath?</p>
 
 <a data-dest1="node3C1">You can hold your breath for 20 seconds, give or take.<br />
-<a data-dest1="node3C2">You can hold your breath for 3 minutes.  You've got training—Space Crab Army training.<br />
+<a data-dest1="node3C2">You can hold your breath for 3 minutes.  You've got trainingâ€”Space Crab Army training.<br />
 <a data-dest1="node3C3 "> You're a space crab!  You can hold your breath all day.<br />
 </div>
 	
@@ -118,14 +118,14 @@ THE END.
 
 3C2.
 <div class="story" id="node3C2">
-<p>3 minutes.  You've got training—Space Crab Army training.</p>
+<p>3 minutes.  You've got trainingâ€”Space Crab Army training.</p>
 	
 <p>You nearly turn purple from holding your breath so long, but you manage to program the failing Cockleshell to eject you through the air lock, giving you a nice boost towards home.  Your entry into open space triggers your shapeshifting reflexes, and you immediately shift into crabform.  As far as you can tell, the space octopus doesn't even notice your escape.  Looking back, you see it probing around inside the Cockleshell with two long tentacles.  It looks like a kid with two fingers in the peanut butter without jar. </p>
 
 <p>You shudder, remembering that in this case you are the peanut butter.</p>
 
 <p>You propel yourself homeward as best you can; it takes longer without the Cockleshell, but at least you're alive.  You scuttle doggedly onward, sights set on Brachya, trying not to think about what Divine Brachyura will say when she finds out you've lost one of her ships.  Emarginatas charge a claw and a leg for their ships, and if Divine Brachyura docks your pay for the cost of the Cockleshell 2600, you won't make a penny for years.  Ah, well.  Mother and Dad won't let you starve.  Hopefully.</p>
-<p>You pass rather close to Verru on your journey homeward, and without any warning you see three strange ships heading toward you.  They've clearly come from Verru, which is odd because, aside from that weird signal you picked up earlier, there's been no sign of activity on Verru before.  The ships don't see you—you're just one space crab drifting through the vastness of space, without the Cockleshell—but you stare hard at them, trying to get some idea of who these ships could belong to.</p>
+<p>You pass rather close to Verru on your journey homeward, and without any warning you see three strange ships heading toward you.  They've clearly come from Verru, which is odd because, aside from that weird signal you picked up earlier, there's been no sign of activity on Verru before.  The ships don't see youâ€”you're just one space crab drifting through the vastness of space, without the Cockleshellâ€”but you stare hard at them, trying to get some idea of who these ships could belong to.</p>
 
 <p>And then you see it, and it's so obvious that you slam a claw onto your own head, appalled at how dense you've been: these ships are shaped like crabbers.  You've never actually <i>seen</i> a crabber, true, but these ships look just like the pictures from your classes at Space Crab Academy.</p>
 
@@ -233,7 +233,7 @@ some kind of signal
 
 <p>When you finally get back to Brachya, you race to the audience hall and interrupt the councilor speaking to Divine Brachyura.  You're still in crabform; you can't be bothered to wait for the effects of your direct contact with space to wear off.</p>
 
-<p>"Divine Brachyura," you pant, chest heaving, eyes wild, "the crabbers—...uhh, carcinologists are coming!  I saw them, and I have proof!"  You continue babbling, growing more and more incoherent, as Divine Brachyura and the huffy councilor stare at you.  After a moment, Her Crustaceasness reaches out and clamps a claw around your wrist.  She yanks you toward her and jabs a button on your wrist device, then watches the recording you made of the crabber base.  Once she's seen the whole recording, Divine Brachyura unclamps your wrist and gestures to a nearby guard.</p>
+<p>"Divine Brachyura," you pant, chest heaving, eyes wild, "the crabbersâ€”...uhh, carcinologists are coming!  I saw them, and I have proof!"  You continue babbling, growing more and more incoherent, as Divine Brachyura and the huffy councilor stare at you.  After a moment, Her Crustaceasness reaches out and clamps a claw around your wrist.  She yanks you toward her and jabs a button on your wrist device, then watches the recording you made of the crabber base.  Once she's seen the whole recording, Divine Brachyura unclamps your wrist and gestures to a nearby guard.</p>
 
 <p>"Find Commander Kelpbane," she growls. "Do it yourself. I want him here within five minutes."  She watches the guard run from the room, then turns back to you.  You stand as straight and tall as you can, waiting for her to commend you and announce that you'll be leading the war effort by her side.  "Youngster, you've fulfilled your duty.  Go home, have a warm cup of tea, and put yourself to bed.  This is a job for cooler heads, now." She nods, then turns away to speak to the councilor still standing nearby.</p>
 
@@ -254,7 +254,7 @@ v
 
 <p>Your timing is superb.  Just as you stop rustling and decide you're well enough hidden, two sets of heavy footsteps clomp up the passageway and through the hatch.  You can't see anything; you've wedged yourself in with your face against the wall, your back to the room.  Stupid, stupid, stupid!</p>
 
-<p>"I will board my ship and await your orders, ma'am," a familiar voice says crisply.  Commander Kelpbane!  In your mind's eye, you see him snapping a salute.  Back in Academy, the kids all tried to approximate his salutes.  They were the snappiest salutes in the Space Crab Army, the envy of officers and enlisted alike. You'll never get your salutes up to his standard.  In fact, Mother was saying just the other day—...Ma'am?  Who would Commander Kelpbane address as ma'am, unless...</p> 
+<p>"I will board my ship and await your orders, ma'am," a familiar voice says crisply.  Commander Kelpbane!  In your mind's eye, you see him snapping a salute.  Back in Academy, the kids all tried to approximate his salutes.  They were the snappiest salutes in the Space Crab Army, the envy of officers and enlisted alike. You'll never get your salutes up to his standard.  In fact, Mother was saying just the other dayâ€”...Ma'am?  Who would Commander Kelpbane address as ma'am, unless...</p> 
 
 <p>"All right, commander," you hear Divine Brachyura growl, "I'll be in touch once we're in the air.  Be prepared."</p>
 
@@ -280,7 +280,7 @@ v
 <div class="story" id="node4A1A1A2A">
 <p>You leap out from behind the gear rack, heedless of your own safety.</p>  
 
-<p>"Divine Brachyura," you cry, startling your leader.  She turns to glare at you, claws clacking in outrage.  You gulp and continue, hoping she lets you have your say before she kills you.  "Divine Brachyura, I have a plan!  This morning, while I was, uh, patrolling the sector, I encountered a space octopus."  You pause.  Divine Brachyura looks unimpressed thus far, and you rush to explain your idea.  "What if we go find it again, and tempt it to come after the cra—...carcinologists!"</p>
+<p>"Divine Brachyura," you cry, startling your leader.  She turns to glare at you, claws clacking in outrage.  You gulp and continue, hoping she lets you have your say before she kills you.  "Divine Brachyura, I have a plan!  This morning, while I was, uh, patrolling the sector, I encountered a space octopus."  You pause.  Divine Brachyura looks unimpressed thus far, and you rush to explain your idea.  "What if we go find it again, and tempt it to come after the craâ€”...carcinologists!"</p>
 
 <p>Divine Brachyura stares at you for a moment.  Yes, yes, she looks intrigued.  She's going to go for it!  You're going to be remembered as the Space Crab Army cadet who won the battle against the crabbers of Verru through ingenuity and brilliant strategizing! </p> 
 
@@ -292,7 +292,7 @@ v
 <div class="story" id="node4A1A1A2B">
 <p>You leap out from behind the gear rack, heedless of your own safety.</p>  
 
-<p>"Divine Brachyura," you cry, startling your leader.  She turns to glare at you, claws clacking in outrage.  You gulp and continue, hoping she lets you have your say before she kills you.  "Divine Brachyura, I have a plan!  THE DEATHSTARFISH!"  You pause.  Divine Brachyura looks unimpressed, which startles you, but you rush to explain your idea.  "What if we go, get its attention, and lead it here.  Surely, after waking from its hibernation, it will be hungry, won't it?  We can act as bait and lead it right here to Verru.  Once their base is destroyed, the cra—...carcinologists will scatter and retreat!"</p>
+<p>"Divine Brachyura," you cry, startling your leader.  She turns to glare at you, claws clacking in outrage.  You gulp and continue, hoping she lets you have your say before she kills you.  "Divine Brachyura, I have a plan!  THE DEATHSTARFISH!"  You pause.  Divine Brachyura looks unimpressed, which startles you, but you rush to explain your idea.  "What if we go, get its attention, and lead it here.  Surely, after waking from its hibernation, it will be hungry, won't it?  We can act as bait and lead it right here to Verru.  Once their base is destroyed, the craâ€”...carcinologists will scatter and retreat!"</p>
 
 <p>You stare at Divine Brachyura hopefully, waiting for her decision.  She's got to agree to do it, she's just got to!  If she doesn't, your people are doomed!  She's clacking her claws, she's glaring at you, but...</p>
 
@@ -314,7 +314,7 @@ v
 
 4A1A1A2B1
 <div class="story" id="node4A1A1A2B1">
-<p>It's not easy, but you claw your way back to consciousness.  Whether your brilliant plan succeeds or not, you're going to see it through to the end.  You're going to stand proud, right here beside Divine Bra—...You glance around the cabin.  Where did Divine Brachyura go?  You boggle when you see her heading for the hatch.  She glances back and catches your eye.</p>
+<p>It's not easy, but you claw your way back to consciousness.  Whether your brilliant plan succeeds or not, you're going to see it through to the end.  You're going to stand proud, right here beside Divine Braâ€”...You glance around the cabin.  Where did Divine Brachyura go?  You boggle when you see her heading for the hatch.  She glances back and catches your eye.</p>
 
 <p>"Oh," she growls, "so you're awake again, are you?  I suggest getting out of this ship, if you don't want to play appetizer to a deathstarfish."  She gestures toward the viewscreen.  The deathstarfish fills it.  "It may turn its attentions to Verru afterwards, but for now it wants to kill whatever woke it up."  She turns away and, without another word, disappears out the airlock.</p>
 
@@ -347,7 +347,10 @@ v
 
 4A1A1A2B1A1
 <div class="story" id="node4A1A1A2B1A1">
-<p>protest, die, THE END</p>
+<p>You run after Divine Brachyura, determined to get your due.</p>
+
+<p>"Divine Brachyura," you shout, waving your arms wildly at her when she glances back to see who could be so rudely calling her name.
+<p></p>
 </div>
 
 4A1A1A2B1A2
@@ -370,7 +373,7 @@ v
 <div class="story" id="node4A1A1A2C">
 <p>You burst from your hiding place, startling Divine Brachyura long enough to grab the mic out of her sturdy claw.  Clearing your throat, you burst into a full-throated rendition of the Brachyuran National Anthem:</p>
 
-<p>"<i>Hail to thee, Brachya, pearl within the shell—</i>"</p>
+<p>"<i>Hail to thee, Brachya, pearl within the shellâ€”</i>"</p>
 
 <p>Before you make it all the way through the first line, Divine Brachyura recovers her wits and slams you over the head with one doughty claw.  You die with a proud smile on your face; muttering, Divine Brachyura shoves your carcass off the control panel and goes back to directing the battle.</p>
 
@@ -380,7 +383,7 @@ v
 </div>
 4A1A1A3
 <div class="story" id="node4A1A1A3">
-<p> Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabform—for the change hasn't yet had time to wear off—you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
+<p> Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabformâ€”for the change hasn't yet had time to wear offâ€”you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
 
 <p>Hopefully, Divine Brachyura and the rest of the Space Crab Army will win the battle against the crabbers.  You savor your tea; if the SCA doesn't succeed, it could be the last cup you ever drink.</p>
 
@@ -398,7 +401,7 @@ v
 </div>
 4A1B
 <div class="story" id="node4A1B">
-<p>Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabform—for the change hasn't yet had time to wear off—you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
+<p>Bowing deeply, you slowly head back down the audience hall toward the exit.  Still in crabformâ€”for the change hasn't yet had time to wear offâ€”you clack toward home.  Mother and Father will be out until evening, and you foresee a peaceful afternoon.  In the empty kitchen, you prepare yourself a cup of strong tea and sip slowly, savoring the herbal flavor.</p>
 
 <p>If the crabbers do find Brachya and come to boil you and your family and friends, hopefully you'll have enough time to find Divine Brachyura and tell her you told her so.</p>
 
@@ -420,7 +423,7 @@ v
 <div class="story" id="node4B">
 <p>Cloak?  No way.  There's no one out here!  <I>You're</i> not a paranoid hermit crab.</p>
 
-<p>Wait—what was that?  The Cockleshell's main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they're coming in fast!  They've clearly seen you, and they're not opening a frequency to hail you.  You're under attack; you hesitate, unsure whether to <a data-dest1="node4B1">fight</a> or <a data-dest1="node4B2">flee</a>.</p>
+<p>Waitâ€”what was that?  The Cockleshell's main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they're coming in fast!  They've clearly seen you, and they're not opening a frequency to hail you.  You're under attack; you hesitate, unsure whether to <a data-dest1="node4B1">fight</a> or <a data-dest1="node4B2">flee</a>.</p>
 </div>
 4B1. 
 <div class="story" id="node4B1">
@@ -441,4 +444,5 @@ v
 
 <p>THE END.</p>
 </div>
+
 
