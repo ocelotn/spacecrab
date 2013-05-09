@@ -42,3 +42,24 @@ function builder($start)
 //Refocuses on the newest panel
 	$("#storywrapper" ).accordion( "option", "active", $start );
 }
+
+//Save button which calls savesys
+$( "button.save" )
+.button()
+.click(function() {
+$(this).ready.load('spacecrab.pl?0');
+saveSys();
+});
+
+//Load button which calls loadsys
+$( "button.save" )
+.button()
+.click(function() {
+$(this).ready.load('spacecrab.pl?0');
+loadSys();
+});
+
+//Should restart the game by calling spacecrab.pl?0
+$( "button.startOver" )
+.button()
+.click.load('spacecrab.pl?0');

@@ -21,6 +21,7 @@ function randomNumGen()
 			flipResult = "Tails";
 }
 //to branch different ranges, can be compressed into fewer lines
+/* coinFlip undefined, not quite sure where this code is going
 if (coinFlip =="Heads")
 {
     document.getElementById("StoryNode001");
@@ -29,7 +30,7 @@ else
 {
     document.getElementById("StoryNode002");
 }
-
+*/
 
 function hideDiv()
 //hide Div content
@@ -106,4 +107,3 @@ else
 		alert("Sorry, no saves detected");
   }
 }		
-

@@ -1,3 +1,5 @@
 <div class="story" id="node4B">
-<p>Safety first!  It only means pushing a button, after all.  You cloak the ship.</p>
+<p>Cloak?  No way.  There&#39;s no one out here!  <i>You&#39;re</i> not a paranoid hermit crab.</p>
+
+<p>Wait—what was that?  The Cockleshell&#39;s main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they&#39;re coming in fast!  They&#39;ve clearly seen you, and they&#39;re not opening a frequency to hail you.  You&#39;re under attack; you hesitate, unsure whether to <a data-dest1="node4B1">fight</a> or <a data-dest1="node4B2">flee</a>.</p>
 </div>
