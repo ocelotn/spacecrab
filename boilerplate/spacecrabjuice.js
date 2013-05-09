@@ -61,5 +61,6 @@ loadSys();
 $( "button.startOver" )
 .button()
 .click.(function() {
-$(this).ready.load('spacecrab.pl?0');
+//$(this).ready.load('spacecrab.pl?0');
+$(this).ready.load('spacecrab.pl');
 });
