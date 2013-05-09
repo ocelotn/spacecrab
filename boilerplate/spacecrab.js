@@ -38,7 +38,8 @@ function copier()
 	var screenCopy = $('body').clone().html();
     return screenCopy;
 }
-		
+
+/*
 function saveSys()
 {
 //Checks if browser supports this type of save
@@ -60,7 +61,7 @@ if(typeof(Storage)!=="undefined")
 function loadSys()
 {
 //Checks if there is a save called saveCrab
-if(localStorage.getItem('save') != null)
+if(localStorage.getItem('saveCrab') != null)
   	{
 	// Loads data from variable save and replaces the body
 		document.body.innerHTML = localStorage.getItem('saveCrab');
@@ -71,6 +72,8 @@ else
 		alert("Sorry, no saves detected");
   }
 }
+*/
+
 
 /*
 			TODO:
