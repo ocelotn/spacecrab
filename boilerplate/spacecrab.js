@@ -89,10 +89,11 @@ else
 //detects forks in the choices and redirects to random choice.
 alert("js is being called correctly");
  
-$function forkedChoice()
+$(function()
 {
 	alert("function has been called =)");
-    for (thing in $('a.story[data-dest2]')){		
+    for (thing in $('a.story[data-dest2]'))
+	{		
 		var result = Math.floor(Math.random()*2);	//generates either 1 or 0.
 		alert("result = " + result);
 		
@@ -105,7 +106,7 @@ $function forkedChoice()
 			}
 		}
 	}
-}
+})
 
 //Generates n Coinflips
 function coinflip(int flipCount)
