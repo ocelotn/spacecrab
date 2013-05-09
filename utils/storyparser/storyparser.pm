@@ -34,7 +34,7 @@ sub error{
 
 sub cleantext{
 	my $text = shift;
-	$text =~s/ó/&mdash;/g;
+	$text =~s/\x{2014}|\x{2013}|\x{8012}/--/g;
 	return $text;
 }
 
