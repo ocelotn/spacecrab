@@ -42,3 +42,10 @@ function builder($start)
 //Refocuses on the newest panel
 	$("#storywrapper" ).accordion( "option", "active", $start );
 }
+
+//Should restart the game by calling 
+$( "button.startOver" )
+.button()
+.click(function() {
+$(document).load('spacecrab.pl?0');
+});
