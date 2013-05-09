@@ -46,7 +46,9 @@ use GraphViz;
     my %nodeformat = ( 
        shape=> "box",   
        fontsize=> 10.0, 
-       color => "gray"
+       style => "filled",
+       color => "gray",
+       fillcolor => "linen"
     );
    my %edgeformat = (
       fontsize => 8.0,
@@ -99,8 +101,7 @@ sub checkforEnd{
 	#possibly followed by a dot, whitespace or 
 	#a closing tag, return true else false
 #	return ($div->text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
-#if ($div->content_xml) {print $div->content_xml;}
-	return ($div->content_xml=~/THE END/)?1:0;
+	return ($div->all_text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
 }
 
 sub getGraph{   
@@ -133,12 +134,13 @@ sub addStoryNode{
       elsif ($nodeno eq "-1"){print "Node is not parseable from $file."; die;}
       $firstline = "Node file exists but appears empty.";
    }
-            
+ 	my $tooltip = $div->children()->first->text;
+ 	$tooltip =~s/[\'\"]//g;
       $graph->add_node(
          $nodeno, 
          label=>$nodeno.":\n".$firstline, 
-         tooltip=>"Node ".$nodeno
-      );
+         tooltip=>"Node ".$nodeno." ".$tooltip
+      ) or die "cannot add node $nodeno for $file\n";
       return $nodeno;
 }
 sub addStraightEdge{
@@ -197,16 +199,18 @@ sub addForkedEdge{
 
 sub addImage{
 	my ($graph, $source, $img) = @_;
+warn "$source addin img to $img\n";
 	my $nodecolor;
 	if (-e $imagepath."/".$img){
 		$nodecolor = $imgcolor;
 	} else {$nodecolor = 'red';}
+if ($source eq "node1" or $img=~/node1/){warn "DANGER\n\n";}
 	$graph->add_node(
 		name=> $img,
 		tooltip=>"Image ".$img,
 		color=>$nodecolor,
-		shape=>'circle'
-	);
+		shape=>'oval'
+	) or die "no node added for $img";
 	$graph->add_edge( $source => $img);
 	
 }
@@ -217,19 +221,23 @@ sub main {
    
    #populate the graph
    foreach my $file (getFileSpec($nodepath)){
+      #get the node contents
       my $div = getDiv($file);
+      unless ($div) {$div = Mojo::DOM->new('<div>EMPTY FILE!</div>')}
+      #add the node
       my $nodeno = addStoryNode($graph, $div, $file);
+      #map edges out of the node
       if ($div) {
-         #map edges out of the node
-      #      $dom->find('a[class="choice"]')->each(sub{
       my $links =  $div->find('a');
-	  if (defined $links && $links->size > 0){
-		  $links->each(sub{
-			 
+      #	if there _are_ any links
+      if (defined $links && $links->size > 0){
+         $links->each(sub{
 				my $choicetext = $_->text;
 				my @attributes  = $_->attrs;
 				
 				foreach my $choice ($_->attrs){
+				   #if there are to destinations, create a forked edge 
+				   #with an anonymous junction node
 				   if (defined $choice->{$d1} && defined $choice->{$d2}){
 					  addForkedEdge(
 						 $graph, 
@@ -242,23 +250,25 @@ sub main {
 				   addStraightEdge($graph, $nodeno, $choice->{$d1}, $choicetext);
 				   }
 				}
-			 });
-			 if ($div->{'fg'}){
-			   #addStraightEdge($graph,$nodeno, $div->{'fg'}, "image: ".$div->{'fg'});
-			   addImage($graph, $nodeno, $div->{'fg'});
-			 }
-	#         if ($attribs->{'mg'}){add_edge();}
-	#         if ($attribs->{'bg'}){add_edge();}
-		  } else { 
-		  	if (checkforEnd($div)){
-		  		$graph->add_node($nodeno, color=>'blue');
-	      	} else {
+		 });
+      } else { 
+		if (checkforEnd($div)){
+		  		$graph->add_node($nodeno, fillcolor=>'lightgray');
+	    } else {
 	      		$graph->add_node($nodeno, color=>'red');
-	      	}
-	      }
-		}   		
-      }
-   
+	    }
+	  }
+   	}
+	if ($div->{'fg'}){
+		addImage($graph, $nodeno, $div->{'fg'});
+	}
+	if ($div->{'mg'}){
+	   addImage($graph, $nodeno, $div->{'mg'});
+	}
+	if ($div->{'bg'}){
+	   addImage($graph, $nodeno, $div->{'bg'});
+	}
+  }
    print $graph->as_svg;
 
 }

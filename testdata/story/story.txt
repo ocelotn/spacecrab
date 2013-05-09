@@ -1,7 +1,7 @@
 Space Crab: A Saga
 
 1.
-<div class="story" id="node1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png bg="BG_SpaceCrabQueenPalace.png">
+<div class="story" id="node1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>You're in the ship again, drifting.  </p>
 
 <p>You're supposed to be scouting the sector for Crabbers, by order of the Divine Brachyura herself.  Your Cockleshell 2600 is equipped with chelae for pincering at close range, as well as xanthidaen lasers and long-range bombs for space battle.  It wouldn't be much help in a pitched battle, but it should do the trick if you need to beat a hasty retreat and leave some cover-fire in your wake to discourage pursuit.</p>  
@@ -27,7 +27,7 @@ some kind of signal
 
 2. 
 march into that audience hall and tell Divine Brachyura that she's acting like a hermit crab 
-<div class="story" id="node2" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueenAttack.png bg="BG_SpaceCrabQueenPalace.png">
+<div class="story" id="node2" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueenAttack.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>You turn your ship around and fly straight back to Brachya, the most beautiful planet in space, and dock your ship at the port nearest the Royal Compound.   After powering down the Cockleshell, you steel yourself and stride through the audience hall doors.  The guards don't stop you; they know you for a loyal servant to Her Divine Crustaceasness, and they casually salute as you stride by. </p>
 
 <p>You march up to the throne, where Divine Brachyura sits on her throne.  It's a sturdy, imposing structure, and Divine Brachyura is a sturdy, imposing crab.  You take a deep breath; you had forgotten she might be in crabform.  Of all your people, only Divine Brachyura has the knack of shifting to crabform at will, and she often spends her public audience time in full crab.  She looks at you expectantly with her gracefully protruding eyeballs, and you clear your throat.</p>
@@ -103,8 +103,13 @@ a nice coral polyp and algae sandwich
 <p>How long can you hold your breath?</p>
 
 <a data-dest1="node3C1">You can hold your breath for 20 seconds, give or take.<br />
+<<<<<<< HEAD
 <a data-dest1="node3C2">You can hold your breath for 3 minutes.  You've got training—Space Crab Army training.<br />
 <a data-dest1="node3C3 "> You're a space crab!  You can hold your breath all day.<br />
+=======
+<a data-dest1="node3C2">You can hold your breath for 3 minutes.  You've got trainingâ€”Space Crab Army training.<br />
+<a data-dest1="node3C3"> You're a space crab!  You can hold your breath all day.<br />
+>>>>>>> dev
 </div>
 	
 3C1.
@@ -186,7 +191,7 @@ some kind of signal
 </div>	
 
 4A1
-<div class="story" id="node4A1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png bg="BG_SpaceCrabQueenPalace.png">
+<div class="story" id="node4A1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>After checking carefully with your ship's scanners to make sure no more crabber vessels are nearby, you speed off toward Brachya.  You plan out what to say to Divine Brachyura, envisioning yourself by her side as she announces that the crabbers have come and the Space Crab Army must arise and defeat the enemy.</p> 
 
 <p>"This young crab," she will proclaim to the gathered masses, "has saved us all, giving us the time to organize and rise up to face the wicked carcinologists!"</p> 
@@ -218,6 +223,7 @@ some kind of signal
 <p>Perhaps they're all inside that massive building, the somewhat narrow one that stetches into the distance.  It's got rows of windows; maybe you should <a data-dest1="node4A1A1">scuttle over and take a peek</a>.</p>
 
 <p>Or maybe...no, there's really no other option, here.  You need to <a data-dest1="node4A1A1">scuttle over and take a peek</a>.</p>
+</div>
 
 4A1A1
 <div class="story" id="node4A1A1" fg="FG_SpaceCrabHuman.png" bg="BG_CrabberBase.png">
@@ -226,6 +232,7 @@ some kind of signal
 <p>You pull yourself together and hold up your claw, recording an image of the room with your wrist device.   No one will be able to deny that the crabbers have landed on Verru.</p>
 
 <p>Now you've got to <a data-dest1="node4A1A1A">get out of here and take the Cockleshell back to Brachya</a>.  To be honest, though, it's tempting to <a data-dest1="node4A1A1B">keep gawking like an idiot</a>.  Crabbers have been legends and scary stories to you until now.  It's hard to tear your eyes away.</p>
+</div>
 
 4A1A1A
 <div class="story" id="node4A1A1A" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
@@ -324,7 +331,7 @@ deathstarfish
 </div>
 
 4A2
-<div class="story id="node4A2" fg="FG_SpaceCrabShipInterior.png">
+<div class="story" id="node4A2" fg="FG_SpaceCrabShipInterior.png">
 <p>You're going to have to present Divine Brachyura with evidence that something fishy is going on with Verru, and the only way to do that is to go record some images with your handy wrist device.  You won't actually have wrists when you use it, because you'll be in crabform. You spend a moment pondering this irony, then take yourself firmly in claw.  You're stalling!  There's no time for nervous dithering.  You tap out the proper commands and the Cockleshell sends you flying out through the airlock.  Crabform kicks in immediately, turning you into an independent space-worthy unit, small but hardy.</p>
 
 <p>It doesn't take you long to reach Verru; the Cockleshell lobbed you out of the airlock with force, sending you sailing toward the small moon. As you near the surface, you employ claws and legs to steer yourself to a landing a few yards away from what you've identified as a landing strip.  You want to be close enough that reaching the crabber base won't take an hour, but far enough away that you don't land in the middle of a crabber audience.  You gauge your descent to perfection, of course, and land among scrubby bushes and trees just outside the crabber compound.</p>

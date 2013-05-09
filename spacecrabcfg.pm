@@ -23,9 +23,9 @@ our @EXPORT = qw(config);
                 "spacecrabmeat" => "spacecrabmeat.pl",
 	    #default files
 	       "startnode" => "node1",	
-               "fgdefault" => "FG1",
-               "mgdefault" => "MG1",
-               "bgdefault" => "BG1"
+               "fgdefault" => "FG1.png",
+               "mgdefault" => "MG1.png",
+               "bgdefault" => "BG1.png"
 	};
 	
 	my $patternsnstrings= {

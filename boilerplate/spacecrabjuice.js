@@ -43,24 +43,3 @@ function builder($start)
 	$("#storywrapper" ).accordion( "option", "active", $start );
 }
 
-//Save button which calls savesys
-$( "button.save" )
-.button()
-.click(function() {
-saveSys();
-});
-
-//Load button which calls loadsys
-$( "button.load" )
-.button()
-.click(function() {
-loadSys();
-});
-
-//Should restart the game by calling spacecrab.pl?0
-$( "button.startOver" )
-.button()
-.click(function() {
-//$(this).ready.load('spacecrab.pl?0');
-$(this).ready.load('spacecrab.pl');
-});

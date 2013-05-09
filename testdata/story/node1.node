@@ -1,4 +1,4 @@
-<div class="story" id="node1">
+<div bg="BG_SpaceCrabQueenPalace.png" class="story" fg="FG_SpaceCrabHuman.png" id="node1" mg="MG_SpaceCrabQueen.png">
 <p>You&#39;re in the ship again, drifting.  </p>
 
 <p>You&#39;re supposed to be scouting the sector for crabbers, by order of the Divine Brachyura herself.  Your Cockleshell 2600 is equipped with chelae for pincering at close range, as well as xanthidaen lasers and long-range bombs for space battle.  It wouldn&#39;t be much help in a pitched battle, but it should do the trick if you need to beat a hasty retreat and leave some cover-fire in your wake to discourage pursuit.</p>  
