@@ -1,37 +1,3 @@
-/*
-
-<div id="StoryNode001">
-    Bob flipped a coin, what was the result?
-</div>
-
-<a href="" onclick="alert('Heads!')">Heads</a>
-
-<a href="" onclick="alert('Tails!')">Tails</a>
-
-*/
-	
-function randomNumGen()
-// Generates Random # for dynamic story telling
-{
-	var coinFlip = Math.floor(Math.random()*2);
-	var flipResult;
-		if(coinFlip==1)
-			flipResult = "Heads";
-		else
-			flipResult = "Tails";
-}
-//to branch different ranges, can be compressed into fewer lines
-/* coinFlip undefined, not quite sure where this code is going
-if (coinFlip =="Heads")
-{
-    document.getElementById("StoryNode001");
-}
-else
-{
-    document.getElementById("StoryNode002");
-}
-*/
-
 function hideDiv()
 //hide Div content
 { 
@@ -65,11 +31,6 @@ function showDiv()
 		} 
 	} 
 }
-
-
-		//available preview
-		//http://jsfiddle.net/petko_james/nDMFG/3/
-
 
 function copier()
 //Copies everything in the body for saving and loading
@@ -144,17 +105,38 @@ $(document).load('spacecrab.pl');
 			implement coinflips at loadtime to start, then try to use AJAX to intercept onclick and flip coin and direct them to resulting destination. 
 			if( dest2 exists) flip a coin else{ flip a coin for dest 1) 
 			
+			JQuery
+			$("#target").click(function() {
+				
+});
+
 */
 
-$function(){
-	for ('a' : 'story'){		//('#mydiv').find('.myclass');
+
+//detects forks in the choices and redirects to random choice. 
+$function()
+{
+	for ('a' : '.story'){		
 		if ('a').find('data-dest2id')
 		{
-			('a').attr("href", "spacecrab.pl?" + data-dest2id); //add coinflip result here
+			var result = Math.floor(Math.random()*1);	//generates either 1 or 0.
+			if(result == 1){
+				('a').attr("href", "spacecrab.pl?" + data-dest2id);
+			}
 		}
-		else if ('a').find('data-dest1id')
+		else
 		{
-			('a').attr("href", "spacecrab.pl?" + data-dest1id); //here too
+			('a').attr("href", "spacecrab.pl?" + data-dest1id);
 		}
 	}
-};
+}
+
+//Generates n Coinflips
+function coinflip(int flipCount)
+{
+	while (flipCount!=0)
+	{
+		flipCount--;
+		return Math.floor(Math.random()*1);
+	}
+}
