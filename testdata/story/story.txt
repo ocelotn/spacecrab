@@ -1,7 +1,7 @@
 ﻿Space Crab: A Saga
 
 1.
-<div class="story" id="node1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png bg="BG_SpaceCrabQueenPalace.png">
+<div class="story" id="node1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>You're in the ship again, drifting.  </p>
 
 <p>You're supposed to be scouting the sector for crabbers, by order of the Divine Brachyura herself.  Your Cockleshell 2600 is equipped with chelae for pincering at close range, as well as xanthidaen lasers and long-range bombs for space battle.  It wouldn't be much help in a pitched battle, but it should do the trick if you need to beat a hasty retreat and leave some cover-fire in your wake to discourage pursuit.</p>  
@@ -27,7 +27,7 @@ some kind of signal
 
 2. 
 march into that audience hall and tell Divine Brachyura that she's acting like a hermit crab 
-<div class="story" id="node2" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueenAttack.png bg="BG_SpaceCrabQueenPalace.png">
+<div class="story" id="node2" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueenAttack.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>You turn your ship around and fly straight back to Brachya, the most beautiful planet in space, and dock your ship at the port nearest the Royal Compound.   After powering down the Cockleshell, you steel yourself and stride through the audience hall doors.  The guards don't stop you; they know you for a loyal servant to Her Divine Crustaceasness, and they casually salute as you stride by. </p>
 
 <p>You march up to the throne, where Divine Brachyura sits on her throne.  It's a sturdy, imposing structure, and Divine Brachyura is a sturdy, imposing crab.  You take a deep breath; you had forgotten she might be in crabform.  Of all your people, only Divine Brachyura has the knack of shifting to crabform at will, and she often spends her public audience time in full crab.  She looks at you expectantly with her gracefully protruding eyeballs, and you clear your throat.</p>
@@ -187,7 +187,7 @@ some kind of signal
 </div>	
 
 4A1
-<div class="story" id="node4A1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png bg="BG_SpaceCrabQueenPalace.png">
+<div class="story" id="node4A1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabQueenPalace.png">
 <p>After checking carefully with your ship's scanners to make sure no more crabber vessels are nearby, you speed off toward Brachya.  You plan out what to say to Divine Brachyura, envisioning yourself by her side as she announces that the crabbers have come and the Space Crab Army must arise and defeat the enemy.</p> 
 
 <p>"This young crab," she will proclaim to the gathered masses, "has saved us all, giving us the time to organize and rise up to face the wicked carcinologists!"</p> 
