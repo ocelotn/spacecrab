@@ -34,8 +34,8 @@ sub error{
 
 sub cleantext{
 	my $text = shift;
-	if($text =~/�/){print "yep\n";} exit;
-#	$text =~s/\x{2014}/\&mdash/--/g;
+#	if($text =~/—/){print "yep\n";} exit;
+	$text =~s/\x{8212}/&#8212;/g;
 	return $text;
 }
 
