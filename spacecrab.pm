@@ -102,9 +102,12 @@ sub generateImageLinks {
    
    #assemble the image div
    my $links='</div><div class="scene">';
-   $links .= '<img src="images/'.$nodeproperties->{"bg"}.$cfg->{"imgsuffix"}.'" alt ="background image"/>';
-   $links.='<img src="images/'.$nodeproperties->{"mg"}.$cfg->{"imgsuffix"}.'" alt="midground image"/>';
-   $links.='<img src="images/'.$nodeproperties->{"fg"}.$cfg->{"imgsuffix"}.'" alt="foreground image"/>';
+   $links .= '<img src="images/'.$nodeproperties->{"bg"}.'" alt ="background image"/>';
+   $links.='<img src="images/'.$nodeproperties->{"mg"}.'" alt="midground image"/>';
+   $links.='<img src="images/'.$nodeproperties->{"fg"}.'" alt="foreground image"/>';
+#   $links .= '<img src="images/'.$nodeproperties->{"bg"}.$cfg->{"imgsuffix"}.'" alt ="background image"/>';
+#   $links.='<img src="images/'.$nodeproperties->{"mg"}.$cfg->{"imgsuffix"}.'" alt="midground image"/>';
+#   $links.='<img src="images/'.$nodeproperties->{"fg"}.$cfg->{"imgsuffix"}.'" alt="foreground image"/>';
    $links.='</div>';
    
    #return it
