@@ -23,63 +23,6 @@ $(function()
 	}
 );
 });
-/*
-//Converted copier function to be in jQuery
-$(function copier() 
-{
-	var screenCopy = $('body').clone().html();
-    return screenCopy;
-});
-
-//Converted save function to be in jQuery
-$(function saveSys() 
-{
-//Checks if browser supports this type of save
-if(typeof(Storage)!=="undefined")
-  	{
-	// Saves data in save
-	        localStorage.setItem('saveCrab', copier());
-			
-			//Should tell what is actually in the savefile
-			alert( JSON.parse(JSON.stringify(localStorage.getItem('saveCrab'))));
-	}
-	// If browser dont support it, then can't save
-	else
-	  {
-			alert("Sorry, your browser does not support web storage");
-	  }
-});
-
-//Converted load function to be in jQuery
-$(function loadSys() 
-{
-//Checks if there is a save called saveCrab
-if(localStorage.getItem('saveCrab') != null)
-  	{
-	// Loads data from variable save and replaces the body
-		document.body.innerHTML = localStorage.getItem('saveCrab');
-  	}
-	// If browser dont support it, then can't save/load
-else
-  {
-		alert("Sorry, no saves detected");
-  }
-});
-
-//Save button which calls savesys
-$( "button.save" )
-.button()
-.click(function() {
-saveSys();
-});
-
-//Load button which calls loadsys
-$( "button.load" )
-.button()
-.click(function() {
-loadSys();
-});
-*/
 
 //Save button which calls savesys
 $( "button.save" )
@@ -92,7 +35,7 @@ $( "button.save" )
 				localStorage.setItem('saveCrab', ($('body').clone().html()));
 				
 				//Should tell what is actually in the savefile
-				alert( JSON.parse(JSON.stringify(localStorage.getItem('saveCrab'))));
+//				alert( JSON.parse(JSON.stringify(localStorage.getItem('saveCrab'))));
 		}
 		// If browser dont support it, then can't save
 		else
@@ -123,7 +66,7 @@ $( "button.load" )
 $( "button.startOver" )
 .button()
 .click(function() {
-$.load.get('spacecrab.pl?0');
+$.load(get('spacecrab.pl?0'));
 });
 
 //Builds the extra tabs

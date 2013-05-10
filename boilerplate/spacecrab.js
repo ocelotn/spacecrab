@@ -33,49 +33,6 @@ function showDiv()
 }
 
 /*
-function copier()
-//Copies everything in the body for saving and loading
-{
-	var screenCopy = $('body').clone().html();
-    return screenCopy;
-}
-
-function saveSys()
-{
-//Checks if browser supports this type of save
-if(typeof(Storage)!=="undefined")
-  	{
-	// Saves data in save
-	        localStorage.setItem('saveCrab', copier());
-			
-			//Should tell what is actually in the savefile
-			alert( JSON.parse(JSON.stringify(localStorage.getItem('saveCrab'))));
-	}
-	// If browser dont support it, then can't save
-	else
-	  {
-			alert("Sorry, your browser does not support web storage");
-	  }
-}
-
-function loadSys()
-{
-//Checks if there is a save called saveCrab
-if(localStorage.getItem('saveCrab') != null)
-  	{
-	// Loads data from variable save and replaces the body
-		document.body.innerHTML = localStorage.getItem('saveCrab');
-  	}
-	// If browser dont support it, then can't save/load
-else
-  {
-		alert("Sorry, no saves detected");
-  }
-}
-*/
-
-
-/*
 			TODO:
 			@JimPetko
 			implement coinflips at loadtime to start, then try to use AJAX to intercept onclick and flip coin and direct them to resulting destination. 
