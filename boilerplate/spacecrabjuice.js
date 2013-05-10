@@ -53,6 +53,12 @@ $( "button.load" )
 		{
 		// Loads data from variable save and replaces the body
 			document.body.innerHTML = localStorage.getItem('saveCrab');
+			var body= document.getElementsByTagName('body')[0];
+			var script= document.createElement('script');
+			script.id = 'theend';
+			script.type= 'text/javascript';
+			script.src= 'boilerplate/spacecrabjuice.js';
+			body.appendChild(script);
 		}
 		// If browser dont support it, then can't save/load
 	else
@@ -65,8 +71,15 @@ $( "button.load" )
 //Should restart the game by calling spacecrab.pl?0
 $( "button.startOver" )
 .button()
-.click(function() {
-$('html').load('spacecrab.pl?0');
+.click(function() 
+{
+	$('html').load('spacecrab.pl?0');
+	var body= document.getElementsByTagName('body')[0];
+	var script= document.createElement('script');
+	script.id = 'theend';
+	script.type= 'text/javascript';
+	script.src= 'boilerplate/spacecrabjuice.js';
+	body.appendChild(script);
 });
 
 //Builds the extra tabs
