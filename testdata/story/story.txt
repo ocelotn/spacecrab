@@ -373,7 +373,7 @@ some kind of signal
 
 
 4A1A1A2B1A1
-<div class="story" id="node4A1A1A2B1A1">
+<div class="story" id="node4A1A1A2B1A1" fg="FG_SpaceCrabHuman.png" mg="MG_SpaceCrabQueen.png" bg="BG_SpaceCrabPalace.png">
 <p>You run after Divine Brachyura, determined to get your due.</p>
 
 <p>"Divine Brachyura," you shout, waving your arms wildly at her when she glances back to see who could be so rudely calling her name.
