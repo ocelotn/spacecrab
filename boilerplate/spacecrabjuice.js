@@ -66,7 +66,7 @@ $( "button.load" )
 $( "button.startOver" )
 .button()
 .click(function() {
-$.load(get('spacecrab.pl?0'));
+$('html').load('spacecrab.pl?0');
 });
 
 //Builds the extra tabs
