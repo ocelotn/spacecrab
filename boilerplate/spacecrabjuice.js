@@ -28,22 +28,58 @@ $(function()
 $( "button.save" )
 .button()
 .click(function() {
-saveSys();
+//Checks if browser supports this type of save
+	if(typeof(Storage)!=="undefined")
+		{
+		// Saves data in save
+				localStorage.setItem('saveCrab', ($('body').clone().html()));
+				
+				//Should tell what is actually in the savefile
+//				alert( JSON.parse(JSON.stringify(localStorage.getItem('saveCrab'))));
+		}
+		// If browser dont support it, then can't save
+		else
+		  {
+				alert("Sorry, your browser does not support web storage");
+		  }
 });
 
-//Load button which calls loadsys
+//Load button which loads
 $( "button.load" )
 .button()
 .click(function() {
-loadSys();
+	//Checks if there is a save called saveCrab
+	if(localStorage.getItem('saveCrab') != null)
+		{
+		// Loads data from variable save and replaces the body
+			document.body.innerHTML = localStorage.getItem('saveCrab');
+			var body= document.getElementsByTagName('body')[0];
+			var script= document.createElement('script');
+			script.id = 'theend';
+			script.type= 'text/javascript';
+			script.src= 'boilerplate/spacecrabjuice.js';
+			body.appendChild(script);
+		}
+		// If browser dont support it, then can't save/load
+	else
+	  {
+			alert("Sorry, no saves detected");
+	  }
 });
+
 
 //Should restart the game by calling spacecrab.pl?0
 $( "button.startOver" )
 .button()
-.click(function() {
-//$(this).load('spacecrab.pl?0');
-$(document).load('spacecrab.pl');
+.click(function() 
+{
+	$('html').load('spacecrab.pl?0');
+	var body= document.getElementsByTagName('body')[0];
+	var script= document.createElement('script');
+	script.id = 'theend';
+	script.type= 'text/javascript';
+	script.src= 'boilerplate/spacecrabjuice.js';
+	body.appendChild(script);
 });
 
 //Builds the extra tabs
