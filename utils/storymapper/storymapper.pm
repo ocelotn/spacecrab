@@ -54,7 +54,7 @@ use GraphViz;
    my %edgeformat = (
       fontsize => 8.0,
       color => $hrefcolor,
-      fontcolor => $hrefcolor
+      fontcolor => $hrefcolor,
     );
     my %graphformat = (
        directed => "TRUE",
@@ -158,7 +158,8 @@ sub addImage{
 		name=> $img,
 		tooltip=>"Image ".$img,
 		color=>$nodecolor,
-		shape=>'oval'
+		shape=>'oval',
+		splines=>'true'
 	) or die "no node added for $img";
 	$graph->add_edge($source => $img);
 }
@@ -245,7 +246,7 @@ sub main {
 		 }
          #check for non-default images
 		 foreach my $attr (qw(fg mg bg)){		 
-		   if ($div->{$attr}){addImage($graph, $nodeno, $div->{$attr});}
+#		   if ($div->{$attr}){addImage($graph, $nodeno, $div->{$attr});}
 		 }		   
       } #node processed
   } #all files processed
