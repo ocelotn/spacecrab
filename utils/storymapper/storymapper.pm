@@ -26,7 +26,7 @@ use GraphViz;
    #path variables
    my $nodepath = "../../testdata/story";
    my $imagepath = "../../images";
-   my $nodefilenamepat = qr/(.*)\.node$/;
+   my $nodefilenamepat = qr/(.*)(\.node)?$/;
    my $dirmarker = "/";
    
    #attribute names
@@ -57,10 +57,10 @@ use GraphViz;
     );
     my %graphformat = (
        directed => "TRUE",
-       bgcolor => "linen"
+       bgcolor => "linen",
+       label => "Spacecrab Story Map"
     );
-
-   
+     
 sub getFileSpec {
    opendir(DH, shift) or die "couldn't open $nodepath for listing";
    my @files = grep {!/^\./} readdir(DH);
@@ -85,11 +85,9 @@ sub getNodeFromFileName {
 sub getFirstLine{
 #   my $firsttext = shift->at('div[class="story"] *:not(div)');
 #   my $firsttext = shift->at('div[class="story"] p|h1|h2|h3|h4|li');
-   my $firsttext = shift->at('p|h1|h2|h3|h4|li');
-   
-   my $firstline;
-   if ($firsttext) {
-      $firstline = substr $firsttext->text, 0, 50;
+   my $firstline = shift->at('p|h1|h2|h3|h4|li');
+   if ($firstline) {
+      $firstline = substr $firstline->text, 0, 50;
    } else {
       $firstline = "Cannot find a first line. Node may be skeletal."
    }
@@ -103,7 +101,6 @@ sub checkforEnd{
 #	return ($div->text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
 	return ($div->all_text=~/THE END\.?\s*(<\/\s*\w+\s*>)?\s*$/)?1:0;
 }
-
 sub getGraph{   
    #create the graph
    my $graph = GraphViz->new(
@@ -122,89 +119,101 @@ sub getDiv{
 }
 sub addStoryNode{
    my ($graph, $div, $file) = @_;
-   #allowing empty nodetext to map possible stub files
+
    my $nodeno = $div->{'id'};
    my $firstline;
-   if ($nodeno){
-      $firstline = getFirstLine($div);
-   }
+   
+   #allowing empty nodetext to map possible stub files
    unless ($nodeno) {
       $nodeno = getNodeFromFileName($file);
       if ($nodeno eq '') {die "Can't get nodeno from filename $file.";}
       elsif ($nodeno eq "-1"){print "Node is not parseable from $file."; die;}
       $firstline = "Node file exists but appears empty.";
    }
+
+   #setting up parameters
+	if ($nodeno=~$nodefilenamepat){$nodeno = $1;} 
+	   else {warn "Non standard node id $nodeno";}
+	$firstline = getFirstLine($div);
  	my $tooltip = $div->children()->first->text;
  	$tooltip =~s/[\'\"]//g;
-      $graph->add_node(
-         $nodeno, 
+
+    $graph->add_node(
+         $nodeno,
          label=>$nodeno.":\n".$firstline, 
          tooltip=>"Node ".$nodeno." ".$tooltip
-      ) or die "cannot add node $nodeno for $file\n";
-      return $nodeno;
-}
-sub addStraightEdge{
-   my ($graph,$source, $dest, $choicetext) = @_;
-   if (!$dest) {}#die "no destination for $source\n";}
-   else {
-   $dest =~/(.*)(\.node)?/;
-   my $nodeid = $1;
-   $graph->add_edge(
-      $source => $nodeid, 
-      ,head_url => $uribase.$nodeid, 
-      tooltip=>$source.",".$nodeid.":".$choicetext
-   );
-   }
-}
-sub addForkedEdge{
-   my ($graph, $source, $dest1, $dest2, $choicetext) = @_;
-      #if it's a forked URL create a subnode for the fork then map from that
-            my $forkid = $source.",";
-            $forkid.=$dest1.",";
-            if ($dest2){$forkid.=$dest2;}
-            $graph->add_node(
-               $forkid,
-               shape=>"point"
-               , url=>$uribase.$source, tooltip=>$source.":".$choicetext
-            );
-            $graph->add_edge(
-               $source=>$forkid,
-               tail_url=>$uribase.$source,
-               tooltip=>$forkid.":".$choicetext);
+    ) or die "cannot add node $nodeno for $file\n";
 
-#            my $threshval = ($choice->{$thresh})?$choice->{$thresh}:"";
-#            my $d1chance = ($threshval ne '')? $threshmax-$threshval : 0.50;
-#            my $d2chance = $threshval;
-#            my $depsval =   ($choice->{$deps})  ?$choice->{$deps}  :"";
-            
-            if($dest1){
-               $graph->add_edge(
-                  $forkid => $dest1, 
-#                  label => $depsval.$d1chance,
-                  color=> $d1color, fontcolor =>$d1color
-                  , tail_url=>$uribase.$source
-                  , tooltip=>$forkid.":".$choicetext
-               )
-            } 
-            if ($dest2){
-               $graph->add_edge(
-                  $forkid => $dest2, 
-#                  label=> $depsval.$d2chance,
-                  color=> $d2color, fontcolor =>$d2color
-                  , tail_url=>$uribase.$source
-                  , tooltip=>$forkid.":".$choicetext
-               )
-            }
+    return $nodeno;
+}
+sub commented {
+#sub addStraightEdge{
+#   my ($graph,$source, $dest, $choicetext) = @_;
+#   if (!$dest) {die "no destination for $source\n";}
+#   else {
+#	 $dest =~s/(.*)(\.node)?/$1/;
+#	 $graph->add_edge(
+#		$source => $dest, 
+#		,head_url => $uribase.$dest, 
+#		tooltip=>$source.",".$dest.":".$choicetext
+#	 );
+#  }
+#}
+# sub addChoiceEdge{
+#    my ($graph, $source, $choicetext, $dest1, $dest2) = @_;
+# 
+# #            my $threshval = ($choice->{$thresh})?$choice->{$thresh}:"";
+# #            my $d1chance = ($threshval ne '')? $threshmax-$threshval : 0.50;
+# #            my $d2chance = $threshval;
+# #            my $depsval =   ($choice->{$deps})  ?$choice->{$deps}  :"";
+#          
+#    my $forkid;
+#       
+#    #if it's a forked choice create a subnode for the fork then map from that
+#    if ($dest2){
+# 	   $forkid = $source."-".$dest1.":".$dest2;
+# 	   $graph->add_node(
+# 		  $forkid,
+# 		  shape=>"point"
+# 		  , url=>$uribase.$source
+# 		  , tooltip=>$source.":".$choicetext
+# 	   );
+# 
+# 	   $graph->add_edge(
+# 		  $source=>$forkid,
+# 		  tail_url=>$uribase.$source,
+# 		  tooltip=>$forkid.":".$choicetext
+# 	   );
+# 	   	   
+# 	   $graph->add_edge(
+# 		  $forkid => $dest2 
+# #         , label=> $depsval.$d2chance
+# 		  , color=> $d2color 
+# 		  , fontcolor =>$d2color
+# 		  , tail_url=>$uribase.$source
+# 		  , tooltip=>$forkid.":".$choicetext
+# 	   )
+# 	}
+# 
+# if (defined $forkid){$source = $forkid;}
+# 
+#    #either way, add an edge to dest1
+# 	$graph->add_edge(
+# 	   $source => $dest1 
+#  #     , label => $depsval.$d1chance
+# 	   , color=> $d1color
+# 	   , fontcolor =>$d1color
+# 	   , tail_url=>$uribase.$source
+# 	   , tooltip=>$forkid.":".$choicetext
+# 	)
+#     
+# }
 }
 
 sub addImage{
 	my ($graph, $source, $img) = @_;
-warn "$source addin img to $img\n";
-	my $nodecolor;
-	if (-e $imagepath."/".$img){
-		$nodecolor = $imgcolor;
-	} else {$nodecolor = 'red';}
-if ($source eq "node1" or $img=~/node1/){warn "DANGER\n\n";}
+	my $nodecolor=(-e $imagepath."/".$img)?
+      $imgcolor:'red';
 	$graph->add_node(
 		name=> $img,
 		tooltip=>"Image ".$img,
@@ -212,7 +221,62 @@ if ($source eq "node1" or $img=~/node1/){warn "DANGER\n\n";}
 		shape=>'oval'
 	) or die "no node added for $img";
 	$graph->add_edge( $source => $img);
-	
+}
+
+sub addChoices{
+  my ($div, $graph, $source) = @_;
+  my $links = $div->find('a');
+  if (defined $links && $links->size > 0){
+	 $links->each(sub{
+	   my $choice = $_;
+	   my $choicetext = $choice->text;
+       my $forkid;
+       
+       #if it is a forked choice with two destinations
+       #add a fork point and edges from that to each dest
+	   if (defined $choice->{$d2} && defined $choice->{$d1}){
+		  $forkid = $source."-".$choice->{$d1}.":".$choice->{$d2};
+		  $graph->add_node(
+			 $forkid
+			 , shape=>"point"
+			 , url=>$uribase.$source
+			 , tooltip=>$source.":".$choicetext
+		  ) or die "could not add forkpoint $forkid";
+   
+		  $graph->add_edge(
+			 $source=>$forkid,
+			 tail_url=>$uribase.$source,
+			 tooltip=>$forkid.":".$choicetext
+		  ) or die "could not add edge from $source to $forkid";
+			  
+		  $graph->add_edge(
+			 $forkid => $choice->{$d2} 
+   #         , label=> $depsval.$d2chance
+			 , color=> $d2color 
+			 , fontcolor =>$d2color
+			 , tail_url=>$uribase.$source
+			 , tooltip=>$forkid.":".$choicetext
+		  ) or die "could not add edge from $source to ".$choice->{$d2};
+	   }
+
+	   if (defined $forkid){$source = $forkid;}
+
+	   #either way, add an edge to dest1
+	    if (!defined $choice->{$d1} || !defined $source){
+	       die "something is wrong - either no source or dest1";
+	    }
+		$graph->add_edge(
+		   $source => $choice->{$d1}
+	 #     , label => $depsval.$d1chance
+		   , color=> $d1color
+		   , fontcolor =>$d1color
+		   , tail_url=>$uribase.$source
+		   , tooltip=>$source.":".$choicetext
+		) or die "could not add edge from $source to ".$choice->{$d1};
+	 });
+	 return 1;
+  }
+  return 0;
 }
 
 sub main {
@@ -220,58 +284,33 @@ sub main {
    my $graph = getGraph();
    
    #populate the graph
-   foreach my $file (getFileSpec($nodepath)){
+   foreach my $file (getFileSpec($nodepath)){   
       #get the node contents
       my $div = getDiv($file);
       unless ($div) {$div = Mojo::DOM->new('<div>EMPTY FILE!</div>')}
       #add the node
       my $nodeno = addStoryNode($graph, $div, $file);
-      #map edges out of the node
+      #if the node is not empty
       if ($div) {
-      my $links =  $div->find('a');
-      #	if there _are_ any links
-      if (defined $links && $links->size > 0){
-         $links->each(sub{
-				my $choicetext = $_->text;
-				my @attributes  = $_->attrs;
-				
-				foreach my $choice ($_->attrs){
-				   #if there are to destinations, create a forked edge 
-				   #with an anonymous junction node
-				   if (defined $choice->{$d1} && defined $choice->{$d2}){
-					  addForkedEdge(
-						 $graph, 
-						 $nodeno, 
-						 $choice->{$d1},
-						 $choice->{$d2},  
-						 $choicetext);
-				   } else {
-				   #if it's a direct URL, just add a direct edge
-				   addStraightEdge($graph, $nodeno, $choice->{$d1}, $choicetext);
-				   }
-				}
-		 });
-      } else { 
-		if (checkforEnd($div)){
-		  		$graph->add_node($nodeno, fillcolor=>'lightgray');
-	    } else {
-	      		$graph->add_node($nodeno, color=>'red');
-	    }
-	  }
-   	}
-	if ($div->{'fg'}){
-		addImage($graph, $nodeno, $div->{'fg'});
-	}
-	if ($div->{'mg'}){
-	   addImage($graph, $nodeno, $div->{'mg'});
-	}
-	if ($div->{'bg'}){
-	   addImage($graph, $nodeno, $div->{'bg'});
-	}
-  }
-   print $graph->as_svg;
-
+      #	map any edges out of the node
+		 unless(addChoices($div, $graph, $nodeno)){ 
+		 #if there are no story links going out
+			if (checkforEnd($div)){
+					#intentional ending
+					$graph->add_node($nodeno, %nodeformat,  fillcolor=>'lightgray');
+			} else {
+					#this node may be an unintentional dead end
+					$graph->add_node($nodeno, %nodeformat, color=>'red');
+			}
+		 }
+         #check for non-default images
+		 foreach my $attr (qw(fg mg bg)){
+		   if ($div->{$attr}){addImage($graph, $nodeno, $div->{$attr});}
+		 }		   
+      } #node processed
+  } #all files processed
+  print $graph->as_svg;
 }
-   main();
 
+main();
 1
