@@ -58,17 +58,18 @@ sub parseNode{
 		)? $vals:$cfg->{$zone."default"};
 	 }
 	
-	 $div->find('a')->map(sub{
-		my $choice = $_; 
-		#$attributes{'href'} = $cfg->{'baseurl'}.
-		$attributes{'href'} = 'spacecrab.pl?';
+#	 $div->find('a')->map(sub{
+#		my $choice = $_; 
+#		#$attributes{'href'} = $cfg->{'baseurl'}.
+#		$attributes{'href'} = 'spacecrab.pl?';
 #		if ($choice->attrs('data-dest2') ne ''){
 #		   $attributes{'href'} .= getCleanNodeno($choice->attrs('data-dest2'));
 #		} else {
-		   $attributes{'href'} .= getCleanNodeno($choice->attrs('data-dest1'));
+#		   $attributes{'href'} .= getCleanNodeno($choice->attrs('data-dest1'));
 #		}
-		   $choice->{'href'} = $attributes{'href'};
-	 });
+#		   $choice->{'href'} = $attributes{'href'};
+#	 });
+
 	 $attributes{'story'} = $div->to_xml;
 	 return \%attributes;
 }
