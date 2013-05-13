@@ -35,7 +35,6 @@ function showDiv()
 
 function chooseALink(){
    $("a").click(function() {
-     //alert("Hello world!");
      var $destno = 1;
      if($(this).attr('data-dest2')){
      var $destno = Math.round(Math.random()+1);
