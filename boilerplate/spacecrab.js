@@ -33,7 +33,7 @@ function showDiv()
 	} 
 }
 
-$(document).ready(function() {
+function chooseALink(){
    $("a").click(function() {
      //alert("Hello world!");
      var $destno = 1;
@@ -42,4 +42,8 @@ $(document).ready(function() {
 	 }
 	 $(this).attr('href','spacecrab.pl?'+$(this).attr('data-dest'+$destno));
    });
+}
+
+$(document).ready(function() {
+   chooseALink();
  });
