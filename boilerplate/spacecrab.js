@@ -1,3 +1,4 @@
+
 function hideDiv()
 //hide Div content
 { 
@@ -32,44 +33,13 @@ function showDiv()
 	} 
 }
 
-/*
-			TODO:
-			@JimPetko
-			implement coinflips at loadtime to start, then try to use AJAX to intercept onclick and flip coin and direct them to resulting destination. 
-			if( dest2 exists) flip a coin else{ flip a coin for dest 1) 
-			
-			JQuery
-			$("#target").click(function() {
-				
-});
-
-*/
-
-
-//detects forks in the choices and redirects to random choice.
-alert("js is being called correctly");
- 
-$(function()
-{
-	alert("function has been called =)");
-    for (thing in $('a.story[data-dest2]'))
-	{		
-		var result = Math.floor(Math.random()*2);	//generates either 1 or 0.
-		alert("after random gen - result = " + result);
-		
-		if(result == 1){
-			$(thing).attr("href", "spacecrab.pl?" + data-dest2);
-			alert("inside if statement - result = " + result);			
-		}
-	}
-})
-
-//Generates n Coinflips
-function coinflip(int flipCount)
-{
-	while (flipCount!=0)
-	{
-		flipCount--;
-		return Math.floor(Math.random()*2);
-	}
-}
+$(document).ready(function() {
+   $("a").click(function() {
+     //alert("Hello world!");
+     var $destno = 1;
+     if($(this).attr('data-dest2')){
+     var $destno = Math.round(Math.random()+1);
+	 }
+	 $(this).attr('href','spacecrab.pl?'+$(this).attr('data-dest'+$destno));
+   });
+ });

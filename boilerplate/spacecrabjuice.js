@@ -1,4 +1,11 @@
 
+$(function(){
+	alert($('div[class="story"] a[data-dest1]').text;
+});
+
+
+
+
 //Sets up accordion
 $(function() 
 {
@@ -98,4 +105,5 @@ function builder($start)
 //Refocuses on the newest panel
 	$("#storywrapper" ).accordion( "option", "active", $start );
 }
+
 
