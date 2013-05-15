@@ -16,21 +16,6 @@ $(function()
 	});
 });
 
-//Sets up sizing of accordion
-$(function() 
-{
-	$( "#accordion-resizer" ).resizable(
-	{
-		minHeight: 240,
-		minWidth: 300,
-		resize: function() 
-		{
-			$( "#storywrapper" ).accordion( "refresh" );
-		}
-	}
-);
-});
-
 //Save button which calls savesys
 $( "button.save" )
 .button()
