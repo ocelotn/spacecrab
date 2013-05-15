@@ -1,6 +1,6 @@
 
 $(function(){
-	alert($('div[class="story"] a[data-dest1]').text;
+	alert($('div[class="story"] a[data-dest1]').text);
 });
 
 
