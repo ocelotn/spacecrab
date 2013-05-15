@@ -459,12 +459,14 @@ some kind of signal
 <div class="story" id="node4B" fg="FG_SpaceCrabShip.png" mg="MG_CrabberShipFleet.png">
 <p>Cloak?  No way.  There's no one out here!  <I>You're</i> not a paranoid hermit crab.</p>
 
-<p>Wait—what was that?  The Cockleshell's main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they're coming in fast!  They've clearly seen you, and they're not opening a frequency to hail you.  You're under attack; you hesitate, unsure whether to <a data-dest1="node4B1">fight</a> or <a data-dest1="node4B2">flee</a>.</p>
+<p>Wait—what was that?  The Cockleshell's main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they're coming in fast!  They've clearly seen you, and they're not opening a frequency to hail you.  You're under attack; you hesitate, unsure whether to fight or flee. You bite your lip, reach into your pocket, and pull out your lucky coin.  Lucky coin always knows what to do!  You toss it in the air, catch it, and slap it onto your arm.  <a data-dest1="node4B1" data-dest2="node4B2"> Heads fight, tails flee</a>!</p>
 </div>
 
 
 4B1 
 <div class="story" id="node4B1" mg="MG_CrabberShipFleet.png">
+<p>Heads!</p>
+
 <p>You raise the ship's shields and prepare to fire your xanthidaen lasers.  You're not going down without a fight!</p>
 
 <p>You are, however, going down, because the Cockleshell 2600 really wasn't made for intense battle, and you <i>are</i> facing three enemy ships.  As their lasers destroy you, you wonder who they are and what they're doing on Verru.</p>
@@ -477,7 +479,9 @@ some kind of signal
 
 4B2
 <div class="story" id="node4B2" mg="MG_CrabberShipFleet.png">
-<p>There's no way the Cockleshell 2600 can handle a fight against three enemy ships.  You desperately shift gears and send the Cockleshell flying homeward.</p>
+<p>Tails.</p>
+
+<p>Lucky coin is right (as usual): there's no way the Cockleshell 2600 can handle a fight against three enemy ships.  You desperately shift gears and send the Cockleshell flying homeward.</p>
 
 <p>Unfortunately, there's also no way the Cockleshell 2600 can outrun three enemy ships, either.  It wasn't build for fighting, it wasn't built for speed...as the enemy ships' lasers destroy you, you wonder what the hell it <i>was</i> built for, anyway.</p>
 
