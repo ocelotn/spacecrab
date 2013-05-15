@@ -66,13 +66,7 @@ $( "button.startOver" )
 .button()
 .click(function() 
 {
-	$(document).load('test.space-crab.com');
-	var body= document.getElementsByTagName('body')[0];
-	var script= document.createElement('script');
-	script.id = 'theend';
-	script.type= 'text/javascript';
-	script.src= 'boilerplate/spacecrabjuice.js';
-	body.appendChild(script);
+	window.location.reload();
 });
 
 //Builds the extra tabs
