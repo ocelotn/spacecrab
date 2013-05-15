@@ -3,8 +3,9 @@ $(function(){
 	alert($('div[class="story"] a[data-dest1]').text);
 });
 
-
-
+$(document).ready(function() {
+   chooseALink();
+ });
 
 //Sets up accordion
 $(function() 
@@ -65,7 +66,7 @@ $( "button.startOver" )
 .button()
 .click(function() 
 {
-	$('html').load('spacecrab.pl?0');
+	$(document).load('test.space-crab.com');
 	var body= document.getElementsByTagName('body')[0];
 	var script= document.createElement('script');
 	script.id = 'theend';
