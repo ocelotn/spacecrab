@@ -35,7 +35,6 @@ function showDiv()
 
 function chooseALink(){
    $("a").click(function() {
-    alert("in choose alink\n");
      $(this).attr('href','spacecrab.pl?'+$(this).attr('data-dest'+$destno));
      var $destno = 1;
      if($(this).attr('data-dest2')){
