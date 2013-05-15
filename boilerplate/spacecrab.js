@@ -35,11 +35,13 @@ function showDiv()
 
 function chooseALink(){
    $("a").click(function() {
+    alert("in choose alink\n");
+     $(this).attr('href','spacecrab.pl?'+$(this).attr('data-dest'+$destno));
      var $destno = 1;
      if($(this).attr('data-dest2')){
      var $destno = Math.round(Math.random()+1);
-	 }
-	 $(this).attr('href','spacecrab.pl?'+$(this).attr('data-dest'+$destno));
+      }
+     $(this).attr('href','spacecrab.pl?'+$(this).attr('data-dest'+$destno));
    });
 }
 
