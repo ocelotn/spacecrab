@@ -149,6 +149,7 @@ sub getPage {
    #	get content
    my $nodeData = grabNodeData($nodeno);
    $page.=storyText($nodeData);
+   $page.="</div>";
    $page.=generateImageLinks($nodeData);
    #   add footer
    $page.=grabSnippet($cfg->{"boilerplatepath"}.$cfg->{"footername"});
