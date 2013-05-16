@@ -66,16 +66,16 @@ $( "button.startOver" )
 .button()
 .click(function() 
 {
-	window.location.reload();
+	var varAppend = "/spacecrab.pl?0"; 
+	window.location.href = window.location.href.replace(".com",".com" + varAppend);
 });
 
 
 var $nodeNum = 1;
 
 //Builds the extra tabs
-$(function builder()
-{
-	$("a").live("click", function()  
+
+$("a").live("click", function()  
 	{
 		this.preventDefault();
 	//Append just adds the body
@@ -89,6 +89,5 @@ $(function builder()
 	//Reloads the accordion after all this work has been done
 		$('#storywrapper').accordion("refresh");
 	});
-});
 
 
