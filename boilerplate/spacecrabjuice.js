@@ -73,7 +73,7 @@ $( "button.startOver" )
 var $nodeNum = 1;
 
 //Builds the extra tabs
-function builder()
+$(function builder()
 {
 	$("a").live("click", function()  
 	{
@@ -88,7 +88,7 @@ function builder()
 	
 	//Reloads the accordion after all this work has been done
 		$('#storywrapper').accordion("refresh");
-	}
-}
+	});
+});
 
 
