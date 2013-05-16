@@ -69,21 +69,26 @@ $( "button.startOver" )
 	window.location.reload();
 });
 
+
+var $nodeNum = 1;
+
 //Builds the extra tabs
-function builder($start)
+function builder()
 {
-//Append just adds the body
-	$(document.getElementById("storywrapper")).append('<h[$start]></h[$start]><div><p></p></div>');
+	$("a").live("click", function(){  
+	{
+		this.preventDefault();
+	//Append just adds the body
+		$(document.getElementById("storywrapper")).append('<h></h><div><p$nodeNum></p$nodeNum></div>');
 
-//Loads data parsed from the .story in the spacecrabmeat into p
-	$("p").load("http://test.space-crab.com/spacecrabmeat.pl? .story");
+	//Loads data parsed from the .story in the spacecrabmeat into p
+	//	$("p$nod").load("http://test.space-crab.com/spacecrabmeat.pl? .story");
 
-
-//Reloads the accordion after all this work has been done
-	$('#storywrapper').accordion("refresh");
-
-//Refocuses on the newest panel
-	$("#storywrapper" ).accordion( "option", "active", $start );
+		$("p#nodeNum").load($(this).attr("href") + " .story"); 
+	
+	//Reloads the accordion after all this work has been done
+		$('#storywrapper').accordion("refresh");
+	}
 }
 
 
