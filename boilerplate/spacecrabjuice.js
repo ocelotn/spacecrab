@@ -75,7 +75,7 @@ var $nodeNum = 1;
 //Builds the extra tabs
 function builder()
 {
-	$("a").live("click", function(){  
+	$("a").live("click", function()  
 	{
 		this.preventDefault();
 	//Append just adds the body
