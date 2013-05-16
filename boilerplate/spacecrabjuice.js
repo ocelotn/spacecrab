@@ -78,7 +78,6 @@ var $nodeNum = 1;
 
 $("a").click(function()  
 	{
-		this.preventDefault();
 	//Append just adds the body
 		$(document.getElementById("storywrapper")).append('<h></h><div><p$nodeNum></p$nodeNum></div>');
 
