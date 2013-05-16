@@ -1,6 +1,6 @@
 
 $(function(){
-	alert($('div[class="story"] a[data-dest1]').text);
+	//alert($('div[class="story"] a[data-dest1]').text);
 });
 
 $(document).ready(function() {
@@ -26,9 +26,9 @@ $( "button.save" )
 		{
 		// Saves data in save
 				localStorage.setItem('saveCrab', ($('body').clone().html()));
-				
+			        alert('Saved the story so far');	
 				//Should tell what is actually in the savefile
-//				alert( JSON.parse(JSON.stringify(localStorage.getItem('saveCrab'))));
+//				//alert( JSON.parse(JSON.stringify(localStorage.getItem('saveCrab'))));
 		}
 		// If browser dont support it, then can't save
 		else
