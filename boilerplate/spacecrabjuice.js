@@ -67,7 +67,8 @@ $( "button.startOver" )
 .click(function() 
 {
 	var varAppend = "/spacecrab.pl?0"; 
-	window.location.href = window.location.href.replace(".com",".com" + varAppend);
+//	window.location.href = window.location.href.replace(".com",".com" + varAppend);
+	window.location.href = window.location.href.replace(".com",".com");
 });
 
 
@@ -75,7 +76,7 @@ var $nodeNum = 1;
 
 //Builds the extra tabs
 
-$("a").live("click", function()  
+$("a").click(function()  
 	{
 		this.preventDefault();
 	//Append just adds the body
