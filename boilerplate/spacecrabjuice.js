@@ -68,7 +68,7 @@ $( "button.startOver" )
 {
 	var varAppend = "/spacecrab.pl?0"; 
 //	window.location.href = window.location.href.replace(".com",".com" + varAppend);
-	window.location.href = 'test.space-crab.com/spacecrab.pl?0';
+	window.location.href = 'spacecrab.pl?0';
 });
 
 
@@ -85,7 +85,7 @@ $("a").click(function(e)
 	//Loads data parsed from the .story in the spacecrabmeat into p
 	//	$("p$nod").load("http://test.space-crab.com/spacecrabmeat.pl? .story");
 
-		$("p#nodeNum").load($(this).attr("href") + " .story"); 
+		$("p#nodeNum").load($(this).attr("href") .story); 
 	
 	//Reloads the accordion after all this work has been done
 		$('#storywrapper').accordion("refresh");
