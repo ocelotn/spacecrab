@@ -187,12 +187,14 @@ some kind of signal
 <p>Orbiting Verru and monitoring the signal, you realize you're sitting in plain view of anyone who might pass by.  Perhaps you should <a data-dest1="node4A">cloak the Cockleshell</a> while you wait for the computer to decipher the signal.  Just as a precaution.</p>
 
 <p>But is it really necessary?  Or would that be the act of a paranoid hermit crab? Everyone knows <a data-dest1="node4B">there's nothing really going on out here</a>.  You wince as the signal playing on the speakers hits a particularly sharp note.  What to do, what to do?</p>
+
+<p>You dig around in your pocket.  Now might be just the time to <a data-dest1="node4A" data-dest2="node4B">flip your lucky coin</a>! Making decisions is hard work.</p>
 </div>	
 
 
 4A
 <div class="story" id="node4A" fg="FG_SpaceCrabShipInterior.png" mg="MG_CrabberShipFleet.png">
-<p>Safety first!  It only means pushing a button, after all.  You cloak the ship, and it's a damn good thing you did.   Moments after cloaking, you see three ships come blazing toward you; you gape at them as they zip by and disappear into the distance.   Judging by their speed and angle, they've just come from Verru.  You don't recognize the ships, so they're obviously not of crustaceas design.</p> 
+<p>It's time to cloak the ship. Safety first!  It only means pushing a button, after all.  You cloak the ship, and it's a damn good thing you did.   Moments after cloaking, you see three ships come blazing toward you; you gape at them as they zip by and disappear into the distance.   Judging by their speed and angle, they've just come from Verru.  You don't recognize the ships, so they're obviously not of crustaceas design.</p> 
 
 <p>What could be happening down there on that little moon?  You stare at it on your screen, as though the view from space is going to tell you anything.  You ought to <a data-dest1="node4A1">fly straight home, tell Divine Brachyura what you've seen, and help her raise the Space Crab Army</a>.  You're just one person in a Cockleshell 2600.  You need reinforcements.</p>
 
@@ -232,7 +234,8 @@ some kind of signal
 
 <p>Perhaps they're all inside that massive building, the somewhat narrow one that stetches into the distance.  It's got rows of windows; maybe you should <a data-dest1="node4A1A1">scuttle over and take a peek</a>.</p>
 
-<p>Or maybe...no, there's really no other option, here.  You need to <a data-dest1="node4A1A1">scuttle over and take a peek</a>.</p>
+<p>Or maybe...no, there's really no other option, here.  You need to <a data-dest1="node4A1A1">scuttle over and take a peek</a>.  Even if you were to <a data-dest1="node4A1A1" data-dest2="node4A1A1">toss your lucky coin</a>, you're pretty sure both sides would mean "scuttle over and take a peak," because it's pretty clear that that's what needs to happen here.</p>
+
 </div>
 
 
@@ -240,7 +243,7 @@ some kind of signal
 <div class="story" id="node4A1A1" fg="FG_SpaceCrab.png" bg="BG_CrabberBase.png">
 <p> Oh, the horror!  Rows and rows of monstrous silver pots, as far as the eye can see.  Dozens of crabbers wander around inside the building, checking the pots, adding a dash of salt here and pepper there, filling ramekins with melted butter.  You've heard all the crabber campfire stories; you know what those pots are for.</p>
 
-<p>You pull yourself together and hold up your claw, recording an image of the room with your wrist device.   No one will be able to deny that the crabbers have landed on Verru.</p>
+<p>You pull yourself together and hold up your claw, recording an image of the room with your wrist device.  No one will be able to deny that the crabbers have landed on Verru once they see this footage.</p>
 
 <p>Now you've got to <a data-dest1="node4A1A1A">get out of here and take the Cockleshell back to Brachya</a>.  To be honest, though, it's tempting to <a data-dest1="node4A1A1B">keep gawking like an idiot</a>.  Crabbers have been legends and scary stories to you until now.  It's hard to tear your eyes away.</p>
 </div>
@@ -459,7 +462,7 @@ some kind of signal
 <div class="story" id="node4B" fg="FG_SpaceCrabShip.png" mg="MG_CrabberShipFleet.png">
 <p>Cloak?  No way.  There's no one out here!  <I>You're</i> not a paranoid hermit crab.</p>
 
-<p>Wait—what was that?  The Cockleshell's main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they're coming in fast!  They've clearly seen you, and they're not opening a frequency to hail you.  You're under attack; you hesitate, unsure whether to fight or flee. You bite your lip, reach into your pocket, and pull out your lucky coin.  Lucky coin always knows what to do!  You toss it in the air, catch it, and slap it onto your arm.  <a data-dest1="node4B1" data-dest2="node4B2"> Heads fight, tails flee</a>!</p>
+<p>Wait, what was that?  The Cockleshell's main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they're coming in fast!  They've clearly seen you, and they're not opening a frequency to hail you.  You're under attack; you hesitate, unsure whether to fight or flee. You bite your lip. Well, lucky coin always knows what to do!  You toss it in the air, catch it, and slap it onto your arm.  <a data-dest1="node4B1" data-dest2="node4B2"> Heads fight, tails flee</a>!</p>
 </div>
 
 
