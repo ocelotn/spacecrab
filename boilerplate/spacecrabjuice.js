@@ -87,7 +87,7 @@ $("a").click(function(e)
 
 		var node = $(this).attr("data-dest1");
 		node = node + '.node';
-		$("p#nodeNum").load($node .story); 
+		$("p#nodeNum").load(node .story); 
 	
 	//Reloads the accordion after all this work has been done
 		$('#storywrapper').accordion("refresh");
