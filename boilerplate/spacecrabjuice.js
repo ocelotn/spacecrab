@@ -85,7 +85,8 @@ $("a").click(function(e)
 	//Loads data parsed from the .story in the spacecrabmeat into p
 	//	$("p$nod").load("http://test.space-crab.com/spacecrabmeat.pl? .story");
 
-		$("p#nodeNum").load($(this).attr("href") .story); 
+		var node = $(this).attr("data-dest1");
+		$("p#nodeNum").load((node + .node) .story); 
 	
 	//Reloads the accordion after all this work has been done
 		$('#storywrapper').accordion("refresh");
