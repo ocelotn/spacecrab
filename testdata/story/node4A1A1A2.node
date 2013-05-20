@@ -1,4 +1,4 @@
-<div class="story" id="node4A1A1A2">
+<div class="story" fg="FG_SpaceCrabShipFleet.png" id="node4A1A1A2" mg="MG_CrabberShipFleet.png">
 <p>Though Divine Brachyura is no longer looking at you, you bow deeply and stalk out of the audience hall at a dignified pace.  Outside, you see that the ships of the Space Crab Army are already arriving; Commander Kelpbane must have sent out the call as soon as he got Divine Brachyura&#39;s summons.</p> 
 
 <p> The nearest ship is a grand one, larger and more impressive than any of the others you&#39;ve seen thus far, and there appears to be no one guarding it.  You dash gleefully inside and look around.  Aha!  Toward the back, behind the pilot&#39;s chair and supplies rack, there&#39;s just enough space for a space crab stowaway.  Hearing voices behind you, you dive for it, wedging yourself in behind the supplies.</p>
@@ -27,8 +27,9 @@
 
 </p><p>Wait, where are these ideas coming from?  You can&#39;t lead your people toward a space octopus, and you certainly can&#39;t lead them toward the deathstarfish, can you? You square your shoulders.  Well, if this is the end, then you&#39;ll face it with pride.  If you can&#39;t lead your people to victory, at least you can <a data-dest1="node4A1A1A2C">lead them in song.</a></p>
 
+
 4A1A1A2A
-<div class="story" id="node4A1A1A2A">
+<div class="story" fg="MG_SpaceCrabQueenAttack.png" id="node4A1A1A2A" mg="FG_SpaceCrabShipInterior.png">
 <p>You leap out from behind the gear rack, heedless of your own safety.</p>  
 
 <p>&quot;Divine Brachyura,&quot; you cry, startling your leader.  She turns to glare at you, claws clacking in outrage.  You gulp and continue, hoping she lets you have your say before she kills you.  &quot;Divine Brachyura, I have a plan!  This morning, while I was, uh, patrolling the sector, I encountered a space octopus.&quot;  You pause.  Divine Brachyura looks unimpressed thus far, and you rush to explain your idea.  &quot;What if we go find it again, and tempt it to come after the cra—...carcinologists!&quot;</p>
@@ -39,8 +40,9 @@
 <p>THE END.</p>
 </div>
 
+
 4A1A1A2B
-<div class="story" id="node4A1A1A2B">
+<div class="story" fg="MG_SpaceCrabQueen.png" id="node4A1A1A2B" mg="FG_SpaceCrabShipInterior.png">
 <p>You leap out from behind the gear rack, heedless of your own safety.</p>  
 
 <p>&quot;Divine Brachyura,&quot; you cry, startling your leader.  She turns to glare at you, claws clacking in outrage.  You gulp and continue, hoping she lets you have your say before she kills you.  &quot;Divine Brachyura, I have a plan!  THE DEATHSTARFISH!&quot;  You pause.  Divine Brachyura looks unimpressed, which startles you, but you rush to explain your idea.  &quot;What if we go, get its attention, and lead it here.  Surely, after waking from its hibernation, it will be hungry, won&#39;t it?  We can act as bait and lead it right here to Verru.  Once their base is destroyed, the cra—...carcinologists will scatter and retreat!&quot;</p>
@@ -64,7 +66,7 @@
 
 
 4A1A1A2B1
-<div class="story" id="node4A1A1A2B1">
+<div class="story" fg="FG_SpaceCrabShipInterior.png" id="node4A1A1A2B1" mg="MG_DeathStarfishNear.png">
 <p>It&#39;s not easy, but you claw your way back to consciousness.  Whether your brilliant plan succeeds or not, you&#39;re going to see it through to the end.  You&#39;re going to stand proud, right here beside Divine Bra—...You glance around the cabin.  Where did Divine Brachyura go?  You boggle when you see her heading for the hatch.  She glances back and catches your eye.</p>
 
 <p>&quot;Oh,&quot; she growls, &quot;so you&#39;re awake again, are you?  I suggest getting out of this ship, if you don&#39;t want to play appetizer to a deathstarfish.&quot;  She gestures toward the viewscreen.  The deathstarfish fills it.  &quot;It may turn its attentions to Verru afterwards, but for now it wants to kill whatever woke it up.&quot;  She turns away and, without another word, disappears out the airlock.</p>
@@ -76,7 +78,9 @@
 <p>For a few tense moments, you watch the deathstarfish skimming the blasted bits and pieces of Divine Brachyura&#39;s ship into its maw.  The SCA ships have backed away, and by now so have the crabber vessels.  <a data-dest1="node4A1A1A2B1A">Will the monstrous creature turn its attention to Verru?</a></p>
 </div>
 
-<div class="story" id="node4A1A1A2B1A">
+
+4A1A1A2B1A
+<div class="story" fg="MG_DeathStarfishFar.png" id="node4A1A1A2B1A" mg="MG_CrabberShipFleet.png">
 <p>Yes!  It appears to be turning toward the moon.  As you watch the screen, the deathstarfish seems to pulsate from within.  When the beam of energy erupts from its...mouth, perhaps, if that&#39;s its mouth...and slams into Verru, you gasp.  What had been a moon just a moment before has instantly become scraps and debris, through which the deathstarfish is cheerfully skimming.  You imagine it burbling happily to itself; it reminds you of your pet hamster, burrowing through a pile of food pellets and seeds.</p>
 
 <p>Wait, what is it doing now?  You frown, and Commander Kelpbane leans in closer to the screen.  The deathstarfish is turning again.  Where could it be going...?  Oh!  Oh, dear.  You wince, watching the deathstarfish&#39;s energy beam blast apart Sessilia&#39;s smaller moon.  That&#39;s really too bad; the crabfolk of Sessilia had a settlement there, you know, and now they&#39;ve all been blown into deathstarfish food.  Still...it&#39;s just one settlement, and war demands sacrifice!</p>
@@ -96,21 +100,24 @@
 <p>Or maybe you don&#39;t.  All you really did was stow away on a ship and make one little suggestion, and then Divine Brachyura and Commander Kelpbane took care of the action.  And what does fame matter, anyway?  Your planet is safe now; the crabbers have fled your sector of space.  Isn&#39;t that what&#39;s important?  Maybe you should <a data-dest1="node4A1A1A2B1A2">keep your trap shut and join the party, which is clearly getting underway as you stand around moping.  You see a huge barrel of ale being rolled down the street, and a few crabs have already started singing a victory song.</a></p>
 </div>
 
+
 4A1A1A2B1A1
-<div class="story" id="node4A1A1A2B1A1">
+<div bg="BG_SpaceCrabPalace.png" class="story" fg="FG_SpaceCrabHuman.png" id="node4A1A1A2B1A1" mg="MG_SpaceCrabQueen.png">
 <p>You run after Divine Brachyura, determined to get your due.</p>
 
 <p>&quot;Divine Brachyura,&quot; you shout, waving your arms wildly at her when she glances back to see who could be so rudely calling her name.
 </p><p></p>
 </div>
 
+
 4A1A1A2B1A2
-<div class="story" id="node4A1A1A2B1A2">
+<div class="story" fg="FG_SpaceCrabShipInterior" id="node4A1A1A2B1A2">
 <p>shut your trap, have a good time and a long life, THE END</p>
 </div>
 
+
 4A1A1A2B2
-<div class="story" id="node4A1A1A2B2">
+<div class="story" fg="FG_SpaceCrabShipInterior.png" id="node4A1A1A2B2" mg="MG_DeathStarfishNear.png">
 <p>You let yourself drift into oblivion, hoping that when you wake up everything will be taken care of: the deathstarfish will have eaten Verru, the crabbers will be gone, and Divine Brachyura will have had someone drag you home to bed.</p>
 
 <p>Unfortunately, what happens instead is that Divine Brachyura realizes the deathstarfish will most likely destroy your ship before turning its attention to Verru (your ship being the thing that nettled it in the first place, after all).  She sets the ship to eject her into space, forgetting all about you until she&#39;s already clear of the vessel.  She shrugs and scuttles away toward the nearest crabship.</p>
@@ -120,8 +127,9 @@
 <p>THE END.</p>
 </div>
 
+
 4A1A1A2C
-<div class="story" id="node4A1A1A2C">
+<div class="story" fg="MG_SpaceCrabQueenAttack.png" id="node4A1A1A2C" mg="FG_SpaceCrabShipInterior.png">
 <p>You burst from your hiding place, startling Divine Brachyura long enough to grab the mic out of her sturdy claw.  Clearing your throat, you burst into a full-throated rendition of the Brachyuran National Anthem:</p>
 
 <p>&quot;<i>Hail to thee, Brachya, pearl within the shell—</i>&quot;</p>
