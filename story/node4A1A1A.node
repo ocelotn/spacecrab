@@ -1,0 +1,13 @@
+<div bg="BG_SpaceCrabPalace.png" class="story" fg="FG_SpaceCrab.png" id="node4A1A1A" mg="MG_SpaceCrabQueen.png">
+<p>With the proof safely recorded on your wrist device, you scuttle off into the underbrush. When you&#39;ve gotten a good distance away from the crabber encampment, you launch yourself back toward the Cockleshell 2600.  Once aboard, you set your destination to Brachya and head home at the highest speed the Cockleshell can handle.</p>
+
+<p>When you finally get back to Brachya, you race to the audience hall and interrupt the councilor speaking to Divine Brachyura.  You&#39;re still in crabform; you can&#39;t be bothered to wait for the effects of your direct contact with space to wear off.</p>
+
+<p>&quot;Divine Brachyura,&quot; you pant, chest heaving, eyes wild, &quot;the crabbers—...uhh, carcinologists are coming!  I saw them, and I have proof!&quot;  You continue babbling, growing more and more incoherent, as Divine Brachyura and the huffy councilor stare at you.  After a moment, Her Crustaceasness reaches out and clamps a claw around your wrist.  She yanks you toward her and jabs a button on your wrist device, then watches the recording you made of the crabber base.  Once she&#39;s seen the whole recording, Divine Brachyura unclamps your wrist and gestures to a nearby guard.</p>
+
+<p>&quot;Find Commander Kelpbane,&quot; she growls. &quot;Do it yourself. I want him here within five minutes.&quot;  She watches the guard run from the room, then turns back to you.  You stand as straight and tall as you can, waiting for her to commend you and announce that you&#39;ll be leading the war effort by her side.  &quot;Youngster, you&#39;ve fulfilled your duty.  Go home, have a warm cup of tea, and put yourself to bed.  This is a job for cooler heads, now.&quot; She nods, then turns away to speak to the councilor still standing nearby.</p>
+
+<p>You stare at the side of her head.  Go home?  Have some tea?  Impossible!  She wouldn&#39;t even know about the crabbers on Verru if not for you.  She can&#39;t count you out now.</p>
+
+<p>Your options are three, and you&#39;ve got to make a decision quickly, before Divine Brachyura turns to find out why you&#39;re still standing around.  You could <a data-dest1="node4A1A1A1">protest her decision</a>, tell her you&#39;re not going to be sent to bed like a child, and hope she doesn&#39;t kill you for your impertinence; you could <a data-dest1="node4A1A1A2">sneak onto one of the ships</a> that will be massing outside and preparing to fly into battle; or you could <a data-dest1="node4A1A1A3">go home, have a nice cup of tea, and go to bed</a> (it <i>has</i> been a long day, after all).</p>
+</div>

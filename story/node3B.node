@@ -1,3 +1,15 @@
-<div class="story" id="node3B">
-<p>With a sigh, you turn the ship around and head back the way you&#39;ve come.  Perhaps you should just <a data-dest1id="node4">go investigate that signal from Verru</a>.</p>
+<div class="story" fg="FG_SpaceCrabShipInterior.png" id="node3B" mg="MG_SpaceOctopusAttack.png">
+<p>With a sigh, you turn the ship around and head back the way you&#39;ve come.  Perhaps you should just go investigate that signal from Verru.  You feel kind of silly—you&#39;re probably turning shell and running from a harmless gust of galactic gases—but, after all, there are lots of dangerous things in space.  This sparkly blue and green whatsis could be one of them.</p>
+
+<p>As you punch the buttons to turn the ship around, however, you see that the blue and green sparkle isn&#39;t quite as distant as it had been a moment before.  You&#39;ve stopped moving toward it, so...that can only mean <i>it</i> is now moving towards <i>you</i>!  Glancing down at your computer display, you see confirmation of your suspicions: the blip on your radar that stands for the blue and green whatsis has, over the last few seconds, begun a trajectory toward the Cockleshell 2600.</p>
+
+<p>You&#39;ve been spotted!  It could be friendly, but it&#39;s probably not.  Time to run!  You enter coordinates into the computer and send the Cockleshell speeding towards home.</p>
+
+<p>Well, that was the idea, anyway.  For some reason, you&#39;re not moving.  You look down at the computer display again.  The blue and green whatsis has disappeared from the screen.  Perhaps it wasn&#39;t chasing you after all, but simply moving off in another direction.  Could it have already flown past you?</p>  
+
+<p>When the first tentacle explodes into the Cockleshell&#39;s cabin, you realize your mistake.  Of course!  A space octopus!  They often create displays to lure unsuspecting travelers.  You&#39;ve heard countless stories of people approaching beautiful light patterns in space, only to be gripped by space octopus tentacles and shoveled into a gaping maw.</p>
+
+<p>You watch the tentacle slop around the cabin, seeking something tasty.  As it descends toward your face, you close your eyes and try not to think of Mother and Father.  They&#39;ll be very disappointed when they find out how you died, and Divine Brachyura will probably make them pay to replace the Cockleshell 2600.</p>
+
+<p>THE END.</p>
 </div>
