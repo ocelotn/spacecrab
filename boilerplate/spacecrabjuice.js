@@ -92,7 +92,9 @@ $("a").click(function(e)
 	
 	//Reloads the accordion after all this work has been done
 		$('#storywrapper').accordion("refresh");
-	//	alert(node);
+	//Refocuses on the newest panel
+		$("#storywrapper" ).accordion( "option", "active", 0 );
+		//	alert(node);
 	});
 
 
