@@ -862,8 +862,8 @@ body .ui-tooltip {
 .ui-state-active a,
 .ui-state-active a:link,
 .ui-state-active a:visited {
-	color: #ffffff;
-	text-decoration: none;
+	color: blue;
+	text-decoration: underline;
 }
 
 /* Interaction Cues

@@ -88,7 +88,7 @@ $("a").click(function(e)
 		var node = $(this).attr("data-dest1");
 //		node = 'test.space-crab.com/spacecrab.pl?' + node;
 		node = 'story/' + node + '.node';
-		$("p").load(node); 
+		$("#node1").load(node); 
 	
 	//Reloads the accordion after all this work has been done
 		$('#storywrapper').accordion("refresh");
