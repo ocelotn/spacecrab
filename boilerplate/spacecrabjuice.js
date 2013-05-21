@@ -72,7 +72,7 @@ $( "button.startOver" )
 });
 
 
-var $nodeNum = 1;
+//var $nodeNum = 1;
 
 //Builds the extra tabs
 
@@ -80,7 +80,7 @@ $("a").click(function(e)
 	{
 		e.preventDefault();
 	//Append just adds the body
-		$(document.getElementById("storywrapper")).append('<h></h><div><p$nodeNum></p$nodeNum></div>');
+		$(document.getElementById("storywrapper")).append('<h></h><div><p1></p1></div>');
 
 	//Loads data parsed from the .story in the spacecrabmeat into p
 	//	$("p$nod").load("http://test.space-crab.com/spacecrabmeat.pl? .story");
@@ -88,7 +88,7 @@ $("a").click(function(e)
 		var node = $(this).attr("data-dest1");
 		node = 'test.space-crab.com/spacecrab.pl?' + node;
 		//		node = 'story/' + node + '.node';
-		$("p$nodeNum").load(node); 
+		$("p1").load(node); 
 	
 	//Reloads the accordion after all this work has been done
 		$('#storywrapper').accordion("refresh");
