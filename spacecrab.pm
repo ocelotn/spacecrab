@@ -37,6 +37,7 @@ sub grabSnippet{
    while(<$fh>){$wodgeoftext.=$_;}
     close $fh;   
    return scrubText($wodgeoftext);
+}
 
 sub scrubText{
 	my $text = shift;
