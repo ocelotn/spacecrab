@@ -86,8 +86,8 @@ $("a").click(function(e)
 	//	$("p$nod").load("http://test.space-crab.com/spacecrabmeat.pl? .story");
 
 		var node = $(this).attr("data-dest1");
-		node = 'test.space-crab.com/spacecrab.pl?' + node;
-		//		node = 'story/' + node + '.node';
+//		node = 'test.space-crab.com/spacecrab.pl?' + node;
+		node = 'story/' + node + '.node';
 		$("p1").load(node); 
 	
 	//Reloads the accordion after all this work has been done
