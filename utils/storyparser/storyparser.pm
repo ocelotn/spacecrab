@@ -7,6 +7,7 @@ use Mojo::DOM;
 use lib('../../');
 use spacecrabcfg;
 package StoryParser;
+use utf-8;
 
    #SETUP
    my $cfg = spacecrabcfg::config();
@@ -34,7 +35,10 @@ sub error{
 
 sub cleantext{
 	my $text = shift;
-	$text =~s/\x{8212}/&#8212;/g;
+	$text =~s/\x{2013}/&#x2013;/g;
+	$text =~s/\x{2014}/&#x2014;/g;
+	$text =~s/\x{2018}/&#x2018;/g;
+	$text =~s/\x{2019}/&#x2019;/g;	
 	return $text;
 }
 

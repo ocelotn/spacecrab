@@ -3,6 +3,7 @@ use File::Slurp;
 use Mojo::DOM;
 use lib('.');
 use spacecrabcfg;
+use utf8;
 
 package SpaceCrab;
 
@@ -35,7 +36,13 @@ sub grabSnippet{
    my $wodgeoftext;
    while(<$fh>){$wodgeoftext.=$_;}
     close $fh;   
-   return $wodgeoftext;
+   return scrubText($wodgeoftext);
+
+sub scrubText{
+	my $text = shift;
+	$text =~s/\x{2014}/&#x2014;/g;
+#	$text =~s/—/&#x2014;/g;
+	return $text;
 }
 
 sub parseNode{
