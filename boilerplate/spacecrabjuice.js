@@ -86,12 +86,13 @@ $("a").click(function(e)
 	//	$("p$nod").load("http://test.space-crab.com/spacecrabmeat.pl? .story");
 
 		var node = $(this).attr("data-dest1");
-		node = 'story/' + node + '.node';
+		node = test.space-crab.com/spacecrab.pl? + node;
+		//		node = 'story/' + node + '.node';
 		$("p#nodeNum").load(node); 
 	
 	//Reloads the accordion after all this work has been done
 		$('#storywrapper').accordion("refresh");
-		alert(node);
+	//	alert(node);
 	});
 
 
