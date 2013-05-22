@@ -1,6 +1,5 @@
-body { 
-   background-image: url("images/BG1.PNG");
-   background-repeat: repeat;
+body { background-image: url('images/BG1.png');
+background-repeat: repeat;
 }
 
 @font-face{
@@ -10,39 +9,27 @@ body {
 @font-face{ font-family: Smart;
 	src: url('fonts/Smart.ttf');}
 
-a.story:link{
+#story a:link{
 	color: #42d8df;
 	text-decoration: underline;
 }
 
-a.story:visited{
+#story a:visited{
 	color: #f00;
 	text-decoration: none;
 }
 	
 /*Fits text into the white area*/
-div.story {
-	text-align: left;
-	font-family: Monkey;
-	color: #b0aeb0;
-	clear: right; 
-	background-color: #000; 
-	max-width: 620px ; 
-	clear: left; 
-	height: 100%; 
-	padding: 20px;
-	overflow: scroll;
-	
-}
 	
 .header {
 	text-align: center;
 	font-family: Smart;
 	font-weight: bold; 
 	color: black;
+	text-shadow: 2px 2px 7px #111111;
 	clear: right; 
 	max-width: 620px;
-	height: 100%
+	height: 100%;
 	float: left;
 	
 /* Old browsers */
@@ -73,22 +60,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', end
 
 .map{
 float: right;
-background-image: url("images/UI_Map.PNG");
+clear: left;
+background-image: url('images/UI_Map.png');
 max-width: 620px;
 max-height: 100%;
 }
 
-div.scene{
-position: relative;
-right: 620px;
-float: right;
-background-image: url("images/BG1.PNG");
+div.story {
+	text-align: left;
+	font-family: Monkey;
+	color: #b0aeb0;
+	clear: right; 
+	background-color: #000; 
+	max-width: 620px ; 
+	clear: left; 
+	height: 100%; 
+	padding: 20px;
+	overflow: scroll;
+	
+}
 
+div.scene{
+position: absolute;
+right: 620px;
+top: 0;
+width: 620px;
+float: right;
+background-image: url('images/BG1.png');
 }
 
 #footer {
+	clear: both;
 	text-align: center;
-	background-image: url("images/BG1.PNG");
+	background-image: url('images/BG1.png');
 	font-family: Monkey;
 	color: #af0cee;}	
 	
