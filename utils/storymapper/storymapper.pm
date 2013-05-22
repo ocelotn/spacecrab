@@ -133,12 +133,19 @@ sub addStoryNode{
       elsif ($nodeno eq "-1"){print "Node is not parseable from $file."; die;}
       warn "no node name! for $file - trying $nodeno";   
    }
+<<<<<<< HEAD
 
    #setting up parameters
 	if ($nodeno=~$nodefilenamepat){$nodeno = $1;} 
 	   else {warn "Non standard node id $nodeno";}
 	$firstline = getFirstLine($div);
  	my $tooltip = $div->children()->first->text;
+=======
+ 	#my $tooltip = $div->children()->first->text;
+ 	my $tooltip = '';
+ 	if ($div->children()->size > 0){$tooltip = $div->children()->first->text;}
+ 	elsif ($div->text){$tooltip = $div->text;}
+>>>>>>> e57f4dc0dc9c22649edaa871174c6069c0dd37be
  	$tooltip =~s/[\'\"]//g;
 
     $graph->add_node(

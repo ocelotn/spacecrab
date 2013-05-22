@@ -1,9 +1,0 @@
-<div class="story" fg="FG_SpaceCrabShipInterior.png" id="node4">
-<p>You shift gears and jab a few pertinent buttons, and your ship drifts toward Verru, Sessilia&#39;s second moon.  You&#39;d already programmed the Cockleshell to record the signal coming from the dark moon; now you set it to play the signal on the ship&#39;s internal speakers. Perhaps you can learn something from it, even if the ship&#39;s computer can&#39;t decode it.</p>
-
-<p>Orbiting Verru and monitoring the signal, you realize you&#39;re sitting in plain view of anyone who might pass by.  Perhaps you should <a data-dest1="node4A">cloak the Cockleshell</a> while you wait for the computer to decipher the signal.  Just as a precaution.</p>
-
-<p>But is it really necessary?  Or would that be the act of a paranoid hermit crab? Everyone knows <a data-dest1="node4B">there&#39;s nothing really going on out here</a>.  You wince as the signal playing on the speakers hits a particularly sharp note.  What to do, what to do?</p>
-
-<p>You dig around in your pocket.  Now might be just the time to <a data-dest1="node4A" data-dest2="node4B">flip your lucky coin</a>! Making decisions is hard work.</p>
-</div>
