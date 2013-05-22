@@ -1,4 +1,4 @@
-body { background-image: url("images/BG1") center fixed;
+body { background-image: url("images/BG1.PNG") center fixed;
  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -29,7 +29,7 @@ div.story {
 	color: #b0aeb0;
 	clear: right; 
 	background-color: #000; 
-	max-width: 580px ; 
+	max-width: 620px ; 
 	clear: left; 
 	height: 100%; 
 	padding: 20px;
@@ -42,9 +42,9 @@ div.story {
 	font-family: Smart;
 	font-weight: bold;
 	height: 100%; 
-	color: #af0cee;
+	color: #6f969a;
 	clear: right; 
-	max-width: 580px; 
+	max-width: 620px;
 
 /* Old browsers */
 background: #f5f6f6; 
@@ -69,26 +69,40 @@ background: linear-gradient(135deg,  #f5f6f6 0%,#b8bac6 11%,#dbdce2 21%,#b8bac6 
 
 /* IE6-9 fallback on horizontal gradient */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 ); 
+}
 
 .map{
 float: right;
 clear: left;
-background: ('images/UI_Map');
-max-width: 580px;
+background: ('images/UI_Map.PNG');
+max-width: 620px;
+max-height: 100%;
 }
+
+.button{
+background-color: #6f969a;
+color: #ddc7e1;
+text-shadow: #9c9c9c;
+}
+
 div.scene{
+position: relative;
+right: 621px;
 
 }
 
-#footer {width: 100%; 
-	float: left; 
-	clear: left;}	
+#footer {
+	width: 100%; 
+	text-align: center;
+	background-image: url('images/BG1');
+	font-family: Monkey;
+	color: #af0cee;}	
 	
 /*To resize the accordion*/
 #accordion-resizer {
 padding: 10px;
-width: 50%;
-height: 100% - 40px;
+width: 620px;
+height: 100%;
 }
 
 
