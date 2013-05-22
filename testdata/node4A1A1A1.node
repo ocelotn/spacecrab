@@ -1,0 +1,3 @@
+<div bg="BG_SpaceCrabPalace.png" class="story" fg="FG_SpaceCrab.png" id="node4A1A1A1" mg="MG_SpaceCrabQueen.png">
+<p>No, that&#39;s a terrible idea.  Divine Brachyura doesn&#39;t have any patience for impertinence.  You can&#39;t possibly confront her directly.  You need to <a data-dest1="node4A1A1A3">give up and go home</a>, or else <a data-dest1="node4A1A1A2">do some sneaking</a>.</p>
+</div>
