@@ -1,10 +1,24 @@
-body {background-image:url('../testdata/images/TestImage.png');
+body { background: ('images/BG1');
 /*background-size:cover;*/
 }
+
+a:link{
+	color: purple;
+	text-decoration: underline;
+}
+
+a:visited{
+	color: #b0aeb0;
+	text-decoration: none;
+}
+	
 /*Fits text into the white area*/
 div.story {
+	@font-face{
+		font-family: Monkey;
+		src: url('fonts/Monkey.ttf');}
 	text-align: left;
-	font-family: Copperplate, "Copperplate Gothic Light", fantasy;	
+	font-family: Monkey
 	color: #b0aeb0;
 	clear: right; 
 	background-color: #000; 
@@ -15,47 +29,46 @@ div.story {
 	overflow: scroll;}
 	
 .header {
+	@font-face: Smart;
+	src: url('fonts/Smart.ttf');}
 	text-align: center;
-	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+	font-family: Smart;
 	color: #5e2359;
-	width: 100%; 
+	height: 100%; 
 	clear: right; 
-	max-width: 580px; 
+	max-width: 580; 
 	padding: 10px; 
-	border-color: #60225b;
+	border-color: #970ecc;
 	border-width: thick;
 
-/* IE10 */ 
-background-image: -ms-linear-gradient(top left, #000000 0%, #1D4539 100%);
+background: #d8e0de; /* Old browsers */
 
-/* Mozilla Firefox */ 
-background-image: -moz-linear-gradient(top left, #000000 0%, #1D4539 100%);
+background: -moz-linear-gradient(-45dg,  #d8e0de 0%, #3c3d3b 2%, #aebfbc 12%, #3c3d3b 25%, #99afab 38%, #3c3d3b 51%, #829d98 61%, #3c3d3b 74%, #829d98 88%, #0e0e0e 100%); /* FF3.6+ */
 
-/* Opera */ 
-background-image: -o-linear-gradient(top left, #000000 0%, #1D4539 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#d8e0de), color-stop(2%,#3c3d3b), color-stop(12%,#aebfbc), color-stop(25%,#3c3d3b), color-stop(38%,#99afab), color-stop(51%,#3c3d3b), color-stop(61%,#829d98), color-stop(74%,#3c3d3b), color-stop(88%,#829d98), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
 
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #000000), color-stop(1, #1D4539));
+background: -webkit-linear-gradient(-45deg,  #d8e0de 0%,#3c3d3b 2%,#aebfbc 12%,#3c3d3b 25%,#99afab 38%,#3c3d3b 51%,#829d98 61%,#3c3d3b 74%,#829d98 88%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
 
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-linear-gradient(top left, #000000 0%, #1D4539 100%);
+background: -o-linear-gradient(-45deg,  #d8e0de 0%,#3c3d3b 2%,#aebfbc 12%,#3c3d3b 25%,#99afab 38%,#3c3d3b 51%,#829d98 61%,#3c3d3b 74%,#829d98 88%,#0e0e0e 100%); /* Opera 11.10+ */
 
-/* W3C Markup, IE10 Release Preview */ 
-background-image: linear-gradient(to bottom right, #000000 0%, #1D4539 100%);}
+background: -ms-linear-gradient(-45deg,  #d8e0de 0%,#3c3d3b 2%,#aebfbc 12%,#3c3d3b 25%,#99afab 38%,#3c3d3b 51%,#829d98 61%,#3c3d3b 74%,#829d98 88%,#0e0e0e 100%); /* IE10+ */
 
+background: linear-gradient(135deg,  #d8e0de 0%,#3c3d3b 2%,#aebfbc 12%,#3c3d3b 25%,#99afab 38%,#3c3d3b 51%,#829d98 61%,#3c3d3b 74%,#829d98 88%,#0e0e0e 100%); /* W3C */
 
-.image{
-	float: right;
-	background-image: ('../testdata/images/TestImage.png');
-	clear: left;
-	clear: right;
-	padding: 10px;
-}
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+/*.map{
+float: right;
+clear: left;
+background: ('images/UI_Map');
+max-width: 580px;
+}*/
+/*div.scene*/
 
 #footer {width: 100%; 
 	float: left; 
 	clear: left;}	
-
+	
 /*To resize the accordion*/
 #accordion-resizer {
 padding: 10px;
