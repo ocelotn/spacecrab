@@ -7,7 +7,7 @@ use Mojo::DOM;
 use lib('../../');
 use spacecrabcfg;
 package StoryParser;
-use utf-8;
+use utf8;
 
    #SETUP
    my $cfg = spacecrabcfg::config();
