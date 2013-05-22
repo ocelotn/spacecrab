@@ -1,9 +1,5 @@
-body { background-image: url('images/BG1.PNG');
- -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-/*background-size:cover;*/
+body { background-image: url("images/BG1.PNG");
+background-repeat: repeat;
 }
 
 @font-face{
@@ -45,6 +41,7 @@ div.story {
 	color: black;
 	clear: right; 
 	max-width: 620px;
+	height: 100%
 	float: left;
 	
 /* Old browsers */
@@ -75,40 +72,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', end
 
 .map{
 float: right;
-background: ('images/UI_Map.PNG');
+background-image: url("images/UI_Map.PNG");
 max-width: 620px;
 max-height: 100%;
-}
-
-.save{
-background-color: #6f969a;
-color: #ddc7e1;
-text-shadow: #9c9c9c;
-}
-
-.load{
-background-color: #6f969a;
-color: #ddc7e1;
-text-shadow: #9c9c9c;
-}
-
-.startOver{
-background-color: #6f969a;
-color: #ddc7e1;
-text-shadow: #9c9c9c;
 }
 
 div.scene{
 position: relative;
 right: 620px;
 float: right;
-background-image: url('images/BG1.PNG');
+background-image: url("images/BG1.PNG");
 
 }
 
 #footer {
 	text-align: center;
-	background-image: url('images/BG1.PNG');
+	background-image: url("images/BG1.PNG");
 	font-family: Monkey;
 	color: #af0cee;}	
 	
@@ -116,7 +95,7 @@ background-image: url('images/BG1.PNG');
 #accordion-resizer {
 padding: 10px;
 width: 610px;
-height: 100%;
+height: 100% - 40px;
 }
 
 
