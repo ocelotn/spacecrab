@@ -1,4 +1,8 @@
-body { background: ('images/BG1');
+body { background-image: url("images/BG1") center fixed;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 /*background-size:cover;*/
 }
 
@@ -9,12 +13,12 @@ body { background: ('images/BG1');
 	src: url('fonts/Smart.ttf');}
 
 .story a:link{
-	color: purple;
+	color: #42d8df;
 	text-decoration: underline;
 }
 
 .story a:visited{
-	color: #b0aeb0;
+	color: #f00;
 	text-decoration: none;
 }
 	
@@ -25,7 +29,7 @@ div.story {
 	color: #b0aeb0;
 	clear: right; 
 	background-color: #000; 
-	max-width: 50%; 
+	max-width: 580px ; 
 	clear: left; 
 	height: 100%; 
 	padding: 20px;
@@ -36,10 +40,11 @@ div.story {
 .header {
 	text-align: center;
 	font-family: Smart;
-	color: #af0cee;
+	font-weight: bold;
 	height: 100%; 
+	color: #af0cee;
 	clear: right; 
-	max-width: 50%; 
+	max-width: 580px; 
 
 /* Old browsers */
 background: #f5f6f6; 
@@ -65,13 +70,15 @@ background: linear-gradient(135deg,  #f5f6f6 0%,#b8bac6 11%,#dbdce2 21%,#b8bac6 
 /* IE6-9 fallback on horizontal gradient */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 ); 
 
-/*.map{
+.map{
 float: right;
 clear: left;
 background: ('images/UI_Map');
 max-width: 580px;
-}*/
-/*div.scene*/
+}
+div.scene{
+
+}
 
 #footer {width: 100%; 
 	float: left; 
@@ -80,7 +87,7 @@ max-width: 580px;
 /*To resize the accordion*/
 #accordion-resizer {
 padding: 10px;
-width: 578px;
+width: 50%;
 height: 100% - 40px;
 }
 
