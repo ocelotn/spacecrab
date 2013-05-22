@@ -2,6 +2,12 @@ body { background: ('images/BG1');
 /*background-size:cover;*/
 }
 
+@font-face{
+		font-family: Monkey;
+		src: url('fonts/Monkey.ttf');}
+@font-face{ Smart;
+	src: url('fonts/Smart.ttf');}
+
 a:link{
 	color: purple;
 	text-decoration: underline;
@@ -14,9 +20,6 @@ a:visited{
 	
 /*Fits text into the white area*/
 div.story {
-	@font-face{
-		font-family: Monkey;
-		src: url('fonts/Monkey.ttf');}
 	text-align: left;
 	font-family: Monkey
 	color: #b0aeb0;
@@ -29,8 +32,6 @@ div.story {
 	overflow: scroll;}
 	
 .header {
-	@font-face: Smart;
-	src: url('fonts/Smart.ttf');}
 	text-align: center;
 	font-family: Smart;
 	color: #5e2359;
