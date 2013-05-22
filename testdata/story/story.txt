@@ -67,7 +67,7 @@ a nice coral polyp and algae sandwish
 
 3A
 get closer
-<div class="story" id="node3A" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
+<div class="story" id="node3A" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusNear.png">
 <p>Your curiosity overwhelms you (and your good sense does not).  You maintain your course toward the sparkling green and blue object and increase your speed.  You've come too far to turn back before finding out what this thing is!  It could be incredible!  It could be spectacular!  If you turn back now, you'll never know.</p>
 
 <p>By the time the ink begins to cover your viewports, you're too close to pull away.  Ah, yes, of course.  A space octopus.  You should have known, really.  The blue and green sparkles were its camouflage, the circular markings were the suction cups on what you now see to be tentacles.  The space octopus  pulls you close, drills into the Cockleshell 2600, and injects poison into the cabin.  As you lose consciousness, you wonder whether being eaten by a space octopus will hurt more or less than being eaten by a crabber would have. </p>
@@ -78,7 +78,7 @@ get closer
 
 3B
 turn around now
-<div class="story" id="node3B" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
+<div class="story" id="node3B" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusNear.png">
 <p>With a sigh, you turn the ship around and head back the way you've come.  Perhaps you should just go investigate that signal from Verru.  You feel kind of silly—you're probably turning shell and running from a harmless gust of galactic gases—but, after all, there are lots of dangerous things in space.  This sparkly blue and green whatsis could be one of them.</p>
 
 <p>As you punch the buttons to turn the ship around, however, you see that the blue and green sparkle isn't quite as distant as it had been a moment before.  You've stopped moving toward it, so...that can only mean <i>it</i> is now moving towards <i>you</i>!  Glancing down at your computer display, you see confirmation of your suspicions: the blip on your radar that stands for the blue and green whatsis has, over the last few seconds, begun a trajectory toward the Cockleshell 2600.</p>
@@ -97,7 +97,7 @@ turn around now
 
 3
 a nice coral polyp and algae sandwich
-<div class="story" id="node3C" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
+<div class="story" id="node3C" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusNear.png">
 <p>Ooh, lunch time!  You put the Cockleshell 2600 in neutral and let it idle, then reach around behind your seat and pull out your lunch pail.  Mother filled it this morning as she does every morning, and you know you'll find some tasty polyps and algae layered into the pound or so of sand.  Tipping the pail up, you empty some sand into your mouth. Yes!  Mmmmm, polyps!  No one packs a lunch like Mother.  You tip the pail up again.</p>
 
 <p>Stomach full, you lean back in your seat and ponder your options.  Soon you're snoring, drifting peacefully in space.</p>
@@ -113,7 +113,7 @@ a nice coral polyp and algae sandwich
 
 	
 3C1
-<div class="story" id = "node3C1" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
+<div class="story" id = "node3C1" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusNear.png">
 <p>20 seconds, give or take. </p>
 
 <p>Well, that's not nearly long enough.  You pass out; the space octopus extracts you from the Cockleshell and shovels you into its maw.</p>
@@ -170,7 +170,7 @@ THE END.
 
 
 3C3
-<div class="story" id="node3C3" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusAttack.png">
+<div class="story" id="node3C3" fg="FG_SpaceCrabShipInterior.png" mg="MG_SpaceOctopusNear.png">
 <p>You're a space crab!  You can hold your breath all day.  </p>
 
 <p>Yeah, right.  That doesn't even make sense.  You pass out immediately.  The space octopus extracts you from the Cockleshell and shovels you into its maw.</p>
