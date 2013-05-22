@@ -1,4 +1,4 @@
-body { background-image: url("images/BG1.PNG") center fixed;
+body { background-image: url('images/BG1.PNG');
  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,15 +9,16 @@ body { background-image: url("images/BG1.PNG") center fixed;
 @font-face{
 		font-family: Monkey;
 		src: url('fonts/Monkey.ttf');}
-@font-face{ Smart;
+		
+@font-face{ font-family: Smart;
 	src: url('fonts/Smart.ttf');}
 
-.story a:link{
+a.story:link{
 	color: #42d8df;
 	text-decoration: underline;
 }
 
-.story a:visited{
+a.story:visited{
 	color: #f00;
 	text-decoration: none;
 }
@@ -40,12 +41,12 @@ div.story {
 .header {
 	text-align: center;
 	font-family: Smart;
-	font-weight: bold;
-	height: 100%; 
-	color: #6f969a;
+	font-weight: bold; 
+	color: black;
 	clear: right; 
 	max-width: 620px;
-
+	float: left;
+	
 /* Old browsers */
 background: #f5f6f6; 
 
@@ -69,17 +70,29 @@ background: linear-gradient(135deg,  #f5f6f6 0%,#b8bac6 11%,#dbdce2 21%,#b8bac6 
 
 /* IE6-9 fallback on horizontal gradient */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 ); 
+
 }
 
 .map{
 float: right;
-clear: left;
 background: ('images/UI_Map.PNG');
 max-width: 620px;
 max-height: 100%;
 }
 
-.button{
+.save{
+background-color: #6f969a;
+color: #ddc7e1;
+text-shadow: #9c9c9c;
+}
+
+.load{
+background-color: #6f969a;
+color: #ddc7e1;
+text-shadow: #9c9c9c;
+}
+
+.startOver{
 background-color: #6f969a;
 color: #ddc7e1;
 text-shadow: #9c9c9c;
@@ -87,21 +100,22 @@ text-shadow: #9c9c9c;
 
 div.scene{
 position: relative;
-right: 621px;
+right: 620px;
+float: right;
+background-image: url('images/BG1.PNG');
 
 }
 
 #footer {
-	width: 100%; 
 	text-align: center;
-	background-image: url('images/BG1');
+	background-image: url('images/BG1.PNG');
 	font-family: Monkey;
 	color: #af0cee;}	
 	
 /*To resize the accordion*/
 #accordion-resizer {
 padding: 10px;
-width: 620px;
+width: 610px;
 height: 100%;
 }
 
