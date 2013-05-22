@@ -1,5 +1,6 @@
-body { background-image: url("images/BG1.PNG");
-background-repeat: repeat;
+body { 
+   background-image: url("images/BG1.PNG");
+   background-repeat: repeat;
 }
 
 @font-face{
@@ -98,4 +99,42 @@ width: 610px;
 height: 100% - 40px;
 }
 
+@media screen and (min-width: 650px) and (max-width:1500px){   
+   div#accordion-resizer, div#storywrapper, .story, .header { 
+      max-width: 540px;
+       margin: 0px;
+       padding: 0;
+   }
+   div.scene {
+	 position: fixed;
+	 top: 20px; 
+	 left: 550px;
+	 width: 100%;
+   }
+   img {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 max-width: 1400px;
+   }
+}
+
+@media screen and (max-width:650px){
+   div#accordion-resizer, div#storywrapper, .story, .header { 
+      max-width: 400px;
+   }
+   div#accordion-resizer, div.header {
+   position: absolute; background: none; z-index: 1000;
+   max-height: 200px;
+   margin: 0px;
+   padding: 0;
+   border: none;
+   }
+   div#storywrapper{ margin-top: 250px;}
+   div.scene { position: static; float: left; top:0;}
+   .scene img {
+   	width: 428px;
+   }
+}
 
