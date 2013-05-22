@@ -297,7 +297,7 @@ some kind of signal
 <p>Perhaps not.  It was incredibly fast, after all, when you encountered it before.  Most likely it would shovel you and Divine Brachyura into its maw, and you'd never get a chance to send it after the crabbers.  What else, what else...AHA!  <a data-dest1="node4A1A1A2B">The deathstarfish</a>!  If you can tempt it toward the crabber moonbase, perhaps it will decide to eat it!  After all, it hasn't eaten a planet during your lifetime, or during your parents' lifetimes.  It must be hungry, right?  You wonder if Verru looks appetizing to a creature that eats planets.</a>
 
 <p>Wait, where are these ideas coming from?  You can't lead your people toward a space octopus, and you certainly can't lead them toward the deathstarfish, can you? You square your shoulders.  Well, if this is the end, then you'll face it with pride.  If you can't lead your people to victory, at least you can <a data-dest1="node4A1A1A2C">lead them in song.</a></p>
-
+</div>
 
 4A1A1A2A
 <div class="story" id="node4A1A1A2A">
