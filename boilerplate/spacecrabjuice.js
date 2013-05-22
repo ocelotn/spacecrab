@@ -75,7 +75,7 @@ $( "button.startOver" )
 //var $nodeNum = 1;
 
 //Builds the extra tabs
-
+/*
 $("a").click(function(e)  
 	{
 		e.preventDefault();
@@ -96,5 +96,5 @@ $("a").click(function(e)
 		$("#storywrapper" ).accordion( "option", "active", 0 );
 		//	alert(node);
 	});
-
+*/
 
