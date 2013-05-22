@@ -1,12 +1,14 @@
-body {background-image:url('../testdata/images/TestImage.png');
+body {
+/*background-image:url('../testdata/images/TestImage.png');*/
 /*background-size:cover;*/
+background-color: #000;
 }
 /*Fits text into the white area*/
 div.story {
 	text-align: left;
 	font-family: Copperplate, "Copperplate Gothic Light", fantasy;	
 	color: #b0aeb0;
-	clear: right; 
+	/*clear: right; */
 	background-color: #000; 
 	max-width: 580px; 
 	clear: left; 
@@ -19,7 +21,7 @@ div.story {
 	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 	color: #5e2359;
 	width: 100%; 
-	clear: right; 
+	/*clear: right;*/ 
 	max-width: 580px; 
 	padding: 10px; 
 	border-color: #60225b;
@@ -43,7 +45,44 @@ background-image: -webkit-linear-gradient(top left, #000000 0%, #1D4539 100%);
 /* W3C Markup, IE10 Release Preview */ 
 background-image: linear-gradient(to bottom right, #000000 0%, #1D4539 100%);}
 
+div.scene {
+	position: fixed;
+	top: 10px; 
+	left: 610px;
+}
 
+/*div#accordion-resizer, .header {max-width: 1000px; width: 30%;}*/
+img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+@media screen and (max-width:650px){
+   div#accordion-resizer, div#storywrapper, .story, .header { 
+      max-width: 400px;
+   }
+   div#accordion-resizer, div.header {
+   position: absolute; background: none; z-index: 1000;
+   max-height: 200px;
+   margin: 0px;
+   padding: 0;
+   border: none;
+   }
+   div#storywrapper{ margin-top: 250px;}
+   div.scene { position: static; float: left; top:0;}
+   .scene img {
+   	width: 428px;
+   }
+}
+/*
+@media screen and (min-width: 650px) and (max-width: 1600px){  
+   img {
+   	width: 600px;   	
+   }
+}
+*/
+/*
 .image{
 	float: right;
 	background-image: ('../testdata/images/TestImage.png');
@@ -51,6 +90,7 @@ background-image: linear-gradient(to bottom right, #000000 0%, #1D4539 100%);}
 	clear: right;
 	padding: 10px;
 }
+*/
 
 #footer {width: 100%; 
 	float: left; 
