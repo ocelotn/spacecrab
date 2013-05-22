@@ -383,7 +383,11 @@ some kind of signal
 
 4A1A1A2B1A2
 <div class="story" id="node4A1A1A2B1A2">
-<p>shut your trap, have a good time and a long life, THE END</p>
+<p>After pondering the options, you decide to keep your dreams of glory to yourself.  It's enough that you've saved your whole planet, isn't it?  I mean, yes, it'd be nice to hear a word or two of praise, maybe some thanks, but...well, at least everyone's alive.  Except the people on Sessilia...that was really too bad.</p> 
+
+<p>You turn away from the direction in which Divine Brachyura has disappeared.  Time to find those crabs with the ale keg.  Life is good.</p>
+
+<p>THE END</p>
 </div>
 
 
