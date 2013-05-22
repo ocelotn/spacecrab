@@ -1,5 +1,0 @@
-<div class="story" fg="FG_SpaceCrabShip.png" id="node4B" mg="MG_CrabberShipFleet.png">
-<p>Cloak?  No way.  There&#39;s no one out here!  <i>You&#39;re</i> not a paranoid hermit crab.</p>
-
-<p>Wait, what was that?  The Cockleshell&#39;s main viewscreen blinks wildly, and a frantic bleeping issues from the internal speakers.  Three ships approaching, and they&#39;re coming in fast!  They&#39;ve clearly seen you, and they&#39;re not opening a frequency to hail you.  You&#39;re under attack; you hesitate, unsure whether to fight or flee. You bite your lip. Well, lucky coin always knows what to do!  You toss it in the air, catch it, and slap it onto your arm.  <a data-dest1="node4B1" data-dest2="node4B2"> Heads fight, tails flee</a>!</p>
-</div>
