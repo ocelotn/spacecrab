@@ -5,6 +5,7 @@ use warnings;
 use File::Slurp;
 use Mojo::DOM;
 use GraphViz;
+use utf8;
 
 #package StoryMapper;
 
