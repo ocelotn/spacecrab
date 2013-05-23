@@ -98,7 +98,7 @@ function getHref(link){
 }
 function appendNode(linkidstring){
     $.ajax({ 
-		url: "http://localhost/~lara/spacecrabmeat.pl?"+linkidstring,
+		url: "http://test.space-crab.com/spacecrabmeat.pl?"+linkidstring,
 		dataType: 'html',
         complete: function() {
         },
