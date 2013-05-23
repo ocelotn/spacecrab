@@ -5,7 +5,7 @@ background: cover
 
 @font-face{
 		font-family: Monkey;
-		src: url('fonts/Monkey.ttf');}
+		src: url('../fonts/Monkey.ttf');}
 		
 @font-face{ font-family: Smart;
 	src: url('../fonts/Smart.ttf');}
@@ -28,35 +28,9 @@ background: cover
 	font-weight: bold; 
 	color: #af0cee;
 	text-shadow: 2px 2px 7px #111111;
-	max-width: 1,240px;
-	height: 100%;
+	max-width: 620px;
 	clear: both;
-	float:right;
 	
-/* Old browsers */	
-background: #b5bdc8; 
-
-/* FF3.6+ */
-background: -moz-linear-gradient(-45deg,  #b5bdc8 0%, #28343b 12%, #b5bdc8 28%, #28343b 44%, #828c95 59%, #28343b 77%, #b5bdc8 92%, #28343b 100%); 
-
-/* Chrome,Safari4+ */
-background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#b5bdc8), color-stop(12%,#28343b), color-stop(28%,#b5bdc8), color-stop(44%,#28343b), color-stop(59%,#828c95), color-stop(77%,#28343b), color-stop(92%,#b5bdc8), color-stop(100%,#28343b)); 
-
-/* Chrome10+,Safari5.1+ */
-background: -webkit-linear-gradient(-45deg,  #b5bdc8 0%,#28343b 12%,#b5bdc8 28%,#28343b 44%,#828c95 59%,#28343b 77%,#b5bdc8 92%,#28343b 100%);
-
-/* Opera 11.10+ */ 
-background: -o-linear-gradient(-45deg,  #b5bdc8 0%,#28343b 12%,#b5bdc8 28%,#28343b 44%,#828c95 59%,#28343b 77%,#b5bdc8 92%,#28343b 100%); 
-
-/* IE10+ */
-background: -ms-linear-gradient(-45deg,  #b5bdc8 0%,#28343b 12%,#b5bdc8 28%,#28343b 44%,#828c95 59%,#28343b 77%,#b5bdc8 92%,#28343b 100%);
-
-/* W3C */ 
-background: linear-gradient(135deg,  #b5bdc8 0%,#28343b 12%,#b5bdc8 28%,#28343b 44%,#828c95 59%,#28343b 77%,#b5bdc8 92%,#28343b 100%); 
-
-/* IE6-9 fallback on horizontal gradient */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 ); 
-
 }
 
 
