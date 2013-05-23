@@ -1,5 +1,6 @@
-body { background-image: url('images/BG1.png');
+body { background-image: url('../images/BG1.png');
 background-repeat: repeat;
+background: cover
 }
 
 @font-face{
@@ -7,7 +8,7 @@ background-repeat: repeat;
 		src: url('fonts/Monkey.ttf');}
 		
 @font-face{ font-family: Smart;
-	src: url('fonts/Smart.ttf');}
+	src: url('../fonts/Smart.ttf');}
 
 #story a:link{
 	color: #42d8df;
@@ -25,10 +26,9 @@ background-repeat: repeat;
 	text-align: center;
 	font-family: Smart;
 	font-weight: bold; 
-	color: black;
+	color: #af0cee;
 	text-shadow: 2px 2px 7px #111111;
-	clear: right; 
-	max-width: 620px;
+	max-width: 1,240px;
 	height: 100%;
 	float: left;
 	
@@ -58,13 +58,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', end
 
 }
 
-.map{
-float: right;
-clear: left;
-background-image: url('images/UI_Map.png');
-max-width: 620px;
-max-height: 100%;
-}
+
 
 div.story {
 	text-align: left;
@@ -72,9 +66,9 @@ div.story {
 	color: #b0aeb0;
 	clear: right; 
 	background-color: #000; 
-	max-width: 620px ; 
-	clear: left; 
-	height: 100%; 
+	max-width: 620px; 
+	float: left; 
+	height: 100%;
 	padding: 20px;
 	overflow: scroll;
 	
@@ -85,20 +79,20 @@ position: absolute;
 right: 0;
 top: 0;
 width: 620px;
-height: 100% -40px;
+height: 100%;
 float: right;
 clear: left;
-background-image: url('images/BG1.png');
+background-image: url('../images/BG1.png');
 }
 
 #footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
-	clear: both;
+	clear: right;
 	width: 100%;
 	height: 60px;
 	text-align: center;
-	background-image: url('images/BG1.png');
+	background-image: url('../images/BG1.png');
 	font-family: Monkey;
 	color: #af0cee;}	
 	
