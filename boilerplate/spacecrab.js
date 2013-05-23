@@ -118,7 +118,7 @@ function appendNode(linkidstring){
 }
 function updateGraphics(linkidstring){
        $.ajax({ 
-		url: "http://localhost/~lara/spacecrabeyes.pl?"+linkidstring,
+		url: "http://test.space-crab.com/spacecrabeyes.pl?"+linkidstring,
 		dataType: 'html',
         complete: function() {
         },
