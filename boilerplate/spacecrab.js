@@ -57,7 +57,6 @@ function setupRestartButton()
 //Set up display
 function setupAccordioning()
 {
-    $('#storywrapper').prepend('<h></h>');
    //Sets up accordion
 	$( "#storywrapper" ).accordion(
 	{
