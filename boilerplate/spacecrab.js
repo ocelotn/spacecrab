@@ -33,7 +33,7 @@ function setupLoadButton()
 			   var script= document.createElement('script');
 			   script.id = 'theend';
 			   script.type= 'text/javascript';
-			   script.src= 'boilerplate/spacecrabjuice.js';
+			   script.src= 'boilerplate/spacecrab.js';
 			   body.appendChild(script);
 		   }
 		   // If browser dont support it, then can't save/load
