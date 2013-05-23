@@ -30,7 +30,8 @@ background: cover
 	text-shadow: 2px 2px 7px #111111;
 	max-width: 1,240px;
 	height: 100%;
-	float: left;
+	clear: both;
+	float:right;
 	
 /* Old browsers */	
 background: #b5bdc8; 
@@ -70,7 +71,7 @@ div.story {
 	float: left; 
 	height: 100%;
 	padding: 20px;
-	overflow: scroll;
+
 	
 }
 
